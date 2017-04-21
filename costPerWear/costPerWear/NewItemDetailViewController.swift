@@ -10,40 +10,52 @@ import UIKit
 
 class NewItemDetailViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
-    var datasource = UIPageViewControllerDataSource()
-    var delegate = UIPageViewControllerDelegate()
+    var datasource: UIPageViewControllerDataSource!
+    var delegate: UIPageViewControllerDelegate!
+    
+    
+    lazy var itemImageVC: UIViewController = {
+    }()
+    var itemNameVC: UIViewController!
+    var itemAgeVC: UIViewController!
+    var itemPurchasePriceVC: UIViewController!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        creatPageViewController().setViewControllers([itemImageVC, itemNameVC, itemImageVC, itemPurchasePriceVC], direction: .forward, animated: true)
         
+        
+    
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
     func creatPageViewController() -> UIPageViewController {
         
-        let newItemDetailsVC: UIPageViewController
-        
-       newItemDetailsVC = UIPageViewController.init(transitionStyle: .pageCurl, navigationOrientation: .horizontal, options: <#T##[String : Any]?#>)
+        let enterNewItemDetailVC: UIPageViewController
+        let UIPageViewControllerOptionInterPageSpacingKey: String
+        enterNewItemDetailVC = UIPageViewController.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: [UIPageViewControllerOptionInterPageSpacingKey: 1.0])
+        return enterNewItemDetailVC
     }
     
     
     
+
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+
+
+
+
+
+
+
+
+
+
