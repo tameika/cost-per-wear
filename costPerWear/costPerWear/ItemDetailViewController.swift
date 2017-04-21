@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewItemViewController: UIViewController {
+class NewItemViewController: UIViewController, UITextFieldDelegate {
     
     var newItem: NewItemView!
 
@@ -17,10 +17,10 @@ class NewItemViewController: UIViewController {
 
         self.view.backgroundColor = UIColor.white
         
-        newItem = NewItemView(frame: CGRect.zero)
+        newItem = NewItemView(frame: CGRect.init(x: -20.0, y: 10.0, width: 700.0, height: 600.0))
         self.view.addSubview(newItem)
         
-        
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,4 +39,44 @@ class NewItemViewController: UIViewController {
     }
     */
 
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        print("began editing")
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print("ended editing")
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
