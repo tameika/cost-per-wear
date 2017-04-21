@@ -14,6 +14,7 @@
 		BC774FF21EA73F4B009B9B38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC774FF01EA73F4B009B9B38 /* LaunchScreen.storyboard */; };
 		BC7750031EA81C29009B9B38 /* NewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7750021EA81C29009B9B38 /* NewItemView.swift */; };
 		BC7750051EA81C82009B9B38 /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7750041EA81C82009B9B38 /* NewItemViewController.swift */; };
+		BC7750071EA9B74E009B9B38 /* NewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7750061EA9B74E009B9B38 /* NewItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		BC774FF31EA73F4B009B9B38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC7750021EA81C29009B9B38 /* NewItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemView.swift; sourceTree = "<group>"; };
 		BC7750041EA81C82009B9B38 /* NewItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
+		BC7750061EA9B74E009B9B38 /* NewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 		BC774FFF1EA818C4009B9B38 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BC7750061EA9B74E009B9B38 /* NewItem.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC7750031EA81C29009B9B38 /* NewItemView.swift in Sources */,
+				BC7750071EA9B74E009B9B38 /* NewItem.swift in Sources */,
 				BC774FE71EA73F4B009B9B38 /* ViewController.swift in Sources */,
 				BC7750051EA81C82009B9B38 /* NewItemViewController.swift in Sources */,
 				BC774FE51EA73F4B009B9B38 /* AppDelegate.swift in Sources */,

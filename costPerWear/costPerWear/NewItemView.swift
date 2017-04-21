@@ -16,6 +16,7 @@ class NewItemView: UIView {
     var newItemName: UITextField!
     var newItemAge: UITextField!
     var newItemPurchasePrice: UITextField!
+    var newItemDateCreated: UITextField!
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -23,15 +24,6 @@ class NewItemView: UIView {
     
     override init(frame: CGRect){
         super.init(frame: frame)
-    
-//    init(newItemImage: UIImageView, newItemName: UITextField, newItemAge: UITextField, newItemPurchasePrice: UITextField) {
-//        self.newItemPurchasePrice = newItemPurchasePrice
-//        self.newItemName = newItemName
-//        self.newItemAge = newItemAge
-//        self.newItemPurchasePrice = newItemPurchasePrice
-//    
-//        super.init(frame: frame)
-    
 
 
         self.newItemImage = UIImageView(frame: CGRect.init(x: 150.0, y: 100.0, width: 150.0, height: 150.0))
@@ -43,8 +35,6 @@ class NewItemView: UIView {
         
         self.newItemName = UITextField(frame: CGRect.init(x: 60.0, y: 300.0, width: 300.0, height: 60.0))
         self.newItemName.backgroundColor = UIColor.lightGray
-        //newItemName.allowsEditingTextAttributes = true
-        newItemName.becomeFirstResponder()
         
         self.addSubview(newItemName)
         
@@ -58,7 +48,14 @@ class NewItemView: UIView {
         
         self.addSubview(newItemPurchasePrice)
         
+        self.newItemDateCreated = UITextField(frame: CGRect.init(x: 150.0, y: 150, width: 80.0, height: 50.0))
+        self.newItemDateCreated.backgroundColor = UIColor.lightGray
+        
+        self.addSubview(newItemDateCreated)
+        
     
     }
     
 }
+
+
