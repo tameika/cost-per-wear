@@ -1,26 +1,19 @@
 //
-//  NewItemViewController.swift
+//  NewItemDetailsViewController.swift
 //  costPerWear
 //
-//  Created by Tameika Lawrence on 4/19/17.
+//  Created by Tameika Lawrence on 4/21/17.
 //  Copyright © 2017 Tameika Lawrence. All rights reserved.
 //
 
 import UIKit
 
-class NewItemViewController: UIViewController {
-    
-    var newItem: NewItemView!
+class NewItemDetailsViewController: UIPageViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.white
-        
-        newItem = NewItemView(frame: CGRect.zero)
-        self.view.addSubview(newItem)
-        
-        
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

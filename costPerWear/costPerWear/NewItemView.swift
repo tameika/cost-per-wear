@@ -18,6 +18,7 @@ class NewItemView: UIView {
     var newItemPurchasePrice: UITextField!
     var newItemDateCreated: UITextField!
     
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -35,20 +36,26 @@ class NewItemView: UIView {
         
         self.newItemName = UITextField(frame: CGRect.init(x: 60.0, y: 300.0, width: 300.0, height: 60.0))
         self.newItemName.backgroundColor = UIColor.lightGray
+        newItemName.delegate = self
+        newItemName.attributedPlaceholder = placeholder
+        newItemName.clearsOnBeginEditing = true
+        
         
         self.addSubview(newItemName)
         
         self.newItemAge = UITextField(frame: CGRect.init(x: 60.0, y: 400.0, width: 300.0, height: 60.0))
         self.newItemAge.backgroundColor = UIColor.lightGray
+        newItemAge.delegate = self
         
         self.addSubview(newItemAge)
         
         self.newItemPurchasePrice = UITextField(frame: CGRect.init(x: 120.0, y: 500.0, width: 100.0, height: 60.0))
         self.newItemPurchasePrice.backgroundColor = UIColor.lightGray
+        newItemPurchasePrice.delegate = self
         
         self.addSubview(newItemPurchasePrice)
         
-        self.newItemDateCreated = UITextField(frame: CGRect.init(x: 150.0, y: 150, width: 80.0, height: 50.0))
+        self.newItemDateCreated = UITextField(frame: CGRect.init(x: 150.0, y: 150.0, width: 80.0, height: 50.0))
         self.newItemDateCreated.backgroundColor = UIColor.lightGray
         
         self.addSubview(newItemDateCreated)
@@ -57,5 +64,35 @@ class NewItemView: UIView {
     }
     
 }
+
+
+extension NewItemView: UITextFieldDelegate {
+    
+    var placeholder: NSAttributedString {return NSAttributedString(string: "enter here", attributes: [NSForegroundColorAttributeName : UIColor.lightText])}
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        print("editing began")
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print("editing ended")
+    }
+
+}
+
+
+
+
+
+
+
 
 

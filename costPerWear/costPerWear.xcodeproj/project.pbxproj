@@ -15,6 +15,7 @@
 		BC7750031EA81C29009B9B38 /* NewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7750021EA81C29009B9B38 /* NewItemView.swift */; };
 		BC7750051EA81C82009B9B38 /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7750041EA81C82009B9B38 /* NewItemViewController.swift */; };
 		BC7750071EA9B74E009B9B38 /* NewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7750061EA9B74E009B9B38 /* NewItem.swift */; };
+		BCCD9A5A1EA9C1B6003C64E0 /* NewItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCD9A591EA9C1B6003C64E0 /* NewItemDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		BC7750021EA81C29009B9B38 /* NewItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemView.swift; sourceTree = "<group>"; };
 		BC7750041EA81C82009B9B38 /* NewItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
 		BC7750061EA9B74E009B9B38 /* NewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItem.swift; sourceTree = "<group>"; };
+		BCCD9A591EA9C1B6003C64E0 /* NewItemDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			children = (
 				BC7750041EA81C82009B9B38 /* NewItemViewController.swift */,
 				BC774FF01EA73F4B009B9B38 /* LaunchScreen.storyboard */,
+				BCCD9A591EA9C1B6003C64E0 /* NewItemDetailsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC7750031EA81C29009B9B38 /* NewItemView.swift in Sources */,
+				BCCD9A5A1EA9C1B6003C64E0 /* NewItemDetailsViewController.swift in Sources */,
 				BC7750071EA9B74E009B9B38 /* NewItem.swift in Sources */,
 				BC774FE71EA73F4B009B9B38 /* ViewController.swift in Sources */,
 				BC7750051EA81C82009B9B38 /* NewItemViewController.swift in Sources */,
@@ -330,6 +334,7 @@
 				BC774FF81EA73F4B009B9B38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -15,6 +15,7 @@ struct Item {
     var itemPurchasePrice: Double
     var itemTags: [String]
     var dateCreated: String
+
     
     init(itemName: String, itemAge: String, itemPurchasePrice: Double, itemTags: [String], dateCreated: String) {
         self.itemName = itemName
