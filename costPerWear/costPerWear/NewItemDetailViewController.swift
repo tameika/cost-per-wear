@@ -16,6 +16,7 @@ class NewItemDetailViewController: UIViewController, UIPageViewControllerDataSou
     var pageTitles = ["Photo", "Name", "Age", "Cost"]
     
     
+    
     lazy var itemImageVC: UIViewController = {
     }()
     var itemNameVC: UIViewController!
@@ -43,11 +44,22 @@ class NewItemDetailViewController: UIViewController, UIPageViewControllerDataSou
     }
     
     
-        
     
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        <#code#>
+    }
     
-
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        <#code#>
+    }
     
+    func presentationCount(for pageViewController: UIPageViewController) -> Int {
+        return pageTitles.count
+    }
+    
+    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
+        return 0
+    }
 
 }
 
