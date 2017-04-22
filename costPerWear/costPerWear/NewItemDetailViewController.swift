@@ -10,8 +10,10 @@ import UIKit
 
 class NewItemDetailViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
+    var pageViewController: UIPageViewController?
     var datasource: UIPageViewControllerDataSource!
     var delegate: UIPageViewControllerDelegate!
+    var pageTitles = ["Photo", "Name", "Age", "Cost"]
     
     
     lazy var itemImageVC: UIViewController = {
@@ -23,10 +25,16 @@ class NewItemDetailViewController: UIViewController, UIPageViewControllerDataSou
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        creatPageViewController().setViewControllers([itemImageVC, itemNameVC, itemImageVC, itemPurchasePriceVC], direction: .forward, animated: true)
         
+        self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: [UIPageViewControllerOptionInterPageSpacingKey: 1.0])
         
+        pageViewController?.dataSource = self
+        pageViewController?.setViewControllers([itemImageVC, itemNameVC, itemImageVC, itemPurchasePriceVC], direction: .forward, animated: true, completion: nil)
+        
+        self.pageViewController?.view.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height - 30.0)
+        self.addChildViewController((pageViewController)!)
+        self.view.addSubview((pageViewController?.view)!)
+        self.pageViewController?.didMove(toParentViewController: self)
     
     }
 
@@ -35,14 +43,7 @@ class NewItemDetailViewController: UIViewController, UIPageViewControllerDataSou
     }
     
     
-    func creatPageViewController() -> UIPageViewController {
         
-        let enterNewItemDetailVC: UIPageViewController
-        let UIPageViewControllerOptionInterPageSpacingKey: String
-        enterNewItemDetailVC = UIPageViewController.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: [UIPageViewControllerOptionInterPageSpacingKey: 1.0])
-        return enterNewItemDetailVC
-    }
-    
     
     
 
