@@ -1,19 +1,25 @@
 //
-//  NewItemDetailsViewController.swift
+//  ContentViewController.swift
 //  costPerWear
 //
-//  Created by Tameika Lawrence on 4/21/17.
+//  Created by Tameika Lawrence on 5/2/17.
 //  Copyright © 2017 Tameika Lawrence. All rights reserved.
 //
 
 import UIKit
 
-class NewItemDetailsViewController: UIPageViewController {
-
+class ContentViewController: UIViewController {
+    
+    var pageIndex: Int!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var pageLabel = UILabel()
+        
+        pageLabel.text = pages[self.pageIndex].title
 
-        // Do any additional setup after loading the view.
+
     }
 
     override func didReceiveMemoryWarning() {
