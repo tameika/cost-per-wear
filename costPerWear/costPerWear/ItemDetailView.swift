@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 
+
 class NewItemView: UIView {
     
     // MARK: make lazy
