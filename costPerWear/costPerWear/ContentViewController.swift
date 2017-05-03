@@ -15,7 +15,7 @@ class ContentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var pageLabel = UILabel()
+        let pageLabel = UILabel()
         
         pageLabel.text = pages[self.pageIndex].title
 
