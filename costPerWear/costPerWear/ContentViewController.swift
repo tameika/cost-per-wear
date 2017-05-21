@@ -10,15 +10,20 @@ import UIKit
 
 class ContentViewController: UIViewController {
     
-    var pageIndex: Int!
+    var pageIndex: Int = 0
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let pageLabel = UILabel()
-        
+        var pageLabel = UILabel()
+ 
+        self.view.backgroundColor = UIColor.red
+        pageLabel = UILabel(frame: CGRect.init(x: 20.0, y: 10.0, width: 100.0, height: 100.0))
+        pageLabel.backgroundColor = UIColor.blue
         pageLabel.text = pages[self.pageIndex].title
+        self.view.addSubview(pageLabel)
 
+        //         newItem = NewItemView(frame: CGRect.init(x: -20.0, y: 10.0, width: 700.0, height: 600.0))
 
     }
 

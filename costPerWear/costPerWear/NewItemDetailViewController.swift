@@ -11,6 +11,9 @@ import UIKit
 class NewItemDetailViewController: UIViewController {
     
     var pageViewController: UIPageViewController!
+    
+    var navigationOrientation: UIPageViewControllerNavigationOrientation!
+
 
     var pageTitles = ["Photo", "Name", "Age", "Cost"]
     
@@ -23,17 +26,25 @@ class NewItemDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        let pc = UIPageControl.appearance()
+        pc.pageIndicatorTintColor = UIColor.black
+        pc.currentPageIndicatorTintColor = UIColor.white
+        pc.backgroundColor = UIColor.green
+
+        
         self.view.backgroundColor = UIColor.lightGray
         
         self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: [UIPageViewControllerOptionInterPageSpacingKey: 1.0])
         
         self.pageViewController.dataSource = self
-        //pageViewController?.setViewControllers(viewControllers, direction: .forward, animated: true, completion: nil)
         
         self.pageViewController?.view.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height - 30.0)
         self.addChildViewController((pageViewController)!)
         self.view.addSubview((pageViewController?.view)!)
         self.pageViewController?.didMove(toParentViewController: self)
+        
+        
         
         
     }
@@ -56,7 +67,7 @@ class NewItemDetailViewController: UIViewController {
         return vc
     }
     
-
+    
     
 }
 
@@ -64,7 +75,7 @@ class NewItemDetailViewController: UIViewController {
 extension NewItemDetailViewController: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let vc = viewController as? ContentViewController else {print("fail 1"); return pageViewController }
+        let vc = viewController as! ContentViewController
         var index = (vc.pageIndex) as Int
         
         if (index == 0 || index == NSNotFound) {
@@ -78,8 +89,8 @@ extension NewItemDetailViewController: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
-        guard let vc = viewController as? ContentViewController else {print("fail 2"); return pageViewController }
-        var index = (vc.pageIndex!) as Int
+        let vc = viewController as! ContentViewController
+        var index = (vc.pageIndex) as Int
         if (index == NSNotFound) {
             return nil
         }
