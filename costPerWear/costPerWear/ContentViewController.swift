@@ -22,8 +22,15 @@ class ContentViewController: UIViewController {
         pageLabel.backgroundColor = UIColor.blue
         pageLabel.text = pages[self.pageIndex].title
         self.view.addSubview(pageLabel)
+        
+        pageLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        pageLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0.0).isActive = true
+        pageLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 0.0).isActive = true
+        pageLabel.heightAnchor.constraint(equalTo: self.view.heightAnchor, constant: -50.0).isActive = true
+        pageLabel.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: -50.00).isActive = true
+        
 
-        //         newItem = NewItemView(frame: CGRect.init(x: -20.0, y: 10.0, width: 700.0, height: 600.0))
 
     }
 
