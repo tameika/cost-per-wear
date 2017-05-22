@@ -26,7 +26,6 @@ class NewItemDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         let pc = UIPageControl.appearance()
         pc.pageIndicatorTintColor = UIColor.black
         pc.currentPageIndicatorTintColor = UIColor.white
@@ -40,9 +39,12 @@ class NewItemDetailViewController: UIViewController {
         self.pageViewController.dataSource = self
         
         self.pageViewController?.view.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height - 30.0)
+        self.restartAction(sender: self)
         self.addChildViewController((pageViewController)!)
         self.view.addSubview((pageViewController?.view)!)
         self.pageViewController?.didMove(toParentViewController: self)
+        
+        
         
         
         
@@ -53,6 +55,11 @@ class NewItemDetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    
+    func restartAction(sender: Any) {
+        
+        self.pageViewController.setViewControllers([self.viewControllerAtIndex(index: 0)], direction: .forward, animated: true, completion: nil)
+    }
     
     func viewControllerAtIndex(index: Int) -> UIViewController {
         
@@ -66,6 +73,8 @@ class NewItemDetailViewController: UIViewController {
         
         return vc
     }
+    
+    
     
     
     
