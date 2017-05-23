@@ -32,7 +32,7 @@ class NewItemDetailViewController: UIViewController {
         pc.backgroundColor = UIColor.green
 
         
-        self.view.backgroundColor = UIColor.lightGray
+        self.view.backgroundColor = UIColor.white
         
         self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: [UIPageViewControllerOptionInterPageSpacingKey: 1.0])
         
