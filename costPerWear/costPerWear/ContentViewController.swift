@@ -98,7 +98,9 @@ class ContentViewController: UIViewController {
         
         if !(textfieldEntry.text?.isEmpty)! {
         
-        present(NewItemViewController(), animated: true, completion: nil)
+        //present(NewItemViewController(), animated: true, completion: nil)
+            
+            
             
         
             

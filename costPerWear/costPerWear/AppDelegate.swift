@@ -16,15 +16,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
+        // create a window
         window = UIWindow(frame: UIScreen.main.bounds)
+        
+        // create a nav controller
         let nav = UINavigationController()
-        let mainView = NewItemDetailViewController(nibName: nil, bundle: nil)
+        
+        // create a vc type to represent desired vc's
+        let mainView = UIViewController(nibName: nil, bundle: nil)
+        
+        
+        // assign nav stack to the general desired future stack
         nav.viewControllers = [mainView]
+        
+        (nav.viewControllers).append(NewItemDetailViewController())
+        nav.viewControllers.append(NewItemViewController())
+        
+        // set nav vc as initial (root) vc upon launch
         window?.rootViewController = nav
+        
         window?.makeKeyAndVisible()
         
         return true
+        
+        
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
