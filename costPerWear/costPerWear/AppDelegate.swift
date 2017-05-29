@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         let nav = UINavigationController()
-        let mainView = ViewController(nibName: nil, bundle: nil)
+        let mainView = NewItemDetailViewController(nibName: nil, bundle: nil)
         nav.viewControllers = [mainView]
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
