@@ -16,9 +16,9 @@ class NewItemView: UIView {
     // MARK: make lazy
     
     var newItemImage: UIImageView!
-    var newItemName: UITextField!
-    var newItemAge: UITextField!
-    var newItemPurchasePrice: UITextField!
+    var newItemName: UILabel!
+    var newItemAge: UILabel!
+    var newItemPurchasePrice: UILabel!
     var newItemDateCreated: UILabel!
     
     
@@ -38,25 +38,23 @@ class NewItemView: UIView {
         
         self.addSubview(newItemImage)
         
-        self.newItemName = UITextField(frame: CGRect.init(x: 60.0, y: 300.0, width: 300.0, height: 60.0))
+        self.newItemName = UILabel(frame: CGRect.init(x: 60.0, y: 300.0, width: 300.0, height: 60.0))
         self.newItemName.backgroundColor = UIColor.lightGray
-        newItemName.delegate = self
-        newItemName.attributedPlaceholder = placeholder
-        newItemName.clearsOnBeginEditing = true
-        
-        
+        //newItemName.delegate = self
+        //newItemName.attributedPlaceholder = placeholder
+        //newItemName.clearsOnBeginEditing = true
         
         self.addSubview(newItemName)
         
-        self.newItemAge = UITextField(frame: CGRect.init(x: 60.0, y: 400.0, width: 300.0, height: 60.0))
+        self.newItemAge = UILabel(frame: CGRect.init(x: 60.0, y: 400.0, width: 300.0, height: 60.0))
         self.newItemAge.backgroundColor = UIColor.lightGray
-        newItemAge.delegate = self
+        //newItemAge.delegate = self
         
         self.addSubview(newItemAge)
         
-        self.newItemPurchasePrice = UITextField(frame: CGRect.init(x: 120.0, y: 500.0, width: 100.0, height: 60.0))
+        self.newItemPurchasePrice = UILabel(frame: CGRect.init(x: 120.0, y: 500.0, width: 100.0, height: 60.0))
         self.newItemPurchasePrice.backgroundColor = UIColor.lightGray
-        newItemPurchasePrice.delegate = self
+        //newItemPurchasePrice.delegate = self
         
         self.addSubview(newItemPurchasePrice)
         

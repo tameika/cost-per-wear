@@ -12,14 +12,16 @@ class ContentViewController: UIViewController {
     
     var pageIndex: Int = 0
     
-
+    var pageLabel = UILabel()
+    var pageDescription = UILabel()
+    var textfieldEntry = UITextField()
+    var enterBtn = UIButton()
+    
+    var itemDetails = NewItemView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var pageLabel = UILabel()
-        var pageDescription = UILabel()
-        var textfieldEntry = UITextField()
-        var enterBtn = UIButton()
+        
  
         self.view.backgroundColor = UIColor.lightGray
         
@@ -74,9 +76,23 @@ class ContentViewController: UIViewController {
     func pressed() {
         print("testing testing")
         
-        if self.pageIndex == 0 {
-            
+        guard textfieldEntry.text?.isEmpty == false else { return }
+        
+        switch pageIndex {
+        case 0:
+            itemDetails.newItemImage.image = UIImage()
+        case 1:
+            itemDetails.newItemName.text = "test text"
+        case 2:
+            itemDetails.newItemAge.text = textfieldEntry.text
+        case 3:
+            itemDetails.newItemPurchasePrice.text = textfieldEntry.text
+        default:
+            return
         }
+                
     }
+    
+   
     
 }
