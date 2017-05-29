@@ -17,6 +17,7 @@ class ContentViewController: UIViewController {
         super.viewDidLoad()
         var pageLabel = UILabel()
         var pageDescription = UILabel()
+        var textfieldEntry = UITextField()
  
         self.view.backgroundColor = UIColor.lightGray
         
@@ -32,7 +33,7 @@ class ContentViewController: UIViewController {
 //        pageLabel.heightAnchor.constraint(equalTo: self.view.heightAnchor, constant: -50.0).isActive = true
 //        pageLabel.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: -50.00).isActive = true
         
-        pageDescription = UILabel(frame: CGRect.init(x: 70.0, y: 200.0, width: 200.0, height: 50.0))
+        pageDescription = UILabel(frame: CGRect.init(x: 70.0, y: 50.0, width: 200.0, height: 50.0))
         pageDescription.backgroundColor = UIColor.red
         pageDescription.text = pages[self.pageIndex].description
         self.view.addSubview(pageDescription)
@@ -44,7 +45,13 @@ class ContentViewController: UIViewController {
 //        pageDescription.heightAnchor.constraint(equalTo: self.view.heightAnchor, constant: -50.0).isActive = true
 //        pageDescription.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: -50.00).isActive = true
         
-
+        
+        textfieldEntry = UITextField(frame: CGRect.init(x: 70.0, y: 400.0, width: 300.0, height: 60.0))
+        textfieldEntry.backgroundColor = UIColor.blue
+        //textfieldEntry.delegate = self
+        textfieldEntry.placeholder = "enter text here"
+        textfieldEntry.clearsOnBeginEditing = true
+        self.view.addSubview(textfieldEntry)
 
     }
 
