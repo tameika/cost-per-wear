@@ -17,9 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        //let rootViewController = NewItemDetailViewController()
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = NewItemDetailViewController()
+        let nav = UINavigationController()
+        let mainView = ViewController(nibName: nil, bundle: nil)
+        nav.viewControllers = [mainView]
+        window?.rootViewController = nav
         window?.makeKeyAndVisible()
         
         return true

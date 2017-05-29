@@ -100,6 +100,8 @@ class ContentViewController: UIViewController {
         
         present(NewItemViewController(), animated: true, completion: nil)
             
+        
+            
         }
     }
     
