@@ -78,13 +78,18 @@ class ContentViewController: UIViewController {
         
         //guard textfieldEntry.text?.isEmpty == false else {print("something is empty"); return }
         
+        let vcAtIndex = NewItemDetailViewController()
+        
         switch pageIndex {
         case 0:
             itemDetails.newItemImage.image = UIImage()
+            present(vcAtIndex.viewControllerAtIndex(index: 1), animated: true, completion: nil)
         case 1:
             itemDetails.newItemName.text = "test text"
+            present(vcAtIndex.viewControllerAtIndex(index: 2), animated: true, completion: nil)
         case 2:
             itemDetails.newItemAge.text = textfieldEntry.text
+            present(vcAtIndex.viewControllerAtIndex(index: 3), animated: true, completion: nil)
         case 3:
             itemDetails.newItemPurchasePrice.text = textfieldEntry.text
         default:

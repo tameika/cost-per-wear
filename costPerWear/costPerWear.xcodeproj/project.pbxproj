@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC3033A81EDCB89500332952 /* pageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3033A71EDCB89500332952 /* pageView.swift */; };
 		BC4C49251EB8530900E149E8 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4C49241EB8530900E149E8 /* ContentViewController.swift */; };
 		BC774FE51EA73F4B009B9B38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC774FE41EA73F4B009B9B38 /* AppDelegate.swift */; };
 		BC774FE71EA73F4B009B9B38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC774FE61EA73F4B009B9B38 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC3033A71EDCB89500332952 /* pageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pageView.swift; sourceTree = "<group>"; };
 		BC4C49241EB8530900E149E8 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		BC774FE11EA73F4B009B9B38 /* costPerWear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = costPerWear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC774FE41EA73F4B009B9B38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				BC7750021EA81C29009B9B38 /* ItemDetailView.swift */,
+				BC3033A71EDCB89500332952 /* pageView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				BC774FE71EA73F4B009B9B38 /* ViewController.swift in Sources */,
 				BC7750051EA81C82009B9B38 /* ItemDetailViewController.swift in Sources */,
 				BCCD9A5C1EAAABA5003C64E0 /* NewItemDetailViewController.swift in Sources */,
+				BC3033A81EDCB89500332952 /* pageView.swift in Sources */,
 				BC774FE51EA73F4B009B9B38 /* AppDelegate.swift in Sources */,
 				BC774FED1EA73F4B009B9B38 /* costPerWear.xcdatamodeld in Sources */,
 			);
