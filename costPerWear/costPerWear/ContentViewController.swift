@@ -90,9 +90,13 @@ class ContentViewController: UIViewController {
         default:
             return
         }
-                
+        
+        present(presentVC(), animated: true, completion: nil)  
     }
     
-   
+    func presentVC() -> UIViewController {
+        let vc = NewItemViewController()
+        return vc
+    }
     
 }
