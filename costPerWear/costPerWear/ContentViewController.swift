@@ -11,6 +11,7 @@ import UIKit
 class ContentViewController: UIViewController {
     
     var pageIndex: Int = 0
+    
 
     
     override func viewDidLoad() {
@@ -18,6 +19,7 @@ class ContentViewController: UIViewController {
         var pageLabel = UILabel()
         var pageDescription = UILabel()
         var textfieldEntry = UITextField()
+        var enterBtn = UIButton()
  
         self.view.backgroundColor = UIColor.lightGray
         
@@ -46,12 +48,21 @@ class ContentViewController: UIViewController {
 //        pageDescription.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: -50.00).isActive = true
         
         
-        textfieldEntry = UITextField(frame: CGRect.init(x: 70.0, y: 400.0, width: 300.0, height: 60.0))
+        textfieldEntry = UITextField(frame: CGRect.init(x: 70.0, y: 200.0, width: 300.0, height: 60.0))
         textfieldEntry.backgroundColor = UIColor.blue
         //textfieldEntry.delegate = self
         textfieldEntry.placeholder = "enter text here"
         textfieldEntry.clearsOnBeginEditing = true
         self.view.addSubview(textfieldEntry)
+        
+        enterBtn = UIButton.init(type: .roundedRect)
+        enterBtn = UIButton(frame: CGRect.init(x: 70.0, y: 300.0, width: 100.0, height: 50.0))
+        enterBtn.backgroundColor = UIColor.darkText
+        enterBtn.setTitle("enter!", for: .normal)
+        enterBtn.addTarget(self, action: #selector(ContentViewController.pressed), for: .touchUpInside)
+        self.view.addSubview(enterBtn)
+        
+        
 
     }
 
@@ -60,15 +71,12 @@ class ContentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func pressed() {
+        print("testing testing")
+        
+        if self.pageIndex == 0 {
+            
+        }
     }
-    */
-
+    
 }
