@@ -76,7 +76,7 @@ class ContentViewController: UIViewController {
     func pressed() {
         print("testing testing")
         
-        guard textfieldEntry.text?.isEmpty == false else { return }
+        //guard textfieldEntry.text?.isEmpty == false else {print("something is empty"); return }
         
         switch pageIndex {
         case 0:
@@ -91,12 +91,16 @@ class ContentViewController: UIViewController {
             return
         }
         
-        present(presentVC(), animated: true, completion: nil)  
+        if !(textfieldEntry.text?.isEmpty)! {
+        
+        present(NewItemViewController(), animated: true, completion: nil)
+            
+        }
     }
     
-    func presentVC() -> UIViewController {
-        let vc = NewItemViewController()
-        return vc
-    }
+//    func presentVC() -> UIViewController {
+//        let vc = NewItemViewController()
+//        return vc
+//    }
     
 }
