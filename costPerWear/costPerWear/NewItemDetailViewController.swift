@@ -43,11 +43,7 @@ class NewItemDetailViewController: UIViewController {
         self.addChildViewController((pageViewController)!)
         self.view.addSubview((pageViewController?.view)!)
         self.pageViewController?.didMove(toParentViewController: self)
-        
-        
-      
-        
-        
+
         
     }
     

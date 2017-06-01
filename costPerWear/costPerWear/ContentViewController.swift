@@ -19,8 +19,8 @@ class ContentViewController: UIViewController {
         
  
         self.view.backgroundColor = UIColor.lightGray
-        contentPage = ContentView(frame: CGRect.zero)
-        contentPage.pageLabel.text = pages[self.pageIndex].title
+        contentPage = ContentView(frame: CGRect.init(x: 0.0, y: 0.0, width: 500.00, height: 794.00))
+        contentPage.pageTitle.text = pages[self.pageIndex].title
         contentPage.pageDescription.text = pages[self.pageIndex].description
         self.view.addSubview(contentPage)
         
@@ -28,18 +28,16 @@ class ContentViewController: UIViewController {
        // Should the above be included in view controller?
         
         
-
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    func pressed() {
+    
+    func pressed(_sender: UIButton) {
         print("testing testing")
         
-        //guard textfieldEntry.text?.isEmpty == false else {print("something is empty"); return }
         
         let vcAtIndex = NewItemDetailViewController()
         guard let textfieldEntry = contentPage.textfieldEntry else { return }
@@ -62,7 +60,7 @@ class ContentViewController: UIViewController {
         
         if !(textfieldEntry.text?.isEmpty)! {
         
-        //present(NewItemViewController(), animated: true, completion: nil)
+        present(NewItemViewController(), animated: true, completion: nil)
             
             
             
