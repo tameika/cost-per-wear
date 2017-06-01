@@ -19,9 +19,10 @@ class ContentViewController: UIViewController {
         
  
         self.view.backgroundColor = UIColor.lightGray
-        
+        contentPage = ContentView(frame: CGRect.zero)
         contentPage.pageLabel.text = pages[self.pageIndex].title
         contentPage.pageDescription.text = pages[self.pageIndex].description
+        self.view.addSubview(contentPage)
         
         
        // Should the above be included in view controller?
