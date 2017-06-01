@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-
+// TODO: DELETE "NEW" FROM NAMES
 
 class NewItemView: UIView {
     
