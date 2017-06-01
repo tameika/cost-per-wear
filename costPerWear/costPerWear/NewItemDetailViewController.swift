@@ -40,6 +40,7 @@ class NewItemDetailViewController: UIViewController {
         
         self.pageViewController?.view.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height - 30.0)
         self.restartAction(sender: self)
+
         self.addChildViewController((pageViewController)!)
         self.view.addSubview((pageViewController?.view)!)
         self.pageViewController?.didMove(toParentViewController: self)
@@ -76,11 +77,15 @@ class NewItemDetailViewController: UIViewController {
 }
 
 
+//MARK: PageViewControllerDataSource Methods
+
+
 extension NewItemDetailViewController: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         let vc = viewController as! ContentViewController
-        var index = (vc.pageIndex) as Int
+       
+        var index = vc.pageIndex
         
         if (index == 0 || index == NSNotFound) {
             return nil
@@ -93,17 +98,21 @@ extension NewItemDetailViewController: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
-        let vc = viewController as! ContentViewController
-        var index = (vc.pageIndex) as Int
-        if (index == NSNotFound) {
-            return nil
+        if let vc = viewController as? ContentViewController {
+            var index = vc.pageIndex
+            if (index == NSNotFound) {
+                return nil
+            }
+            index += 1
+            if (index == pages.count) {
+                return nil
+            }
+            print(2.1)
+            return self.viewControllerAtIndex(index: index)
         }
-        index += 1
-        if (index == pages.count) {
-            return nil
-        }
-        print(2.1)
-        return self.viewControllerAtIndex(index: index)
+        
+   
+        return nil
     }
     
     

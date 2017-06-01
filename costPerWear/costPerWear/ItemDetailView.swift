@@ -31,14 +31,14 @@ class NewItemView: UIView {
 
         // MARK: encap in functions
         
-        self.newItemImage = UIImageView(frame: CGRect.init(x: 150.0, y: 100.0, width: 150.0, height: 150.0))
+        self.newItemImage = UIImageView(frame: CGRect(x: 150.0, y: 100.0, width: 150.0, height: 150.0))
         self.newItemImage.backgroundColor = UIColor.lightGray
         self.newItemImage.layer.borderWidth = 3.0
         self.newItemImage.layer.cornerRadius = 50.0
         
         self.addSubview(newItemImage)
         
-        self.newItemName = UILabel(frame: CGRect.init(x: 60.0, y: 300.0, width: 300.0, height: 60.0))
+        self.newItemName = UILabel(frame: CGRect(x: 60.0, y: 300.0, width: 300.0, height: 60.0))
         self.newItemName.backgroundColor = UIColor.lightGray
         //newItemName.delegate = self
         //newItemName.attributedPlaceholder = placeholder

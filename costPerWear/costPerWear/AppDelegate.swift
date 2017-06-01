@@ -23,11 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let nav = UINavigationController()
         
         // create a vc type to represent desired vc's
+        
+        // mainVC
         let mainView = UIViewController(nibName: nil, bundle: nil)
         
         
         // assign nav stack to the general desired future stack
         nav.viewControllers = [mainView]
+     //   nav.viewControllers = [UIViewController(nibName: nil, bundle: nil), NewItemViewController(), NewItemViewController()]
         
         (nav.viewControllers).append(NewItemDetailViewController())
         nav.viewControllers.append(NewItemViewController())

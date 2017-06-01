@@ -16,14 +16,17 @@ struct Item {
     var itemTags: [String]
     var dateCreated: String
 
-    
-    init(itemName: String, itemAge: String, itemPurchasePrice: Double, itemTags: [String], dateCreated: String) {
-        self.itemName = itemName
-        self.itemAge = itemAge
-        self.itemPurchasePrice = itemPurchasePrice
-        self.itemTags = itemTags
-        self.dateCreated = dateCreated
-    }
+//    
+//    init(itemName: String, itemAge: String, itemPurchasePrice: Double, itemTags: [String], dateCreated: String) {
+//        self.itemName = itemName
+//        self.itemAge = itemAge
+//        self.itemPurchasePrice = itemPurchasePrice
+//        self.itemTags = itemTags
+//        self.dateCreated = dateCreated
+//        
+//        
+//       
+//    }
     
 }
 
@@ -32,11 +35,11 @@ struct Page {
     
     var title: String
     var description: String
-    
-    init(title: String, description: String) {
-        self.title = title
-        self.description = description
-    }
+//    
+//    init(title: String, description: String) {
+//        self.title = title
+//        self.description = description
+//    }
 }
 
 

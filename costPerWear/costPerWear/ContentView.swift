@@ -23,7 +23,7 @@ class ContentView: UIView {
     override init(frame: CGRect){
         super.init(frame: frame)
     
-        self.pageTitle = UILabel(frame: CGRect.init(x: 70.0, y: 100.0, width: 100.0, height: 50.0))
+        self.pageTitle = UILabel(frame: CGRect(x: 70.0, y: 100.0, width: 100.0, height: 50.0))
         self.pageTitle.backgroundColor = UIColor.green
         self.addSubview(pageTitle)
         
@@ -38,11 +38,11 @@ class ContentView: UIView {
         self.textfieldEntry.clearsOnBeginEditing = true
         self.addSubview(textfieldEntry)
         
-        self.enterBtn = UIButton.init(type: .roundedRect)
-        self.enterBtn = UIButton(frame: CGRect.init(x: 70.0, y: 300.0, width: 100.0, height: 50.0))
+        self.enterBtn = UIButton(type: .roundedRect)
+        self.enterBtn = UIButton(frame: CGRect(x: 70.0, y: 300.0, width: 100.0, height: 50.0))
         self.enterBtn.backgroundColor = UIColor.darkText
         self.enterBtn.setTitle("enter!", for: .normal)
-        self.enterBtn.addTarget(self, action: #selector(ContentViewController.pressed(_sender:)), for: .touchUpInside)
+        self.enterBtn.addTarget(self, action: #selector(ContentViewController.pressed), for: .touchUpInside)
         self.addSubview(enterBtn)
         
 

@@ -19,11 +19,12 @@ class ContentViewController: UIViewController {
         
  
         self.view.backgroundColor = UIColor.lightGray
-        contentPage = ContentView(frame: CGRect.init(x: 0.0, y: 0.0, width: 500.00, height: 794.00))
+        contentPage = ContentView()
         contentPage.pageTitle.text = pages[self.pageIndex].title
         contentPage.pageDescription.text = pages[self.pageIndex].description
         self.view.addSubview(contentPage)
         
+        self.contentPage.enterBtn.addTarget(self, action: #selector(pressed), for: .touchUpInside)
         
        // Should the above be included in view controller?
         
@@ -35,7 +36,7 @@ class ContentViewController: UIViewController {
     }
     
     
-    func pressed(_sender: UIButton) {
+    func pressed() {
         print("testing testing")
         
         
@@ -45,6 +46,7 @@ class ContentViewController: UIViewController {
         switch pageIndex {
         case 0:
             itemDetails.newItemImage.image = UIImage()
+
             present(vcAtIndex.viewControllerAtIndex(index: 1), animated: true, completion: nil)
         case 1:
             itemDetails.newItemName.text = "test text"

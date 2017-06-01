@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewItemViewController: UIViewController, UITextFieldDelegate {
+class NewItemViewController: UIViewController {
     
     var newItem: NewItemView!
 
@@ -17,11 +17,19 @@ class NewItemViewController: UIViewController, UITextFieldDelegate {
 
         self.view.backgroundColor = UIColor.white
         
-        newItem = NewItemView(frame: CGRect.init(x: -20.0, y: 10.0, width: 700.0, height: 600.0))
+        newItem = NewItemView(frame: CGRect(x: -20.0, y: 10.0, width: 700.0, height: 600.0))
         self.view.addSubview(newItem)
         
 
     }
+    
+    
+//
+//    override func loadView() {
+//        super.loadView()
+//        self.view = NewItemView()
+//    }
+//    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -29,32 +37,8 @@ class NewItemViewController: UIViewController, UITextFieldDelegate {
     }
     
 
-    /*
-    // MARK: - Navigation
+  
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        return true
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        print("began editing")
-    }
-    
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        return true
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        print("ended editing")
-    }
 }
 
 
