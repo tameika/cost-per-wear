@@ -18,9 +18,11 @@
 		BC7750051EA81C82009B9B38 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7750041EA81C82009B9B38 /* ItemDetailViewController.swift */; };
 		BC7750071EA9B74E009B9B38 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7750061EA9B74E009B9B38 /* ItemDetail.swift */; };
 		BCCD9A5C1EAAABA5003C64E0 /* NewItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCD9A5B1EAAABA5003C64E0 /* NewItemDetailViewController.swift */; };
+		E84967BA077C4173C14BE0F3 /* Pods_costPerWear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D036BDF4FACFA72DFCE381 /* Pods_costPerWear.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23DC76F3BFC357CD4672D41C /* Pods-costPerWear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-costPerWear.release.xcconfig"; path = "Pods/Target Support Files/Pods-costPerWear/Pods-costPerWear.release.xcconfig"; sourceTree = "<group>"; };
 		BC3033A91EDF7FFD00332952 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BC4C49241EB8530900E149E8 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		BC774FE11EA73F4B009B9B38 /* costPerWear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = costPerWear.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,6 +36,8 @@
 		BC7750041EA81C82009B9B38 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		BC7750061EA9B74E009B9B38 /* ItemDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
 		BCCD9A5B1EAAABA5003C64E0 /* NewItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemDetailViewController.swift; sourceTree = "<group>"; };
+		D9D036BDF4FACFA72DFCE381 /* Pods_costPerWear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_costPerWear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC32A6F38C8C6C8B57026FBE /* Pods-costPerWear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-costPerWear.debug.xcconfig"; path = "Pods/Target Support Files/Pods-costPerWear/Pods-costPerWear.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E84967BA077C4173C14BE0F3 /* Pods_costPerWear.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16E750742743CA58B6498D6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC32A6F38C8C6C8B57026FBE /* Pods-costPerWear.debug.xcconfig */,
+				23DC76F3BFC357CD4672D41C /* Pods-costPerWear.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		42742CD729DD003BC7806DE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9D036BDF4FACFA72DFCE381 /* Pods_costPerWear.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BC774FD81EA73F4A009B9B38 = {
 			isa = PBXGroup;
 			children = (
 				BC774FE31EA73F4B009B9B38 /* costPerWear */,
 				BC774FE21EA73F4B009B9B38 /* Products */,
+				16E750742743CA58B6498D6A /* Pods */,
+				42742CD729DD003BC7806DE8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,9 +137,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC774FF61EA73F4B009B9B38 /* Build configuration list for PBXNativeTarget "costPerWear" */;
 			buildPhases = (
+				637AB15D15F3BF36A2AFAF1E /* [CP] Check Pods Manifest.lock */,
 				BC774FDD1EA73F4B009B9B38 /* Sources */,
 				BC774FDE1EA73F4B009B9B38 /* Frameworks */,
 				BC774FDF1EA73F4B009B9B38 /* Resources */,
+				09584193648AA42B752E3134 /* [CP] Embed Pods Frameworks */,
+				12939E8B875835AF7D0FF8E1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -172,6 +199,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09584193648AA42B752E3134 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-costPerWear/Pods-costPerWear-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		12939E8B875835AF7D0FF8E1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-costPerWear/Pods-costPerWear-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		637AB15D15F3BF36A2AFAF1E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BC774FDD1EA73F4B009B9B38 /* Sources */ = {
@@ -299,6 +374,7 @@
 		};
 		BC774FF71EA73F4B009B9B38 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC32A6F38C8C6C8B57026FBE /* Pods-costPerWear.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5TKXE57N5X;
@@ -312,6 +388,7 @@
 		};
 		BC774FF81EA73F4B009B9B38 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23DC76F3BFC357CD4672D41C /* Pods-costPerWear.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5TKXE57N5X;
