@@ -36,7 +36,7 @@ class NewItemDetailViewController: UIViewController {
         
         self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: [UIPageViewControllerOptionInterPageSpacingKey: 1.0])
         
-        //self.pageViewController.dataSource = self
+        self.pageViewController.dataSource = self
         
         self.pageViewController?.view.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height - 30.0)
         self.restartAction(sender: self)

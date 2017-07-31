@@ -16,10 +16,10 @@ class ContentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        creatConstraints()
  
         self.view.backgroundColor = UIColor.lightGray
-        contentPage = ContentView()
+        //contentPage = ContentView()
         contentPage.pageTitle.text = pages[self.pageIndex].title
         contentPage.pageDescription.text = pages[self.pageIndex].description
         self.view.addSubview(contentPage)
@@ -65,10 +65,40 @@ class ContentViewController: UIViewController {
         present(NewItemViewController(), animated: true, completion: nil)
             
             
-            
-        
-            
         }
     }
+    
+    
+    func creatConstraints() {
+        
+        contentPage.pageTitle.translatesAutoresizingMaskIntoConstraints = false
+        contentPage.pageTitle.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0.0).isActive = true
+        contentPage.pageTitle.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 0.0).isActive = true
+        contentPage.pageTitle.heightAnchor.constraint(equalTo: self.view.heightAnchor, constant: -50.0).isActive = true
+        contentPage.pageTitle.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: -50.0).isActive = true
+        
+        contentPage.pageDescription.translatesAutoresizingMaskIntoConstraints = false
+        contentPage.pageDescription.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0.0).isActive = true
+        contentPage.pageDescription.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 0.0).isActive = true
+        contentPage.pageDescription.heightAnchor.constraint(equalTo: self.view.heightAnchor, constant: -50.0).isActive = true
+        contentPage.pageDescription.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: -50.0).isActive = true
+        
+        
+        contentPage.textfieldEntry.translatesAutoresizingMaskIntoConstraints = false
+        contentPage.textfieldEntry.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0.0).isActive = true
+        contentPage.textfieldEntry.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 0.0).isActive = true
+        contentPage.textfieldEntry.heightAnchor.constraint(equalTo: self.view.heightAnchor, constant: -50.0).isActive = true
+        contentPage.textfieldEntry.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: -50.0).isActive = true
+        
+        
+        contentPage.enterBtn.translatesAutoresizingMaskIntoConstraints = false
+        contentPage.enterBtn.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0.0).isActive = true
+        contentPage.enterBtn.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 0.0).isActive = true
+        contentPage.enterBtn.heightAnchor.constraint(equalTo: self.view.heightAnchor, constant: -50.0).isActive = true
+        contentPage.enterBtn.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: -50.0).isActive = true
+
+
+    }
+    
   
 }

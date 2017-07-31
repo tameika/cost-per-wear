@@ -22,7 +22,7 @@ class ContentView: UIView {
     
     override init(frame: CGRect){
         super.init(frame: frame)
-    
+        
         self.pageTitle = UILabel(frame: CGRect(x: 70.0, y: 100.0, width: 100.0, height: 50.0))
         self.pageTitle.backgroundColor = UIColor.green
         self.addSubview(pageTitle)
@@ -45,27 +45,27 @@ class ContentView: UIView {
         self.enterBtn.addTarget(self, action: #selector(ContentViewController.pressed), for: .touchUpInside)
         self.addSubview(enterBtn)
         
-
+        
     }
     
     func createConstrains() {
         
         
-        //        pageLabel.translatesAutoresizingMaskIntoConstraints = false
-        //
-        //        pageLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0.0).isActive = true
-        //        pageLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 0.0).isActive = true
-        //        pageLabel.heightAnchor.constraint(equalTo: self.view.heightAnchor, constant: -50.0).isActive = true
-        //        pageLabel.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: -50.00).isActive = true
+        pageTitle.translatesAutoresizingMaskIntoConstraints = false
         
-        //        pageDescription.translatesAutoresizingMaskIntoConstraints = false
-        //
-        //        pageDescription.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0.0).isActive = true
-        //        pageDescription.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 0.0).isActive = true
-        //        pageDescription.heightAnchor.constraint(equalTo: self.view.heightAnchor, constant: -50.0).isActive = true
-        //        pageDescription.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: -50.00).isActive = true
+        pageTitle.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0.0).isActive = true
+        pageTitle.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 0.0).isActive = true
+        pageTitle.heightAnchor.constraint(equalTo: self.view.heightAnchor, constant: -50.0).isActive = true
+        pageTitle.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: -50.00).isActive = true
         
-
+        pageDescription.translatesAutoresizingMaskIntoConstraints = false
+        
+        pageDescription.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0.0).isActive = true
+        pageDescription.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 0.0).isActive = true
+        pageDescription.heightAnchor.constraint(equalTo: self.view.heightAnchor, constant: -50.0).isActive = true
+        pageDescription.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: -50.00).isActive = true
+        
+        
     }
     
     
