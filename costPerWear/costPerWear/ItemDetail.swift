@@ -13,6 +13,7 @@ struct Item {
     var itemName: String
     var itemAge: String
     var itemPurchasePrice: Double
+    var itemType: [ClothingType]
     var itemTags: [String]
     var dateCreated: String
     
@@ -43,6 +44,17 @@ enum ClothingPart {
     case material
     case season
     case fit
+    
+    static func clothes(with type: ClothingType) -> [ClothingPart] {
+        
+        switch type {
+        case .top: return [.sleeve, .neck, .color, .material, .season, .fit]
+        case .bottom: return [.rise, .length, .material, .fit, .season, .color]
+        case .dress: return [.neck, .sleeve, .waist, .length, .color, .material, .season, .fit]
+        case .shoe: return []
+        }
+        
+    }
     
     
 }
@@ -111,6 +123,16 @@ enum Material: String {
     case linen = "Linen"
     case silk = "Silk"
     case satin = "Satin"
+    case canvas = "Canvas"
+    case denim = "Denim"
+    
+}
+
+enum Toe: String {
+    case openToe = "Open-Toe"
+    case pointedToe = "Pointed"
+    case squareToe = "Square"
+    case roundToe = "Round"
     
 }
 enum ClothingSeason: String {
