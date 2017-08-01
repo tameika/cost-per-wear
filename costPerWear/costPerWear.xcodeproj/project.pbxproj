@@ -17,7 +17,7 @@
 		BC7750031EA81C29009B9B38 /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7750021EA81C29009B9B38 /* ItemDetailView.swift */; };
 		BC7750051EA81C82009B9B38 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7750041EA81C82009B9B38 /* ItemDetailViewController.swift */; };
 		BC7750071EA9B74E009B9B38 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7750061EA9B74E009B9B38 /* ItemDetail.swift */; };
-		BCC261A81F2FE48500006CC4 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261A71F2FE48500006CC4 /* Users.swift */; };
+		BCC261A81F2FE48500006CC4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261A71F2FE48500006CC4 /* User.swift */; };
 		BCCD9A5C1EAAABA5003C64E0 /* NewItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCD9A5B1EAAABA5003C64E0 /* NewItemDetailViewController.swift */; };
 		E84967BA077C4173C14BE0F3 /* Pods_costPerWear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D036BDF4FACFA72DFCE381 /* Pods_costPerWear.framework */; };
 /* End PBXBuildFile section */
@@ -36,7 +36,7 @@
 		BC7750021EA81C29009B9B38 /* ItemDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
 		BC7750041EA81C82009B9B38 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		BC7750061EA9B74E009B9B38 /* ItemDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
-		BCC261A71F2FE48500006CC4 /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		BCC261A71F2FE48500006CC4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BCCD9A5B1EAAABA5003C64E0 /* NewItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemDetailViewController.swift; sourceTree = "<group>"; };
 		D9D036BDF4FACFA72DFCE381 /* Pods_costPerWear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_costPerWear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC32A6F38C8C6C8B57026FBE /* Pods-costPerWear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-costPerWear.debug.xcconfig"; path = "Pods/Target Support Files/Pods-costPerWear/Pods-costPerWear.debug.xcconfig"; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				BC7750061EA9B74E009B9B38 /* ItemDetail.swift */,
-				BCC261A71F2FE48500006CC4 /* Users.swift */,
+				BCC261A71F2FE48500006CC4 /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -258,7 +258,7 @@
 			files = (
 				BC4C49251EB8530900E149E8 /* ContentViewController.swift in Sources */,
 				BC7750031EA81C29009B9B38 /* ItemDetailView.swift in Sources */,
-				BCC261A81F2FE48500006CC4 /* Users.swift in Sources */,
+				BCC261A81F2FE48500006CC4 /* User.swift in Sources */,
 				BC7750071EA9B74E009B9B38 /* ItemDetail.swift in Sources */,
 				BC774FE71EA73F4B009B9B38 /* ViewController.swift in Sources */,
 				BC7750051EA81C82009B9B38 /* ItemDetailViewController.swift in Sources */,
