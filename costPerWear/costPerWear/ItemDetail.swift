@@ -14,9 +14,13 @@ struct Item {
     var itemAge: String
     var itemPurchasePrice: Double
     var itemType: [ClothingType]
-    var itemTags: [String]
+    var itemTags: [ClothingPart]
     var dateCreated: String
+    var numberOfWears: Int
     
+    static func calculateCostPerWear() {
+    
+    }
 }
 
 
@@ -161,6 +165,7 @@ enum Silhouette: String {
     case bodyConscious = "Body-Con"
     case oversized = "Oversized"
     case relaxed = "Relaxed"
+    case formFitting = "Form Fitting"
 }
 
 
