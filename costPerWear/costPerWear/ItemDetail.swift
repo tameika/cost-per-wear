@@ -35,7 +35,8 @@ enum ClothingPart {
     case rise
     case waist
     case length
-    case heel
+    case heelStyle
+    case heelHeight
     case toe
     case ankle
     case opening
@@ -43,15 +44,15 @@ enum ClothingPart {
     case color
     case material
     case season
-    case fit
+    case silhouette
     
     static func clothes(with type: ClothingType) -> [ClothingPart] {
         
         switch type {
-        case .top: return [.sleeve, .neck, .color, .material, .season, .fit]
-        case .bottom: return [.rise, .length, .material, .fit, .season, .color]
-        case .dress: return [.neck, .sleeve, .waist, .length, .color, .material, .season, .fit]
-        case .shoe: return []
+        case .top: return [.sleeve, .neck, .color, .material, .season, .silhouette]
+        case .bottom: return [.rise, .length, .material, .silhouette, .season, .color]
+        case .dress: return [.neck, .sleeve, .waist, .length, .color, .material, .season, .silhouette]
+        case .shoe: return [.heelStyle, .heelHeight, .toe, .ankle, .opening, .color, .material, .season]
         }
         
     }
@@ -135,6 +136,34 @@ enum Toe: String {
     case roundToe = "Round"
     
 }
+
+enum HeelStyle: String {
+    
+    case columnHeel = "Column Heel"
+    case stilettoHeel = "Stiletto Heel"
+    case blockHeel = "Block Heel"
+    case skinnyHeel = "Skinny Heel"
+    case cutOutHeel = "Cut-Out Heel"
+    case stackedHeel = "Stacked Heel"
+    case curvedHeel = "Curved Heel"
+    case wedgeHeel = "Wedge Heel"
+}
+
+enum HeelHeight: String {
+    case flat = "Flat"
+    case kittenHeel = "Kitten Heel"
+    case highHeel = "High Heel"
+
+}
+
+enum Silhouette: String {
+    
+    case bodyConscious = "Body-Con"
+    case oversized = "Oversized"
+    case relaxed = "Relaxed"
+}
+
+
 enum ClothingSeason: String {
     
     case summer = "Summer"
