@@ -11,15 +11,16 @@ import UIKit
 
 // TODO: DELETE "NEW" FROM NAMES
 
-class NewItemView: UIView {
+class ItemView: UIView {
     
     // MARK: make lazy
     
-    var newItemImage: UIImageView!
-    var newItemName: UILabel!
-    var newItemAge: UILabel!
-    var newItemPurchasePrice: UILabel!
-    var newItemDateCreated: UILabel!
+    var itemImage: UIImageView!
+    var itemName: UILabel!
+    var itemAge: UILabel!
+    var itemPurchasePrice: UILabel!
+    var itemDateAdded: UILabel!
+    
     
     
     required init?(coder aDecoder: NSCoder) {
@@ -31,37 +32,37 @@ class NewItemView: UIView {
 
         // MARK: encap in functions
         
-        self.newItemImage = UIImageView(frame: CGRect(x: 150.0, y: 100.0, width: 150.0, height: 150.0))
-        self.newItemImage.backgroundColor = UIColor.lightGray
-        self.newItemImage.layer.borderWidth = 3.0
-        self.newItemImage.layer.cornerRadius = 50.0
+        self.itemImage = UIImageView(frame: CGRect(x: 150.0, y: 100.0, width: 150.0, height: 150.0))
+        self.itemImage.backgroundColor = UIColor.lightGray
+        self.itemImage.layer.borderWidth = 3.0
+        self.itemImage.layer.cornerRadius = 50.0
         
-        self.addSubview(newItemImage)
+        self.addSubview(itemImage)
         
-        self.newItemName = UILabel(frame: CGRect(x: 60.0, y: 300.0, width: 300.0, height: 60.0))
-        self.newItemName.backgroundColor = UIColor.lightGray
+        self.itemName = UILabel(frame: CGRect(x: 60.0, y: 300.0, width: 300.0, height: 60.0))
+        self.itemName.backgroundColor = UIColor.lightGray
         //newItemName.delegate = self
         //newItemName.attributedPlaceholder = placeholder
         //newItemName.clearsOnBeginEditing = true
         
-        self.addSubview(newItemName)
+        self.addSubview(itemName)
         
-        self.newItemAge = UILabel(frame: CGRect.init(x: 60.0, y: 400.0, width: 300.0, height: 60.0))
-        self.newItemAge.backgroundColor = UIColor.lightGray
+        self.itemAge = UILabel(frame: CGRect.init(x: 60.0, y: 400.0, width: 300.0, height: 60.0))
+        self.itemAge.backgroundColor = UIColor.lightGray
         //newItemAge.delegate = self
         
-        self.addSubview(newItemAge)
+        self.addSubview(itemAge)
         
-        self.newItemPurchasePrice = UILabel(frame: CGRect.init(x: 120.0, y: 500.0, width: 100.0, height: 60.0))
-        self.newItemPurchasePrice.backgroundColor = UIColor.lightGray
+        self.itemPurchasePrice = UILabel(frame: CGRect.init(x: 120.0, y: 500.0, width: 100.0, height: 60.0))
+        self.itemPurchasePrice.backgroundColor = UIColor.lightGray
         //newItemPurchasePrice.delegate = self
         
-        self.addSubview(newItemPurchasePrice)
+        self.addSubview(itemPurchasePrice)
         
-        self.newItemDateCreated = UILabel(frame: CGRect.init(x: 200.0, y: 260.0, width: 50.0, height: 20.0))
-        self.newItemDateCreated.backgroundColor = UIColor.lightGray
+        self.itemDateAdded = UILabel(frame: CGRect.init(x: 200.0, y: 260.0, width: 50.0, height: 20.0))
+        self.itemDateAdded.backgroundColor = UIColor.lightGray
         
-        self.addSubview(newItemDateCreated)
+        self.addSubview(itemDateAdded)
         
         
     }
@@ -69,7 +70,7 @@ class NewItemView: UIView {
 }
 
 
-extension NewItemView: UITextFieldDelegate {
+extension ItemView: UITextFieldDelegate {
     
     var placeholder: NSAttributedString {return NSAttributedString(string: "enter here", attributes: [NSForegroundColorAttributeName : UIColor.lightText])}
     
