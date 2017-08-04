@@ -8,19 +8,43 @@
 
 import Foundation
 
-struct Item {
+
+
+protocol CostPerWear {
+    
+    static var costPerWear: Double { get set }
+}
+
+struct Item: CostPerWear {
+    internal static var costPerWear: Double = 0.0
+
     
     var itemName: String
     var itemAge: String
-    var itemPurchasePrice: Double
+    static var itemPurchasePrice: Double = 0.0
     var itemType: [ClothingType]
     var itemTags: [ClothingPart]
     var dateCreated: String
-    var numberOfWears: Int
+    static var numberOfWears: Int = 0
     
-    static func calculateCostPerWear() {
     
+    
+    static var calculateCostPerWear: Double {
+        
+        get {
+            
+           return costPerWear
+        }
+        
+        set {
+            
+            costPerWear = itemPurchasePrice / Double(numberOfWears)
+        }
+        
     }
+    
+    
+    
 }
 
 
