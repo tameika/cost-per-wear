@@ -14,8 +14,8 @@ class NewItemViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.view.backgroundColor = UIColor.white
+        self.navigationController?.navigationBar.isHidden = true 
+        self.view.backgroundColor = UIColor.rose
         
         newItem = ItemDetailView(frame: CGRect(x: -20.0, y: 10.0, width: 700.0, height: 600.0))
         self.view.addSubview(newItem)

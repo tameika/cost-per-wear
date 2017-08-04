@@ -34,7 +34,7 @@ class ItemDetailView: UIView {
         // MARK : ITEM IMAGE VIEW
         
         self.itemImage = UIImageView(frame: CGRect(x: 150.0, y: 100.0, width: 150.0, height: 150.0))
-        self.itemImage.backgroundColor = UIColor.lightGray
+        self.itemImage.backgroundColor = UIColor.bone
         self.itemImage.layer.borderWidth = 3.0
         self.itemImage.layer.cornerRadius = 50.0
         self.addSubview(itemImage)
@@ -43,7 +43,7 @@ class ItemDetailView: UIView {
         // MARK : ITEM NAME LABEL
         
         self.itemName = UILabel(frame: CGRect(x: 60.0, y: 300.0, width: 300.0, height: 60.0))
-        self.itemName.backgroundColor = UIColor.lightGray
+        self.itemName.backgroundColor = UIColor.bone
         //newItemName.delegate = self
         //newItemName.attributedPlaceholder = placeholder
         //newItemName.clearsOnBeginEditing = true
@@ -53,20 +53,19 @@ class ItemDetailView: UIView {
         // MARK : ITEM AGE LABEL
         
         self.itemAge = UILabel(frame: CGRect.init(x: 60.0, y: 400.0, width: 300.0, height: 60.0))
-        self.itemAge.backgroundColor = UIColor.lightGray
+        self.itemAge.backgroundColor = UIColor.bone
         self.addSubview(itemAge)
         
         // MARK : PURCHASE PRICE LABEL
         
         self.itemPurchasePrice = UILabel(frame: CGRect.init(x: 120.0, y: 500.0, width: 100.0, height: 60.0))
-        self.itemPurchasePrice.backgroundColor = UIColor.lightGray
-        self.addSubview(itemPurchasePrice)
+        self.itemPurchasePrice.backgroundColor = UIColor.bone
         
         
         // MARK : DATE ADDED LABEL
         
         self.itemDateAdded = UILabel(frame: CGRect.init(x: 200.0, y: 260.0, width: 50.0, height: 20.0))
-        self.itemDateAdded.backgroundColor = UIColor.lightGray
+        self.itemDateAdded.backgroundColor = UIColor.bone
         self.addSubview(itemDateAdded)
         
         

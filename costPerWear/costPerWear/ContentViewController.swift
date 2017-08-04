@@ -12,7 +12,7 @@ class ContentViewController: UIViewController {
     
     var pageIndex = 0
     var contentPage = ContentView()
-    var itemDetails = NewItemView()
+    var itemDetails = ItemDetailView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,17 +45,17 @@ class ContentViewController: UIViewController {
         
         switch pageIndex {
         case 0:
-            itemDetails.newItemImage.image = UIImage()
+            itemDetails.itemImage.image = UIImage()
 
             present(vcAtIndex.viewControllerAtIndex(index: 1), animated: true, completion: nil)
         case 1:
-            itemDetails.newItemName.text = "test text"
+            itemDetails.itemName.text = "test text"
             present(vcAtIndex.viewControllerAtIndex(index: 2), animated: true, completion: nil)
         case 2:
-            itemDetails.newItemAge.text = textfieldEntry.text
+            itemDetails.itemAge.text = textfieldEntry.text
             present(vcAtIndex.viewControllerAtIndex(index: 3), animated: true, completion: nil)
         case 3:
-            itemDetails.newItemPurchasePrice.text = textfieldEntry.text
+            itemDetails.itemPurchasePrice.text = textfieldEntry.text
         default:
             return
         }

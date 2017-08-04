@@ -95,11 +95,11 @@
 			isa = PBXGroup;
 			children = (
 				BC774FE41EA73F4B009B9B38 /* AppDelegate.swift */,
-				BC7750011EA81915009B9B38 /* View */,
+				BCC261AB1F3503E400006CC4 /* Constants */,
 				BC774FFF1EA818C4009B9B38 /* Model */,
+				BC7750011EA81915009B9B38 /* View */,
 				BC7750001EA818D5009B9B38 /* Controller */,
 				BC774FE61EA73F4B009B9B38 /* ViewController.swift */,
-				BCC261A91F34F7D300006CC4 /* Extensions.swift */,
 				BC774FEE1EA73F4B009B9B38 /* Assets.xcassets */,
 				BC774FF31EA73F4B009B9B38 /* Info.plist */,
 				BC774FEB1EA73F4B009B9B38 /* costPerWear.xcdatamodeld */,
@@ -134,6 +134,14 @@
 				BC3033A91EDF7FFD00332952 /* ContentView.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		BCC261AB1F3503E400006CC4 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				BCC261A91F34F7D300006CC4 /* Extensions.swift */,
+			);
+			name = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
