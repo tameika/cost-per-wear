@@ -1,5 +1,5 @@
 //
-//  NewItemView.swift
+//  ItemDetailView.swift
 //  costPerWear
 //
 //  Created by Tameika Lawrence on 4/19/17.
@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-// TODO: DELETE "NEW" FROM NAMES
+// TODO: encap in functions?
 
-class ItemView: UIView {
+class ItemDetailView: UIView {
     
     // MARK: make lazy
     
@@ -20,6 +20,7 @@ class ItemView: UIView {
     var itemAge: UILabel!
     var itemPurchasePrice: UILabel!
     var itemDateAdded: UILabel!
+    var itemCostPerWear: UILabel!
     
     
     
@@ -30,14 +31,16 @@ class ItemView: UIView {
     override init(frame: CGRect){
         super.init(frame: frame)
 
-        // MARK: encap in functions
+        // MARK : ITEM IMAGE VIEW
         
         self.itemImage = UIImageView(frame: CGRect(x: 150.0, y: 100.0, width: 150.0, height: 150.0))
         self.itemImage.backgroundColor = UIColor.lightGray
         self.itemImage.layer.borderWidth = 3.0
         self.itemImage.layer.cornerRadius = 50.0
-        
         self.addSubview(itemImage)
+        
+        
+        // MARK : ITEM NAME LABEL
         
         self.itemName = UILabel(frame: CGRect(x: 60.0, y: 300.0, width: 300.0, height: 60.0))
         self.itemName.backgroundColor = UIColor.lightGray
@@ -49,19 +52,19 @@ class ItemView: UIView {
         
         self.itemAge = UILabel(frame: CGRect.init(x: 60.0, y: 400.0, width: 300.0, height: 60.0))
         self.itemAge.backgroundColor = UIColor.lightGray
-        //newItemAge.delegate = self
-        
         self.addSubview(itemAge)
+        
+        // MARK : PURCHASE PRICE LABEL
         
         self.itemPurchasePrice = UILabel(frame: CGRect.init(x: 120.0, y: 500.0, width: 100.0, height: 60.0))
         self.itemPurchasePrice.backgroundColor = UIColor.lightGray
-        //newItemPurchasePrice.delegate = self
-        
         self.addSubview(itemPurchasePrice)
+        
+        
+        // MARK : DATE ADDED LABEL
         
         self.itemDateAdded = UILabel(frame: CGRect.init(x: 200.0, y: 260.0, width: 50.0, height: 20.0))
         self.itemDateAdded.backgroundColor = UIColor.lightGray
-        
         self.addSubview(itemDateAdded)
         
         
@@ -70,7 +73,7 @@ class ItemView: UIView {
 }
 
 
-extension ItemView: UITextFieldDelegate {
+extension ItemDetailView: UITextFieldDelegate {
     
     var placeholder: NSAttributedString {return NSAttributedString(string: "enter here", attributes: [NSForegroundColorAttributeName : UIColor.lightText])}
     

@@ -10,14 +10,14 @@ import UIKit
 
 class NewItemViewController: UIViewController {
     
-    var newItem: NewItemView!
+    var newItem: ItemDetailView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.view.backgroundColor = UIColor.white
         
-        newItem = NewItemView(frame: CGRect(x: -20.0, y: 10.0, width: 700.0, height: 600.0))
+        newItem = ItemDetailView(frame: CGRect(x: -20.0, y: 10.0, width: 700.0, height: 600.0))
         self.view.addSubview(newItem)
         
 
