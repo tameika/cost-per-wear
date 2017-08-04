@@ -47,8 +47,10 @@ class ItemDetailView: UIView {
         //newItemName.delegate = self
         //newItemName.attributedPlaceholder = placeholder
         //newItemName.clearsOnBeginEditing = true
-        
         self.addSubview(itemName)
+        
+        
+        // MARK : ITEM AGE LABEL
         
         self.itemAge = UILabel(frame: CGRect.init(x: 60.0, y: 400.0, width: 300.0, height: 60.0))
         self.itemAge.backgroundColor = UIColor.lightGray
