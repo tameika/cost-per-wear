@@ -42,49 +42,47 @@ class ItemDetailView: UIView {
         
         self.addSubview(itemImage)
 
-        itemImage.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        itemImage.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        itemImage.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 50.0).isActive = true
+        itemImage.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 100.0).isActive = true
         itemImage.heightAnchor.constraint(equalToConstant: 40.0).isActive = true
         itemImage.widthAnchor.constraint(equalToConstant: 70.0).isActive = true
         
         
         
-//        // MARK : DATE ADDED LABEL
-//        
-//        self.itemDateAdded.frame = CGRect.zero
-//        self.itemDateAdded.backgroundColor = UIColor.bone
-//        self.addSubview(itemDateAdded)
-//        
-//        
-//        // MARK : ITEM NAME LABEL
-//        
-//        self.itemName.frame = CGRect.zero
-//        self.itemName.backgroundColor = UIColor.bone
-//        //newItemName.delegate = self
-//        //newItemName.attributedPlaceholder = placeholder
-//        //newItemName.clearsOnBeginEditing = true
-//        self.addSubview(itemName)
-//        
-//        
-//        // MARK : ITEM AGE LABEL
-//        
-//        self.itemAge.frame = CGRect.zero
-//        self.itemAge.backgroundColor = UIColor.bone
-//        self.addSubview(itemAge)
-//        
-//        // MARK : PURCHASE PRICE LABEL
-//        
-//        self.itemPurchasePrice.frame = CGRect.zero
-//        self.itemPurchasePrice.backgroundColor = UIColor.bone
-//        self.addSubview(itemPurchasePrice)
-//        
-//        
-//        // MARK : COST PER WEAR LABEL
-//        
-//        self.itemCostPerWear.frame = CGRect.zero
-//        self.itemCostPerWear.backgroundColor = UIColor.bone
-//        self.addSubview(itemCostPerWear)
-//        
+        // MARK : DATE ADDED LABEL
+        
+        self.itemDateAdded = UILabel.init(frame: CGRect.zero)
+        self.itemDateAdded.backgroundColor = UIColor.bone
+        self.addSubview(itemDateAdded)
+        
+        
+        
+        // MARK : ITEM NAME LABEL
+        
+        self.itemName = UILabel.init(frame: CGRect.zero)
+        self.itemName.backgroundColor = UIColor.bone
+        self.addSubview(itemName)
+        
+        
+        // MARK : ITEM AGE LABEL
+        
+        self.itemAge = UILabel.init(frame: CGRect.zero)
+        self.itemAge.backgroundColor = UIColor.bone
+        self.addSubview(itemAge)
+        
+        // MARK : PURCHASE PRICE LABEL
+        
+        self.itemPurchasePrice = UILabel.init(frame: CGRect.zero)
+        self.itemPurchasePrice.backgroundColor = UIColor.bone
+        self.addSubview(itemPurchasePrice)
+        
+        
+        // MARK : COST PER WEAR LABEL
+        
+        self.itemCostPerWear = UILabel.init(frame: CGRect.zero)
+        self.itemCostPerWear.backgroundColor = UIColor.bone
+        self.addSubview(itemCostPerWear)
+        
         
     }
     
