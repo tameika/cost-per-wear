@@ -31,8 +31,9 @@ class ItemViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
         
         //createGradientLayer()
+        createColorSets()
        
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ItemViewController.handleTap(_:)))
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: handleTap(_:))
         self.view.addGestureRecognizer(tapGestureRecognizer)
         
         self.view.backgroundColor = UIColor.rose
@@ -46,12 +47,29 @@ class ItemViewController: UIViewController {
     
     func handleTap(gestureRecognizer: UITapGestureRecognizer) {
         
+        if currentColorSet < colorSets.count - 1 {
+            
+            currentColorSet += 1
+        } else {
+            
+            currentColorSet = 0
+        }
         
+        let colorChangeAnimation = CABasicAnimation(keyPath: "colors")
+        colorChangeAnimation.duration = 2.0
+        colorChangeAnimation.toValue = colorSets[currentColorSet]
+        colorChangeAnimation.fillMode = kCAFillModeForwards
+        colorChangeAnimation.isRemovedOnCompletion = false
+        gradientLayer.add(colorChangeAnimation, forKey: "colorChange")
     }
+    
     
     func createColorSets() {
         
         colorSets.append([UIColor.bloodOrange.cgColor, UIColor.rose.cgColor])
+        colorSets.append([UIColor.persianGreen.cgColor, UIColor.deepTeal.cgColor])
+        
+        currentColorSet = 0
         
     }
     
