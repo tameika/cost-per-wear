@@ -60,7 +60,7 @@ class ItemViewController: UIViewController {
         }
         
         let colorChangeAnimation = CABasicAnimation(keyPath: "colors")
-        colorChangeAnimation.duration = 2.0
+        colorChangeAnimation.duration = 1.0
         colorChangeAnimation.toValue = colorSets[currentColorSet]
         colorChangeAnimation.fillMode = kCAFillModeForwards
         colorChangeAnimation.isRemovedOnCompletion = false
@@ -71,7 +71,9 @@ class ItemViewController: UIViewController {
     func createColorSets() {
         
         colorSets.append([UIColor.bloodOrange.cgColor, UIColor.rose.cgColor])
-        colorSets.append([UIColor.persianGreen.cgColor, UIColor.deepTeal.cgColor])
+        colorSets.append([UIColor.lilacMute.cgColor, UIColor.eggplantMute.cgColor])
+        colorSets.append([UIColor.deepTealNew.cgColor, UIColor.persianGreen.cgColor])
+        colorSets.append([UIColor.blueSmokeDeep.cgColor, UIColor.blueSmoke.cgColor])
         
         currentColorSet = 0
         
