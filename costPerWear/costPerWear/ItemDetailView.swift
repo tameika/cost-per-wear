@@ -40,12 +40,13 @@ class ItemDetailView: UIView {
         self.itemImage.layer.borderWidth = 3.0
         self.itemImage.layer.cornerRadius = 50.0
         
-//        itemImage.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-//        itemImage.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        self.addSubview(itemImage)
+
+        itemImage.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        itemImage.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         itemImage.heightAnchor.constraint(equalToConstant: 40.0).isActive = true
         itemImage.widthAnchor.constraint(equalToConstant: 70.0).isActive = true
         
-        self.addSubview(itemImage)
         
         
 //        // MARK : DATE ADDED LABEL
