@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      //   nav.viewControllers = [UIViewController(nibName: nil, bundle: nil), NewItemViewController(), NewItemViewController()]
         
         (nav.viewControllers).append(NewItemDetailViewController())
-        nav.viewControllers.append(NewItemViewController())
+        nav.viewControllers.append(ItemViewController())
         
         // set nav vc as initial (root) vc upon launch
         window?.rootViewController = nav
