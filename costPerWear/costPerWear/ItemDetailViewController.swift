@@ -21,22 +21,26 @@ class ItemViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
         createGradientLayer()
         
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("step 0")
         self.navigationController?.navigationBar.isHidden = true
-        
+        print("step 1")
         //createGradientLayer()
+        print("GradientLayer() was here")
+        print("step 2")
         createColorSets()
-       
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: handleTap(_:))
+        print("step 3")
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(recognizer:)))
         self.view.addGestureRecognizer(tapGestureRecognizer)
-        
-        self.view.backgroundColor = UIColor.rose
+        print("step 4")
+        view.isUserInteractionEnabled = true
+        print("step 5")
         
         itemDetails = ItemDetailView(frame: CGRect.zero)
         self.view.addSubview(itemDetails)
@@ -45,7 +49,7 @@ class ItemViewController: UIViewController {
     }
     
     
-    func handleTap(gestureRecognizer: UITapGestureRecognizer) {
+    func handleTap(recognizer: UITapGestureRecognizer) {
         
         if currentColorSet < colorSets.count - 1 {
             
@@ -78,7 +82,7 @@ class ItemViewController: UIViewController {
         
         gradientLayer.frame = self.view.bounds
         gradientLayer.colors = colorSets[currentColorSet]
-        gradientLayer.locations = [0.0, 0.45]
+        gradientLayer.locations = [0.0, 0.40]
         self.view.layer.addSublayer(gradientLayer)
     }
    
