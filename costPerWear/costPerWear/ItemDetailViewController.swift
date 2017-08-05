@@ -10,33 +10,21 @@ import UIKit
 
 class NewItemViewController: UIViewController {
     
-    var newItem: ItemDetailView!
+    var itemDetails = ItemDetailView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true 
         self.view.backgroundColor = UIColor.rose
         
-        newItem = ItemDetailView(frame: CGRect(x: -20.0, y: 10.0, width: 700.0, height: 600.0))
-        self.view.addSubview(newItem)
+        itemDetails = ItemDetailView(frame: CGRect.zero)
+        self.view.addSubview(itemDetails)
         
 
     }
     
     
-//
-//    override func loadView() {
-//        super.loadView()
-//        self.view = NewItemView()
-//    }
-//    
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
+   
   
 
 }
