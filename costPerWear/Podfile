@@ -4,6 +4,8 @@ platform :ios, '10.2'
 target 'costPerWear' do
   use_frameworks!
   # Pods for costPerWear
+
+ pod 'SnapKit', '~> 3.0'
 	
     pod 'AWSAutoScaling'
     pod 'AWSCloudWatch'
