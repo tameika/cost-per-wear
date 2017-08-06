@@ -27,3 +27,19 @@ extension UIColor {
     static let eggplantMute = UIColor(red:0.31, green:0.20, blue:0.46, alpha:1.0)
 
 }
+
+
+extension ItemDetailView: UITextFieldDelegate {
+    
+    var placeholder: NSAttributedString {return NSAttributedString(string: "enter here", attributes: [NSForegroundColorAttributeName : UIColor.lightText])}
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        print("hey")
+        return false
+    }
+    
+    
+    
+}
