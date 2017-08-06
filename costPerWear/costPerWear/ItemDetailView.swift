@@ -23,7 +23,6 @@ class ItemDetailView: UIView {
     var itemCostPerWear: UILabel!
     
     
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -33,20 +32,21 @@ class ItemDetailView: UIView {
 
         // MARK : ITEM IMAGE VIEW
         
-        
+        print("step 2")
         self.itemImage = UIImageView.init(frame: CGRect.zero)
         self.itemImage.translatesAutoresizingMaskIntoConstraints = false
         self.itemImage.backgroundColor = UIColor.bone
         self.itemImage.layer.borderWidth = 3.0
         self.itemImage.layer.cornerRadius = 50.0
-        
+        print("step 3")
         self.addSubview(itemImage)
-
-        itemImage.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 50.0).isActive = true
-        itemImage.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 100.0).isActive = true
-        itemImage.heightAnchor.constraint(equalToConstant: 40.0).isActive = true
-        itemImage.widthAnchor.constraint(equalToConstant: 70.0).isActive = true
+        print("step 4")
+        itemImage.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 100.0).isActive = true
+        itemImage.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 400.0).isActive = true
+        itemImage.heightAnchor.constraint(equalToConstant: 50.0).isActive = true
+        itemImage.widthAnchor.constraint(equalToConstant: 80.0).isActive = true
         
+        print("step 5")
         
         
         // MARK : DATE ADDED LABEL
