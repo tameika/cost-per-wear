@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import SnapKit
+
 
 // TODO: encap in functions?
 
@@ -35,51 +37,93 @@ class ItemDetailView: UIView {
         itemImage = UIImageView.init(frame: CGRect.zero)
         itemImage.translatesAutoresizingMaskIntoConstraints = false
         itemImage.backgroundColor = UIColor.bone
-        itemImage.layer.cornerRadius = 10.0
+        itemImage.layer.cornerRadius = 15.0
         addSubview(itemImage)
-        itemImage.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 185.0).isActive = true
-        itemImage.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 200.0).isActive = true
-        itemImage.heightAnchor.constraint(equalToConstant: 150.0).isActive = true
-        itemImage.widthAnchor.constraint(equalToConstant: 150.0).isActive = true
-        
+        itemImage.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview().inset(185.0)
+            make.centerY.equalToSuperview().inset(150.0)
+            make.height.equalTo(150.0)
+            make.width.equalTo(150.0)
+        }
         
         
         // MARK : DATE ADDED LABEL
-        
         itemDateAdded = UILabel.init(frame: CGRect.zero)
         itemDateAdded.translatesAutoresizingMaskIntoConstraints = false
         itemDateAdded.backgroundColor = UIColor.bone
-        itemDateAdded.layer.cornerRadius = 10.0
+        itemDateAdded.layer.cornerRadius = itemDateAdded.frame.size.height * 0.50
+        itemDateAdded.clipsToBounds = true
         addSubview(itemDateAdded)
+        itemDateAdded.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview().inset(185.0)
+            make.centerY.equalToSuperview().inset(250.0)
+            make.height.equalTo(20)
+            make.width.equalTo(70)
+        }
         
         
         
         
         // MARK : ITEM NAME LABEL
         
-        self.itemName = UILabel.init(frame: CGRect.zero)
-        self.itemName.backgroundColor = UIColor.bone
-        self.addSubview(itemName)
+        itemName = UILabel.init(frame: CGRect.zero)
+        itemName.translatesAutoresizingMaskIntoConstraints = false
+        itemName.backgroundColor = UIColor.bone
+        itemName.clipsToBounds = true
+        itemName.layer.cornerRadius = itemName.frame.size.height * 0.50
+        addSubview(itemName)
+        itemName.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview().inset(140.0)
+            make.centerY.equalToSuperview().inset(300.0)
+            make.height.equalTo(40.0)
+            make.width.equalTo(220)
+        }
         
         
         // MARK : ITEM AGE LABEL
         
-        self.itemAge = UILabel.init(frame: CGRect.zero)
-        self.itemAge.backgroundColor = UIColor.bone
-        self.addSubview(itemAge)
+        itemAge = UILabel.init(frame: CGRect.zero)
+        itemAge.translatesAutoresizingMaskIntoConstraints = false
+        itemAge.backgroundColor = UIColor.bone
+        itemAge.clipsToBounds = true
+        itemAge.layer.cornerRadius = itemAge.frame.size.height * 0.50
+        addSubview(itemAge)
+        itemAge.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview().inset(140.0)
+            make.centerY.equalToSuperview().inset(350.0)
+            make.height.equalTo(40.0)
+            make.width.equalTo(220.0)
+            
+        }
         
         // MARK : PURCHASE PRICE LABEL
         
-        self.itemPurchasePrice = UILabel.init(frame: CGRect.zero)
-        self.itemPurchasePrice.backgroundColor = UIColor.bone
-        self.addSubview(itemPurchasePrice)
+        itemPurchasePrice = UILabel.init(frame: CGRect.zero)
+        itemPurchasePrice.translatesAutoresizingMaskIntoConstraints = true
+        itemPurchasePrice.backgroundColor = UIColor.bone
+        itemPurchasePrice.layer.cornerRadius = itemPurchasePrice.frame.size.height * 0.50
+        addSubview(itemPurchasePrice)
+        itemPurchasePrice.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview().inset(140.0)
+            make.centerY.equalToSuperview().inset(400.0)
+            make.height.equalTo(40.0)
+            make.width.equalTo(220.0)
+        }
         
         
         // MARK : COST PER WEAR LABEL
         
-        self.itemCostPerWear = UILabel.init(frame: CGRect.zero)
-        self.itemCostPerWear.backgroundColor = UIColor.bone
-        self.addSubview(itemCostPerWear)
+        itemCostPerWear = UILabel.init(frame: CGRect.zero)
+        itemCostPerWear.translatesAutoresizingMaskIntoConstraints = true
+        itemCostPerWear.backgroundColor = UIColor.bone
+        itemCostPerWear.layer.cornerRadius = itemPurchasePrice.frame.size.height * 0.50
+        addSubview(itemCostPerWear)
+        itemCostPerWear.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview().inset(140.0)
+            make.centerY.equalToSuperview().inset(520.0)
+            make.height.equalTo(130.0)
+            make.width.equalTo(130.0)
+        }
         
         
     }
