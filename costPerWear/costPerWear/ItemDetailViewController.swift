@@ -22,26 +22,22 @@ class ItemViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         createGradientLayer()
-        print("step A")
-        itemDetails = ItemDetailView(frame: CGRect.zero)
-        self.view.addSubview(itemDetails)
-        print("step G")
+        
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("step B")
+
         self.navigationController?.navigationBar.isHidden = true
-        print("step C")
         createColorSets()
-        print("step D")
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(recognizer:)))
         self.view.addGestureRecognizer(tapGestureRecognizer)
         view.isUserInteractionEnabled = true
-        print("step E")
-//        itemDetails = ItemDetailView(frame: CGRect.zero)
-//        self.view.addSubview(itemDetails)
-        print("step F")
+        OperationQueue.main.addOperation {
+            self.itemDetails = ItemDetailView(frame: CGRect.zero)
+            self.view.addSubview(self.itemDetails)
+            
+        }
     }
     
     
