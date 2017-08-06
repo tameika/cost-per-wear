@@ -32,28 +32,26 @@ class ItemDetailView: UIView {
 
         // MARK : ITEM IMAGE VIEW
         
-        print("step 2")
-        self.itemImage = UIImageView.init(frame: CGRect.zero)
-        self.itemImage.translatesAutoresizingMaskIntoConstraints = false
-        self.itemImage.backgroundColor = UIColor.bone
-        self.itemImage.layer.borderWidth = 3.0
-        self.itemImage.layer.cornerRadius = 50.0
-        print("step 3")
-        self.addSubview(itemImage)
-        print("step 4")
-        itemImage.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 100.0).isActive = true
-        itemImage.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 400.0).isActive = true
-        itemImage.heightAnchor.constraint(equalToConstant: 50.0).isActive = true
-        itemImage.widthAnchor.constraint(equalToConstant: 80.0).isActive = true
+        itemImage = UIImageView.init(frame: CGRect.zero)
+        itemImage.translatesAutoresizingMaskIntoConstraints = false
+        itemImage.backgroundColor = UIColor.bone
+        itemImage.layer.cornerRadius = 10.0
+        addSubview(itemImage)
+        itemImage.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 185.0).isActive = true
+        itemImage.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 200.0).isActive = true
+        itemImage.heightAnchor.constraint(equalToConstant: 150.0).isActive = true
+        itemImage.widthAnchor.constraint(equalToConstant: 150.0).isActive = true
         
-        print("step 5")
         
         
         // MARK : DATE ADDED LABEL
         
-        self.itemDateAdded = UILabel.init(frame: CGRect.zero)
-        self.itemDateAdded.backgroundColor = UIColor.bone
-        self.addSubview(itemDateAdded)
+        itemDateAdded = UILabel.init(frame: CGRect.zero)
+        itemDateAdded.translatesAutoresizingMaskIntoConstraints = false
+        itemDateAdded.backgroundColor = UIColor.bone
+        itemDateAdded.layer.cornerRadius = 10.0
+        addSubview(itemDateAdded)
+        
         
         
         
