@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CategorySelectionViewController: UIViewController {
+class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
     
     var categoryView = CategoryView()
     
@@ -17,12 +17,24 @@ class CategorySelectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        categoryView.delegate = self
+        
         view.backgroundColor = UIColor.rose 
             categoryView = CategoryView(frame: CGRect.zero)
             view.addSubview(categoryView)
-        
     
+    }
+   
+   
+    func categoryButtonPressed() {
+        
+        let clothingListVC = ClothingListTableViewController()
+        navigationController?.pushViewController(clothingListVC, animated: true)
     }
 
     
 }
+
+
+
+   
