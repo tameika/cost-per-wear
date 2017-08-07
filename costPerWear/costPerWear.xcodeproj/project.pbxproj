@@ -123,8 +123,8 @@
 		BC7750001EA818D5009B9B38 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BC7750041EA81C82009B9B38 /* ItemDetailViewController.swift */,
 				BCC261AE1F382A8700006CC4 /* CategorySelectionViewController.swift */,
+				BC7750041EA81C82009B9B38 /* ItemDetailViewController.swift */,
 				BCCD9A5B1EAAABA5003C64E0 /* NewItemDetailViewController.swift */,
 				BC4C49241EB8530900E149E8 /* ContentViewController.swift */,
 				BC774FF01EA73F4B009B9B38 /* LaunchScreen.storyboard */,

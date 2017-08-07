@@ -9,11 +9,18 @@
 import UIKit
 
 class CategorySelectionViewController: UIViewController {
+    
+    var categoryView = CategoryView()
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        
+        view.backgroundColor = UIColor.rose 
+            categoryView = CategoryView(frame: CGRect.zero)
+            view.addSubview(categoryView)
+        
     
     }
 

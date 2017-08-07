@@ -32,6 +32,7 @@ class ItemViewController: UIViewController {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(recognizer:)))
         self.view.addGestureRecognizer(tapGestureRecognizer)
         view.isUserInteractionEnabled = true
+        
         OperationQueue.main.addOperation {
             self.itemDetails = ItemDetailView(frame: CGRect.zero)
             self.view.addSubview(self.itemDetails)

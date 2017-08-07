@@ -33,6 +33,12 @@ class CategoryView: UIView {
         topsBtn.setTitle("Tops", for: .normal)
         //addTarget
         addSubview(topsBtn)
+        topsBtn.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview().inset(80.0)
+            make.centerY.equalToSuperview().inset(250.0)
+            make.height.equalTo(70.0)
+            make.width.equalTo(70.0)
+        }
         
         
         bottomsBtn = UIButton(frame: CGRect.zero)
@@ -41,6 +47,13 @@ class CategoryView: UIView {
         bottomsBtn.setTitle("Bottoms", for: .normal)
          //addTarget
         addSubview(bottomsBtn)
+        bottomsBtn.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview().inset(300.0)
+            make.centerY.equalToSuperview().inset(250.0)
+            make.height.equalTo(70.0)
+            make.width.equalTo(70.0)
+
+        }
         
         
         dressesBtn = UIButton(frame: CGRect.zero)
@@ -49,6 +62,13 @@ class CategoryView: UIView {
         dressesBtn.setTitle("Dresses", for: .normal)
          //addTarget
         addSubview(dressesBtn)
+        dressesBtn.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview().inset(80.0)
+            make.centerY.equalToSuperview().inset(400.0)
+            make.height.equalTo(70.0)
+            make.width.equalTo(70.0)
+
+        }
         
         
         shoesBtn = UIButton(frame: CGRect.zero)
@@ -57,6 +77,13 @@ class CategoryView: UIView {
         shoesBtn.setTitle("Shoes", for: .normal)
          //addTarget
         addSubview(shoesBtn)
+        shoesBtn.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview().inset(300.0)
+            make.centerY.equalToSuperview().inset(400.0)
+            make.height.equalTo(70.0)
+            make.width.equalTo(70.0)
+
+        }
         
         
         

@@ -34,6 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         (nav.viewControllers).append(NewItemDetailViewController())
         nav.viewControllers.append(ItemViewController())
+        nav.viewControllers.append(CategorySelectionViewController())
         
         // set nav vc as initial (root) vc upon launch
         window?.rootViewController = nav
