@@ -53,7 +53,7 @@ class ItemDetailView: UIView {
         itemDateAdded.translatesAutoresizingMaskIntoConstraints = false
         itemDateAdded.clipsToBounds = true
         itemDateAdded.backgroundColor = UIColor.bone
-        itemDateAdded.layer.cornerRadius = itemDateAdded.bounds.height * 0.50
+        itemDateAdded.layer.cornerRadius = 10.0
         addSubview(itemDateAdded)
         itemDateAdded.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview().inset(185.0)
@@ -70,7 +70,7 @@ class ItemDetailView: UIView {
         itemName.translatesAutoresizingMaskIntoConstraints = false
         itemName.backgroundColor = UIColor.bone
         itemName.clipsToBounds = true
-        itemName.layer.cornerRadius = itemName.bounds.height * 0.50
+        itemName.layer.cornerRadius = 10.0
         addSubview(itemName)
         itemName.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview().inset(140.0)
@@ -86,7 +86,7 @@ class ItemDetailView: UIView {
         itemAge.translatesAutoresizingMaskIntoConstraints = false
         itemAge.backgroundColor = UIColor.bone
         itemAge.clipsToBounds = true
-        itemAge.layer.cornerRadius = itemAge.bounds.height * 0.50
+        itemAge.layer.cornerRadius = 10.0
         addSubview(itemAge)
         itemAge.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview().inset(140.0)
@@ -102,7 +102,7 @@ class ItemDetailView: UIView {
         itemPurchasePrice.translatesAutoresizingMaskIntoConstraints = false
         itemPurchasePrice.backgroundColor = UIColor.bone
         itemPurchasePrice.clipsToBounds = true
-        itemPurchasePrice.layer.cornerRadius = itemPurchasePrice.bounds.height * 0.50
+        itemPurchasePrice.layer.cornerRadius = 10.0
         addSubview(itemPurchasePrice)
         itemPurchasePrice.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview().inset(140.0)
@@ -117,12 +117,12 @@ class ItemDetailView: UIView {
         itemTags.translatesAutoresizingMaskIntoConstraints = false
         itemTags.backgroundColor = UIColor.bone
         itemTags.clipsToBounds = true
-        itemTags.layer.cornerRadius = itemTags.bounds.height * 0.50
+        itemTags.layer.cornerRadius = 10.0
         addSubview(itemTags)
         itemTags.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview().inset(140.0)
-            make.centerY.equalToSuperview().inset(450.0)
-            make.height.equalTo(80.0)
+            make.centerY.equalToSuperview().inset(480.0)
+            make.height.equalTo(85.0)
             make.width.equalTo(220.0)
         }
         
@@ -133,13 +133,13 @@ class ItemDetailView: UIView {
         itemCostPerWear.translatesAutoresizingMaskIntoConstraints = false
         itemCostPerWear.backgroundColor = UIColor.bone
         itemCostPerWear.clipsToBounds = true
-        itemCostPerWear.layer.cornerRadius = itemPurchasePrice.bounds.height * 0.50
+        itemCostPerWear.layer.cornerRadius = 50.0
         addSubview(itemCostPerWear)
         itemCostPerWear.snp.makeConstraints { (make) in
-            make.centerX.equalToSuperview().inset(140.0)
-            make.centerY.equalToSuperview().inset(580.0)
-            make.height.equalTo(150.0)
-            make.width.equalTo(150.0)
+            make.centerX.equalToSuperview().inset(185.0)
+            make.centerY.equalToSuperview().inset(590.0)
+            make.height.equalTo(110.0)
+            make.width.equalTo(110.0)
         }
         
         
