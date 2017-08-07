@@ -31,6 +31,7 @@ class CategoryView: UIView {
         topsBtn.translatesAutoresizingMaskIntoConstraints = false
         topsBtn.backgroundColor = UIColor.bloodOrange
         topsBtn.setTitle("Tops", for: .normal)
+        
         //addTarget
         addSubview(topsBtn)
         topsBtn.snp.makeConstraints { (make) in
