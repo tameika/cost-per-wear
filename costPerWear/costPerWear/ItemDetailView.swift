@@ -22,6 +22,7 @@ class ItemDetailView: UIView {
     var itemName: UILabel!
     var itemPurchasePrice: UILabel!
     var itemAge: UILabel!
+    var itemTags: UILabel!
     var itemCostPerWear: UILabel!
     
     
@@ -50,9 +51,9 @@ class ItemDetailView: UIView {
         // MARK : DATE ADDED LABEL
         itemDateAdded = UILabel.init(frame: CGRect.zero)
         itemDateAdded.translatesAutoresizingMaskIntoConstraints = false
-        itemDateAdded.backgroundColor = UIColor.bone
-        itemDateAdded.layer.cornerRadius = itemDateAdded.frame.size.height * 0.50
         itemDateAdded.clipsToBounds = true
+        itemDateAdded.backgroundColor = UIColor.bone
+        itemDateAdded.layer.cornerRadius = itemDateAdded.bounds.height * 0.50
         addSubview(itemDateAdded)
         itemDateAdded.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview().inset(185.0)
@@ -63,14 +64,13 @@ class ItemDetailView: UIView {
         
         
         
-        
         // MARK : ITEM NAME LABEL
         
         itemName = UILabel.init(frame: CGRect.zero)
         itemName.translatesAutoresizingMaskIntoConstraints = false
         itemName.backgroundColor = UIColor.bone
         itemName.clipsToBounds = true
-        itemName.layer.cornerRadius = itemName.frame.size.height * 0.50
+        itemName.layer.cornerRadius = itemName.bounds.height * 0.50
         addSubview(itemName)
         itemName.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview().inset(140.0)
@@ -86,7 +86,7 @@ class ItemDetailView: UIView {
         itemAge.translatesAutoresizingMaskIntoConstraints = false
         itemAge.backgroundColor = UIColor.bone
         itemAge.clipsToBounds = true
-        itemAge.layer.cornerRadius = itemAge.frame.size.height * 0.50
+        itemAge.layer.cornerRadius = itemAge.bounds.height * 0.50
         addSubview(itemAge)
         itemAge.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview().inset(140.0)
@@ -99,9 +99,10 @@ class ItemDetailView: UIView {
         // MARK : PURCHASE PRICE LABEL
         
         itemPurchasePrice = UILabel.init(frame: CGRect.zero)
-        itemPurchasePrice.translatesAutoresizingMaskIntoConstraints = true
+        itemPurchasePrice.translatesAutoresizingMaskIntoConstraints = false
         itemPurchasePrice.backgroundColor = UIColor.bone
-        itemPurchasePrice.layer.cornerRadius = itemPurchasePrice.frame.size.height * 0.50
+        itemPurchasePrice.clipsToBounds = true
+        itemPurchasePrice.layer.cornerRadius = itemPurchasePrice.bounds.height * 0.50
         addSubview(itemPurchasePrice)
         itemPurchasePrice.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview().inset(140.0)
@@ -110,19 +111,35 @@ class ItemDetailView: UIView {
             make.width.equalTo(220.0)
         }
         
+        //MARK : Clothing Tags Label
+        
+        itemTags = UILabel.init(frame: CGRect.zero)
+        itemTags.translatesAutoresizingMaskIntoConstraints = false
+        itemTags.backgroundColor = UIColor.bone
+        itemTags.clipsToBounds = true
+        itemTags.layer.cornerRadius = itemTags.bounds.height * 0.50
+        addSubview(itemTags)
+        itemTags.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview().inset(140.0)
+            make.centerY.equalToSuperview().inset(450.0)
+            make.height.equalTo(80.0)
+            make.width.equalTo(220.0)
+        }
+        
         
         // MARK : COST PER WEAR LABEL
         
         itemCostPerWear = UILabel.init(frame: CGRect.zero)
-        itemCostPerWear.translatesAutoresizingMaskIntoConstraints = true
+        itemCostPerWear.translatesAutoresizingMaskIntoConstraints = false
         itemCostPerWear.backgroundColor = UIColor.bone
-        itemCostPerWear.layer.cornerRadius = itemPurchasePrice.frame.size.height * 0.50
+        itemCostPerWear.clipsToBounds = true
+        itemCostPerWear.layer.cornerRadius = itemPurchasePrice.bounds.height * 0.50
         addSubview(itemCostPerWear)
         itemCostPerWear.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview().inset(140.0)
-            make.centerY.equalToSuperview().inset(520.0)
-            make.height.equalTo(130.0)
-            make.width.equalTo(130.0)
+            make.centerY.equalToSuperview().inset(580.0)
+            make.height.equalTo(150.0)
+            make.width.equalTo(150.0)
         }
         
         

@@ -22,7 +22,6 @@ class ItemViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         createGradientLayer()
-        
     }
 
     override func viewDidLoad() {
@@ -38,6 +37,8 @@ class ItemViewController: UIViewController {
             self.view.addSubview(self.itemDetails)
             
         }
+        
+       
     }
     
     
@@ -64,7 +65,6 @@ class ItemViewController: UIViewController {
         
         colorSets.append([UIColor.bloodOrange.cgColor, UIColor.rose.cgColor])
         colorSets.append([UIColor.lilacMute.cgColor, UIColor.eggplantMute.cgColor])
-        //colorSets.append([UIColor.deepTealNew.cgColor, UIColor.persianGreen.cgColor])
         colorSets.append([UIColor.blueSmokeDeep.cgColor, UIColor.blueSmoke.cgColor])
         
         currentColorSet = 0
