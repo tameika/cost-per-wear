@@ -36,22 +36,24 @@ class CategoryView: UIView {
         
         
         topsBtn = UIButton(frame: CGRect.zero)
+        topsBtn.isUserInteractionEnabled = true
         topsBtn.translatesAutoresizingMaskIntoConstraints = false
         topsBtn.backgroundColor = UIColor.bloodOrange
         topsBtn.setTitle("Tops", for: .normal)
         
-        topsBtn.addTarget(self, action: Selector(("categoryBtnPressed")), for: .touchUpInside)
+        topsBtn.addTarget(self, action: Selector(("categoryBtnPressed:")), for: .touchUpInside)
         topsBtn.tag = 1
         addSubview(topsBtn)
         topsBtn.snp.makeConstraints { (make) in
-            make.centerX.equalToSuperview().inset(80.0)
-            make.centerY.equalToSuperview().inset(250.0)
+            make.centerX.equalToSuperview().inset(-100.0)
+            make.centerY.equalToSuperview().inset(-100.0)
             make.height.equalTo(70.0)
             make.width.equalTo(70.0)
         }
         
         
         bottomsBtn = UIButton(frame: CGRect.zero)
+        bottomsBtn.isUserInteractionEnabled = true
         bottomsBtn.translatesAutoresizingMaskIntoConstraints = false
         bottomsBtn.backgroundColor = UIColor.bloodOrange
         bottomsBtn.setTitle("Bottoms", for: .normal)
@@ -59,8 +61,8 @@ class CategoryView: UIView {
         bottomsBtn.tag = 2
         addSubview(bottomsBtn)
         bottomsBtn.snp.makeConstraints { (make) in
-            make.centerX.equalToSuperview().inset(300.0)
-            make.centerY.equalToSuperview().inset(250.0)
+            make.centerX.equalToSuperview().inset(100.0)
+            make.centerY.equalToSuperview().inset(-100.0)
             make.height.equalTo(70.0)
             make.width.equalTo(70.0)
 
@@ -68,6 +70,7 @@ class CategoryView: UIView {
         
         
         dressesBtn = UIButton(frame: CGRect.zero)
+        bottomsBtn.isUserInteractionEnabled = true
         dressesBtn.translatesAutoresizingMaskIntoConstraints = false
         dressesBtn.backgroundColor = UIColor.bloodOrange
         dressesBtn.setTitle("Dresses", for: .normal)
@@ -75,8 +78,8 @@ class CategoryView: UIView {
         dressesBtn.tag = 3
         addSubview(dressesBtn)
         dressesBtn.snp.makeConstraints { (make) in
-            make.centerX.equalToSuperview().inset(80.0)
-            make.centerY.equalToSuperview().inset(400.0)
+            make.centerX.equalToSuperview().inset(-100.0)
+            make.centerY.equalToSuperview().inset(50.0)
             make.height.equalTo(70.0)
             make.width.equalTo(70.0)
 
@@ -84,6 +87,7 @@ class CategoryView: UIView {
         
         
         shoesBtn = UIButton(frame: CGRect.zero)
+        shoesBtn.isUserInteractionEnabled = true
         shoesBtn.translatesAutoresizingMaskIntoConstraints = false
         shoesBtn.backgroundColor = UIColor.bloodOrange
         shoesBtn.setTitle("Shoes", for: .normal)
@@ -91,8 +95,8 @@ class CategoryView: UIView {
         shoesBtn.tag = 4
         addSubview(shoesBtn)
         shoesBtn.snp.makeConstraints { (make) in
-            make.centerX.equalToSuperview().inset(300.0)
-            make.centerY.equalToSuperview().inset(400.0)
+            make.centerX.equalToSuperview().inset(100.0)
+            make.centerY.equalToSuperview().inset(50.0)
             make.height.equalTo(70.0)
             make.width.equalTo(70.0)
 
@@ -103,28 +107,7 @@ class CategoryView: UIView {
 
 
 
-extension CategoryView {
-    
-    func categoryButtonPressed(sender: UIButton) {
-        let tag = sender.tag
-        switch tag {
-        case 1:
-            print("tops selected")
-        case 2:
-            print("bottoms selected")
-        case 3:
-            print("dresses selected")
-        case 4:
-            print("shoes selected")
-        default:
-            print("none selected")
-        }
-        
-    }
-    
-    
-}
- 
+
     
  
     

@@ -13,15 +13,26 @@ class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
     var categoryView = CategoryView()
     
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+
+    }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         categoryView.delegate = self
         
+        navigationController?.isNavigationBarHidden = true 
+
+        
         view.backgroundColor = UIColor.rose 
-            categoryView = CategoryView(frame: CGRect.zero)
+            categoryView = CategoryView(frame: CGRect(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
             view.addSubview(categoryView)
+        
     
     }
    
@@ -35,6 +46,28 @@ class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
     
 }
 
+
+extension CategoryView {
+    
+    func categoryButtonPressed(sender: UIButton) {
+        let tag = sender.tag
+        switch tag {
+        case 1:
+            print("tops selected")
+        case 2:
+            print("bottoms selected")
+        case 3:
+            print("dresses selected")
+        case 4:
+            print("shoes selected")
+        default:
+            print("none selected")
+        }
+        
+    }
+    
+    
+}
 
 
    
