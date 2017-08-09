@@ -13,7 +13,7 @@ import SnapKit
 
 protocol CategoryViewDelegate: class {
     
-    func categoryButtonPressed(sender: UIButton)
+    func categorySelected()
 }
 
 
@@ -26,6 +26,12 @@ class CategoryView: UIView {
     var dressesBtn: UIButton!
     var shoesBtn: UIButton!
     
+//   func categoryButtonPressed() {
+//    print("inside button press")
+//        self.delegate?.categorySelected()
+//    print("passed delegate method")
+//    }
+    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -35,13 +41,14 @@ class CategoryView: UIView {
         super.init(frame: frame)
         
         
+        
         topsBtn = UIButton(frame: CGRect.zero)
         topsBtn.isUserInteractionEnabled = true
         topsBtn.translatesAutoresizingMaskIntoConstraints = false
         topsBtn.backgroundColor = UIColor.bloodOrange
         topsBtn.setTitle("Tops", for: .normal)
-        print("i got here")
-        
+        topsBtn.setTitleColor(UIColor.blue, for: .normal)
+        topsBtn.setTitleColor(UIColor.gray, for: .highlighted)
         //topsBtn.addTarget(self, action: #selector(categoryButtonPressed), for: .touchUpInside)
         topsBtn.tag = 1
         addSubview(topsBtn)
@@ -51,6 +58,8 @@ class CategoryView: UIView {
             make.height.equalTo(70.0)
             make.width.equalTo(70.0)
         }
+        
+        
         
         
         bottomsBtn = UIButton(frame: CGRect.zero)
