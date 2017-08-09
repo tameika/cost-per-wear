@@ -26,14 +26,22 @@ class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
         
         categoryView.delegate = self
         
+        addBtnTargets()
+        
         navigationController?.isNavigationBarHidden = true 
 
-        
-        view.backgroundColor = UIColor.rose 
+        view.backgroundColor = UIColor.rose
             categoryView = CategoryView(frame: CGRect(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
             view.addSubview(categoryView)
         
+g    }
     
+    func addBtnTargets() {
+        categoryView.topsBtn.addTarget(self, action: #selector(categoryButtonPressed), for: .touchUpInside)
+        categoryView.bottomsBtn.addTarget(self, action: Selector(("categoryBtnPressed")), for: .touchUpInside)
+        categoryView.dressesBtn.addTarget(self, action: Selector(("categoryBtnPressed")), for: .touchUpInside)
+        categoryView.shoesBtn.addTarget(self, action: Selector(("categoryBtnPressed")), for: .touchUpInside)
+
     }
    
    

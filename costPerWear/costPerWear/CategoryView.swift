@@ -42,7 +42,7 @@ class CategoryView: UIView {
         topsBtn.setTitle("Tops", for: .normal)
         print("i got here")
         
-        topsBtn.addTarget(self, action: #selector(delegate?.categoryButtonPressed), for: .touchUpInside)
+        //topsBtn.addTarget(self, action: #selector(categoryButtonPressed), for: .touchUpInside)
         topsBtn.tag = 1
         addSubview(topsBtn)
         topsBtn.snp.makeConstraints { (make) in
@@ -58,7 +58,7 @@ class CategoryView: UIView {
         bottomsBtn.translatesAutoresizingMaskIntoConstraints = false
         bottomsBtn.backgroundColor = UIColor.bloodOrange
         bottomsBtn.setTitle("Bottoms", for: .normal)
-        bottomsBtn.addTarget(self, action: Selector(("categoryBtnPressed")), for: .touchUpInside)
+        //bottomsBtn.addTarget(self, action: Selector(("categoryBtnPressed")), for: .touchUpInside)
         bottomsBtn.tag = 2
         addSubview(bottomsBtn)
         bottomsBtn.snp.makeConstraints { (make) in
@@ -75,7 +75,7 @@ class CategoryView: UIView {
         dressesBtn.translatesAutoresizingMaskIntoConstraints = false
         dressesBtn.backgroundColor = UIColor.bloodOrange
         dressesBtn.setTitle("Dresses", for: .normal)
-        dressesBtn.addTarget(self, action: Selector(("categoryBtnPressed")), for: .touchUpInside)
+        //dressesBtn.addTarget(self, action: Selector(("categoryBtnPressed")), for: .touchUpInside)
         dressesBtn.tag = 3
         addSubview(dressesBtn)
         dressesBtn.snp.makeConstraints { (make) in
@@ -92,7 +92,7 @@ class CategoryView: UIView {
         shoesBtn.translatesAutoresizingMaskIntoConstraints = false
         shoesBtn.backgroundColor = UIColor.bloodOrange
         shoesBtn.setTitle("Shoes", for: .normal)
-        shoesBtn.addTarget(self, action: Selector(("categoryBtnPressed")), for: .touchUpInside)
+        //shoesBtn.addTarget(self, action: Selector(("categoryBtnPressed")), for: .touchUpInside)
         shoesBtn.tag = 4
         addSubview(shoesBtn)
         shoesBtn.snp.makeConstraints { (make) in
