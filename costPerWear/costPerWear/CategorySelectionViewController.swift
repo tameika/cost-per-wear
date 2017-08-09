@@ -37,19 +37,14 @@ class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
     }
    
    
-    func categoryButtonPressed() {
+    func categoryButtonAction() {
         
         let clothingListVC = ClothingListTableViewController()
         navigationController?.pushViewController(clothingListVC, animated: true)
     }
-
     
-}
-
-
-extension CategoryView {
     
-    func categoryButtonPressed(sender: UIButton) {
+ func categoryButtonPressed(sender: UIButton) {
         let tag = sender.tag
         switch tag {
         case 1:
@@ -65,6 +60,29 @@ extension CategoryView {
         }
         
     }
+
+    
+}
+
+
+extension CategoryView {
+    
+//    func categoryButtonPressed(sender: UIButton) {
+//        let tag = sender.tag
+//        switch tag {
+//        case 1:
+//            print("tops selected")
+//        case 2:
+//            print("bottoms selected")
+//        case 3:
+//            print("dresses selected")
+//        case 4:
+//            print("shoes selected")
+//        default:
+//            print("none selected")
+//        }
+//        
+//    }
     
     
 }

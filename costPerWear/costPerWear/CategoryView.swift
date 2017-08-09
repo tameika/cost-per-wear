@@ -13,7 +13,7 @@ import SnapKit
 
 protocol CategoryViewDelegate: class {
     
-    func categoryButtonPressed()
+    func categoryButtonPressed(sender: UIButton)
 }
 
 
@@ -40,8 +40,9 @@ class CategoryView: UIView {
         topsBtn.translatesAutoresizingMaskIntoConstraints = false
         topsBtn.backgroundColor = UIColor.bloodOrange
         topsBtn.setTitle("Tops", for: .normal)
+        print("i got here")
         
-        topsBtn.addTarget(self, action: Selector(("categoryBtnPressed:")), for: .touchUpInside)
+        topsBtn.addTarget(self, action: #selector(delegate?.categoryButtonPressed), for: .touchUpInside)
         topsBtn.tag = 1
         addSubview(topsBtn)
         topsBtn.snp.makeConstraints { (make) in
