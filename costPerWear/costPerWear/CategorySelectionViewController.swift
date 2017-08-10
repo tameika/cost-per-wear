@@ -24,7 +24,7 @@ class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        //categoryView.delegate = self
         
         
         
@@ -32,6 +32,7 @@ class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
 
         view.backgroundColor = UIColor.rose
             categoryView = CategoryView(frame: CGRect(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
+        categoryView.delegate = self
             view.addSubview(categoryView)
         
     }
@@ -40,14 +41,14 @@ class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
     
     
     
- func categorySelected() {
-
+    func categorySelected() {
     print("A")
     let clothingListVC = ClothingListTableViewController()
-    navigationController?.pushViewController(clothingListVC, animated: false)
+    navigationController?.pushViewController(clothingListVC, animated: true)
     print("B")
-    categoryView.delegate = self
-
+    //categoryView.delegate = self
+        
+        
 
     
 //        let tag = sender.tag
