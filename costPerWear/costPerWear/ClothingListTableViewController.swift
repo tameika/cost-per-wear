@@ -35,15 +35,23 @@ class ClothingListTableViewController: UITableViewController {
         return 0
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        // Configure the cell...
+        cell.textLabel?.text = "item"
 
         return cell
     }
-    */
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let itemDetailVC = ItemViewController()
+        navigationController?.present(itemDetailVC, animated: true, completion: nil)
+        
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
