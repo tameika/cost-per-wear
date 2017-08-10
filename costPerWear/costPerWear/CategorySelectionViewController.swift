@@ -24,9 +24,9 @@ class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        categoryView.delegate = self
         
-        //addBtnTargets()
+        
+        
         
         navigationController?.isNavigationBarHidden = true 
 
@@ -35,34 +35,20 @@ class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
             view.addSubview(categoryView)
         
     }
-    
-//    func addBtnTargets() {
-//        categoryView.topsBtn.addTarget(self, action: #selector(categoryButtonAction), for: .touchUpInside)
-//        categoryView.bottomsBtn.addTarget(self, action: Selector(("categoryBtnPressed")), for: .touchUpInside)
-//        categoryView.dressesBtn.addTarget(self, action: Selector(("categoryBtnPressed")), for: .touchUpInside)
-//        categoryView.shoesBtn.addTarget(self, action: Selector(("categoryBtnPressed")), for: .touchUpInside)
-//
-//    }
-//   
-   
-//    func categoryButtonAction() {
-//        
-//        let clothingListVC = ClothingListTableViewController()
-//        navigationController?.pushViewController(clothingListVC, animated: false)
-//    }
-//    
+ 
     
     
     
     
  func categorySelected() {
-    
-    print("inside category VC selected method")
-    
+
+    print("A")
     let clothingListVC = ClothingListTableViewController()
-    //navigationController?.pushViewController(clothingListVC, animated: false)
-    self.present(clothingListVC, animated: true, completion: nil)
-    print("passed presentation logic")
+    navigationController?.pushViewController(clothingListVC, animated: false)
+    print("B")
+    categoryView.delegate = self
+
+
     
 //        let tag = sender.tag
 //        switch tag {
@@ -79,32 +65,14 @@ class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
 //        }
     
     }
+    
+    
 
     
 }
 
 
-extension CategoryView {
-    
-//    func categoryButtonPressed(sender: UIButton) {
-//        let tag = sender.tag
-//        switch tag {
-//        case 1:
-//            print("tops selected")
-//        case 2:
-//            print("bottoms selected")
-//        case 3:
-//            print("dresses selected")
-//        case 4:
-//            print("shoes selected")
-//        default:
-//            print("none selected")
-//        }
-//        
-//    }
-    
-    
-}
+
 
 
    

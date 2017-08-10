@@ -26,11 +26,9 @@ class CategoryView: UIView {
     var dressesBtn: UIButton!
     var shoesBtn: UIButton!
     
-//   func categoryButtonPressed() {
-//    print("inside button press")
-//        self.delegate?.categorySelected()
-//    print("passed delegate method")
-//    }
+   func categoryButtonPressed() {
+        delegate?.categorySelected()
+    }
     
     
     required init?(coder aDecoder: NSCoder) {
@@ -41,7 +39,6 @@ class CategoryView: UIView {
         super.init(frame: frame)
         
         
-        
         topsBtn = UIButton(frame: CGRect.zero)
         topsBtn.isUserInteractionEnabled = true
         topsBtn.translatesAutoresizingMaskIntoConstraints = false
@@ -49,7 +46,7 @@ class CategoryView: UIView {
         topsBtn.setTitle("Tops", for: .normal)
         topsBtn.setTitleColor(UIColor.blue, for: .normal)
         topsBtn.setTitleColor(UIColor.gray, for: .highlighted)
-        //topsBtn.addTarget(self, action: #selector(categoryButtonPressed), for: .touchUpInside)
+        topsBtn.addTarget(self, action: #selector(categoryButtonPressed), for: .touchUpInside)
         topsBtn.tag = 1
         addSubview(topsBtn)
         topsBtn.snp.makeConstraints { (make) in
