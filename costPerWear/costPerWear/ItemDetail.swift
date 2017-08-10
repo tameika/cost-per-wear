@@ -17,7 +17,6 @@ protocol CostPerWear {
 
 struct Item: CostPerWear {
     internal static var costPerWear: Double = 0.0
-
     
     var itemName: String
     var itemAge: String
@@ -26,9 +25,7 @@ struct Item: CostPerWear {
     var itemTags: [ClothingPart]
     var dateCreated: String
     static var numberOfWears: Int = 0
-    
-    
-    
+  
     static var calculateCostPerWear: Double {
         
         get {
@@ -42,9 +39,7 @@ struct Item: CostPerWear {
         }
         
     }
-    
-    
-    
+  
 }
 
 
@@ -82,9 +77,7 @@ enum ClothingPart {
         case .dress: return [.neck, .sleeve, .waist, .length, .color, .material, .season, .silhouette]
         case .shoe: return [.heelStyle, .heelHeight, .toe, .ankle, .opening, .color, .material, .season]
         }
-        
     }
-    
     
 }
 
@@ -200,10 +193,6 @@ enum ClothingSeason: String {
     case spring = "Spring"
     case fall = "Fall"
 }
-
-
-
-
 
 
 

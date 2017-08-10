@@ -47,27 +47,7 @@ class ContentView: UIView {
         
         
     }
-    
-    func createConstrains() {
         
-        
-//        pageTitle.translatesAutoresizingMaskIntoConstraints = false
-//        
-//        pageTitle.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0.0).isActive = true
-//        pageTitle.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 0.0).isActive = true
-//        pageTitle.heightAnchor.constraint(equalTo: self.view.heightAnchor, constant: -50.0).isActive = true
-//        pageTitle.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: -50.00).isActive = true
-//        
-//        pageDescription.translatesAutoresizingMaskIntoConstraints = false
-//        
-//        pageDescription.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0.0).isActive = true
-//        pageDescription.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 0.0).isActive = true
-//        pageDescription.heightAnchor.constraint(equalTo: self.view.heightAnchor, constant: -50.0).isActive = true
-//        pageDescription.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: -50.00).isActive = true
-        
-        
-    }
-    
     
 }
 

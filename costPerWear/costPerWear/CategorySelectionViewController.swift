@@ -16,18 +16,11 @@ class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-
     }
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //categoryView.delegate = self
-        
-        
-        
+
         navigationController?.isNavigationBarHidden = true 
 
         view.backgroundColor = UIColor.rose
@@ -37,18 +30,12 @@ class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
         
     }
  
-    
-    
-    
-    
+
     func categorySelected() {
-    print("A")
     let clothingListVC = ClothingListTableViewController()
     navigationController?.pushViewController(clothingListVC, animated: true)
-    print("B")
-    //categoryView.delegate = self
         
-        
+    }
 
     
 //        let tag = sender.tag
@@ -65,7 +52,7 @@ class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
 //            print("none selected")
 //        }
     
-    }
+    
     
     
 

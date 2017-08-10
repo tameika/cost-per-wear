@@ -68,6 +68,7 @@ class ContentViewController: UIViewController {
         }
     }
     
+    // MARK: TO DO: Recreate with snapkit
     
     func creatConstraints() {
         

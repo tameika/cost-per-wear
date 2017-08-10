@@ -36,10 +36,8 @@ class ItemViewController: UIViewController {
         OperationQueue.main.addOperation {
             self.itemDetails = ItemDetailView(frame: CGRect.zero)
             self.view.addSubview(self.itemDetails)
-            
         }
         
-       
     }
     
     

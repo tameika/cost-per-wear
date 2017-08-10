@@ -13,6 +13,5 @@ struct User {
     
     var firtName: String
     var lastName: String
-    
     var items: [Item?]
 }
