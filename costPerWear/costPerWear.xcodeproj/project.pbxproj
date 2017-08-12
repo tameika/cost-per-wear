@@ -22,6 +22,8 @@
 		BCC261AF1F382A8700006CC4 /* CategorySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261AE1F382A8700006CC4 /* CategorySelectionViewController.swift */; };
 		BCC261B11F382AD400006CC4 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261B01F382AD400006CC4 /* CategoryView.swift */; };
 		BCC261B31F38D06700006CC4 /* ClothingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261B21F38D06700006CC4 /* ClothingListTableViewController.swift */; };
+		BCC261B51F3E8E2B00006CC4 /* ClothingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261B41F3E8E2B00006CC4 /* ClothingListViewController.swift */; };
+		BCC261B71F3EA45000006CC4 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261B61F3EA45000006CC4 /* CellView.swift */; };
 		BCCD9A5C1EAAABA5003C64E0 /* NewItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCD9A5B1EAAABA5003C64E0 /* NewItemDetailViewController.swift */; };
 		E84967BA077C4173C14BE0F3 /* Pods_costPerWear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D036BDF4FACFA72DFCE381 /* Pods_costPerWear.framework */; };
 /* End PBXBuildFile section */
@@ -45,6 +47,8 @@
 		BCC261AE1F382A8700006CC4 /* CategorySelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySelectionViewController.swift; sourceTree = "<group>"; };
 		BCC261B01F382AD400006CC4 /* CategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		BCC261B21F38D06700006CC4 /* ClothingListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothingListTableViewController.swift; sourceTree = "<group>"; };
+		BCC261B41F3E8E2B00006CC4 /* ClothingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothingListViewController.swift; sourceTree = "<group>"; };
+		BCC261B61F3EA45000006CC4 /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		BCCD9A5B1EAAABA5003C64E0 /* NewItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemDetailViewController.swift; sourceTree = "<group>"; };
 		D9D036BDF4FACFA72DFCE381 /* Pods_costPerWear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_costPerWear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC32A6F38C8C6C8B57026FBE /* Pods-costPerWear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-costPerWear.debug.xcconfig"; path = "Pods/Target Support Files/Pods-costPerWear/Pods-costPerWear.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 				BCC261AE1F382A8700006CC4 /* CategorySelectionViewController.swift */,
 				BCC261B21F38D06700006CC4 /* ClothingListTableViewController.swift */,
 				BC7750041EA81C82009B9B38 /* ItemDetailViewController.swift */,
+				BCC261B41F3E8E2B00006CC4 /* ClothingListViewController.swift */,
 				BCCD9A5B1EAAABA5003C64E0 /* NewItemDetailViewController.swift */,
 				BC4C49241EB8530900E149E8 /* ContentViewController.swift */,
 				BC774FF01EA73F4B009B9B38 /* LaunchScreen.storyboard */,
@@ -139,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				BCC261B01F382AD400006CC4 /* CategoryView.swift */,
+				BCC261B61F3EA45000006CC4 /* CellView.swift */,
 				BC7750021EA81C29009B9B38 /* ItemDetailView.swift */,
 				BC3033A91EDF7FFD00332952 /* ContentView.swift */,
 			);
@@ -280,8 +286,10 @@
 				BC7750031EA81C29009B9B38 /* ItemDetailView.swift in Sources */,
 				BCC261A81F2FE48500006CC4 /* User.swift in Sources */,
 				BC7750071EA9B74E009B9B38 /* ItemDetail.swift in Sources */,
+				BCC261B71F3EA45000006CC4 /* CellView.swift in Sources */,
 				BC774FE71EA73F4B009B9B38 /* ViewController.swift in Sources */,
 				BCC261B11F382AD400006CC4 /* CategoryView.swift in Sources */,
+				BCC261B51F3E8E2B00006CC4 /* ClothingListViewController.swift in Sources */,
 				BC7750051EA81C82009B9B38 /* ItemDetailViewController.swift in Sources */,
 				BCCD9A5C1EAAABA5003C64E0 /* NewItemDetailViewController.swift in Sources */,
 				BCC261AF1F382A8700006CC4 /* CategorySelectionViewController.swift in Sources */,

@@ -9,12 +9,23 @@
 import UIKit
 
 class ClothingListTableViewController: UITableViewController {
+    
+    var items = ["blue tank, black sweater, white tee"]
+    
+    
+    private let reuseIdentifier = "itemCell"
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.isNavigationBarHidden = false 
-
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -32,20 +43,34 @@ class ClothingListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return items.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        cell.textLabel?.text = "item"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath)
+        
+//        if let itemCell = cell as? itemCell {
+//            
+//            
+//        }
+        
+        let item = items[indexPath.row]
+        cell.textLabel?.text = item
+        cell.backgroundColor = UIColor.rose
+        cell.textLabel?.textColor = UIColor.coffeeBeaan
+        cell.textLabel?.sizeToFit()
+        cell.textLabel?.lineBreakMode = .byWordWrapping
 
         return cell
     }
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    
+        let row = indexPath.row
+        
         
         let itemDetailVC = ItemViewController()
         navigationController?.present(itemDetailVC, animated: true, completion: nil)
