@@ -32,7 +32,7 @@ class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
  
 
     func categorySelected() {
-    let clothingListVC = ClothingListTableViewController()
+    let clothingListVC = ClothingListViewController()
     navigationController?.pushViewController(clothingListVC, animated: true)
         
     }

@@ -11,6 +11,8 @@ import UIKit
 class ClothingListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     private let reuseIdentifier = "itemCell"
+    
+    var itemCell: ItemCell!
 
     var items = ["blue tank, black sweater, white tee"]
 
@@ -24,9 +26,12 @@ class ClothingListViewController: UIViewController, UITableViewDelegate, UITable
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self(<#T##NSObject#>), forCellReuseIdentifier: "itemCell")
-        
+        tableView.backgroundColor = UIColor.salmon
+    
         tableView = UITableView(frame: UIScreen.main.bounds, style: .plain)
+        tableView.register(ItemCell.self as AnyClass, forCellReuseIdentifier: "itemCell")
+        view.addSubview(tableView)
+        
         
     }
     
@@ -41,6 +46,17 @@ class ClothingListViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        var cell: ItemCell = tableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath) as! ItemCell
+        
+        if cell == nil {
+            
+            cell = ItemCell(style: .default, reuseIdentifier: "itemCell")
+        }
+        
+        cell.setupCell()
+        cell.titleLabel.text = items[indexPath.row]
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

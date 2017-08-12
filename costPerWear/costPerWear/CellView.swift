@@ -10,9 +10,18 @@ import Foundation
 import UIKit
 
 
-class CellView: UITableViewCell {
+class ItemCell: UITableViewCell {
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    
+    var cpwLabel: UILabel!
+    var titleLabel: UILabel!
+    
+    func setupCell() {
+        
+        titleLabel = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: 170.0, height: 50.0))
+        cpwLabel = UILabel(frame: CGRect.init(x: 100.0, y: 0.0, width: 30.0, height: 50.0))
+        self.contentView.addSubview(titleLabel)
+        self.contentView.addSubview(cpwLabel)
+
     }
 }
