@@ -13,6 +13,7 @@ class ClothingListViewController: UIViewController, UITableViewDelegate, UITable
     private let reuseIdentifier = "itemCell"
     
     var itemCell: ItemCell!
+    
 
     var items = ["blue tank, black sweater, white tee"]
 
@@ -29,24 +30,30 @@ class ClothingListViewController: UIViewController, UITableViewDelegate, UITable
         super.viewDidLoad()
         
         navigationController?.isNavigationBarHidden = false
+        self.tableView.isUserInteractionEnabled = true
         
+
         let screenSize: CGRect = UIScreen.main.bounds
         tableView = UITableView(frame: CGRect.init(x: 0.0, y: 0.0, width: screenSize.width, height: screenSize.height))
 
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "itemCell")
+
         
         tableView.backgroundColor = UIColor.salmon
-        self.tableView.isUserInteractionEnabled = true
         
-        tableView.register(ItemCell.self as AnyClass, forCellReuseIdentifier: "itemCell")
+        
+        
         view.addSubview(tableView)
+        
+        
         
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         print("3")
-        return 0
+        return 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,16 +65,20 @@ class ClothingListViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print("5")
         
-        var cell: ItemCell = tableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath) as! ItemCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath) as? ItemCell else { print("FAILED"); return UITableViewCell() }
         
-        if cell == nil {
-            
-            cell = ItemCell(style: .default, reuseIdentifier: "itemCell")
-        }
         
-        //cell.backgroundColor = UIColor.salmon
-        cell.setupCell()
-        cell.titleLabel.text = "smile"
+        cell.titleLabel.text = items[indexPath.row]
+        
+        
+
+//        cell.setupCell()
+//        cell.titleLabel?.text = items[indexPath.row]
+//        cell.titleLabel.backgroundColor = UIColor.blueSmoke
+//        cell.titleLabel?.font = UIFont(name: "Avenir-Light", size: 22)
+//        cell.titleLabel?.sizeToFit()
+//        cell.titleLabel?.lineBreakMode = .byWordWrapping
+
         
         print("6")
         

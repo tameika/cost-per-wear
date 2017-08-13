@@ -21,22 +21,28 @@ class ItemViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        self.navigationController?.navigationBar.isHidden = false
+
         createGradientLayer()
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        //self.navigationController?.navigationBar.isHidden = true
-        createColorSets()
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(recognizer:)))
-        self.view.addGestureRecognizer(tapGestureRecognizer)
-        view.isUserInteractionEnabled = true
         
         OperationQueue.main.addOperation {
             self.itemDetails = ItemDetailView(frame: CGRect.zero)
             self.view.addSubview(self.itemDetails)
         }
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        createColorSets()
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(recognizer:)))
+        self.view.addGestureRecognizer(tapGestureRecognizer)
+        view.isUserInteractionEnabled = true
+        
+//        OperationQueue.main.addOperation {
+//            self.itemDetails = ItemDetailView(frame: CGRect.zero)
+//            self.view.addSubview(self.itemDetails)
+//        }
         
     }
     
