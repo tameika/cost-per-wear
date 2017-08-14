@@ -36,9 +36,7 @@ class ContentViewController: UIViewController {
     }
     
     
-    func pressed() {
-        print("testing testing")
-        
+    func pressed() {        
         
         let vcAtIndex = NewItemDetailViewController()
         guard let textfieldEntry = contentPage.textfieldEntry else { return }

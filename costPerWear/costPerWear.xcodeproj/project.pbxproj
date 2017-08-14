@@ -21,7 +21,6 @@
 		BCC261AA1F34F7D300006CC4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261A91F34F7D300006CC4 /* Extensions.swift */; };
 		BCC261AF1F382A8700006CC4 /* CategorySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261AE1F382A8700006CC4 /* CategorySelectionViewController.swift */; };
 		BCC261B11F382AD400006CC4 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261B01F382AD400006CC4 /* CategoryView.swift */; };
-		BCC261B31F38D06700006CC4 /* ClothingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261B21F38D06700006CC4 /* ClothingListTableViewController.swift */; };
 		BCC261B51F3E8E2B00006CC4 /* ClothingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261B41F3E8E2B00006CC4 /* ClothingListViewController.swift */; };
 		BCC261B71F3EA45000006CC4 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261B61F3EA45000006CC4 /* CellView.swift */; };
 		BCCD9A5C1EAAABA5003C64E0 /* NewItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCD9A5B1EAAABA5003C64E0 /* NewItemDetailViewController.swift */; };
@@ -46,7 +45,6 @@
 		BCC261A91F34F7D300006CC4 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BCC261AE1F382A8700006CC4 /* CategorySelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySelectionViewController.swift; sourceTree = "<group>"; };
 		BCC261B01F382AD400006CC4 /* CategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
-		BCC261B21F38D06700006CC4 /* ClothingListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothingListTableViewController.swift; sourceTree = "<group>"; };
 		BCC261B41F3E8E2B00006CC4 /* ClothingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothingListViewController.swift; sourceTree = "<group>"; };
 		BCC261B61F3EA45000006CC4 /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		BCCD9A5B1EAAABA5003C64E0 /* NewItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemDetailViewController.swift; sourceTree = "<group>"; };
@@ -130,7 +128,6 @@
 			isa = PBXGroup;
 			children = (
 				BCC261AE1F382A8700006CC4 /* CategorySelectionViewController.swift */,
-				BCC261B21F38D06700006CC4 /* ClothingListTableViewController.swift */,
 				BC7750041EA81C82009B9B38 /* ItemDetailViewController.swift */,
 				BCC261B41F3E8E2B00006CC4 /* ClothingListViewController.swift */,
 				BCCD9A5B1EAAABA5003C64E0 /* NewItemDetailViewController.swift */,
@@ -293,7 +290,6 @@
 				BC7750051EA81C82009B9B38 /* ItemDetailViewController.swift in Sources */,
 				BCCD9A5C1EAAABA5003C64E0 /* NewItemDetailViewController.swift in Sources */,
 				BCC261AF1F382A8700006CC4 /* CategorySelectionViewController.swift in Sources */,
-				BCC261B31F38D06700006CC4 /* ClothingListTableViewController.swift in Sources */,
 				BC3033AA1EDF7FFD00332952 /* ContentView.swift in Sources */,
 				BC774FE51EA73F4B009B9B38 /* AppDelegate.swift in Sources */,
 				BCC261AA1F34F7D300006CC4 /* Extensions.swift in Sources */,

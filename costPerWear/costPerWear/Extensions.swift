@@ -35,7 +35,6 @@ extension ItemDetailView: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        print("hey")
         return false
     }
     

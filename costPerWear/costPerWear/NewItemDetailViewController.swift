@@ -84,7 +84,6 @@ extension NewItemDetailViewController: UIPageViewControllerDataSource {
             return nil
         }
         index -= 1
-        print(1.1)
         return self.viewControllerAtIndex(index: index)
     }
     
@@ -100,7 +99,6 @@ extension NewItemDetailViewController: UIPageViewControllerDataSource {
             if (index == pages.count) {
                 return nil
             }
-            print(2.1)
             return self.viewControllerAtIndex(index: index)
         }
         
