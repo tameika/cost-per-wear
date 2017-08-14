@@ -8,7 +8,9 @@
 
 import Foundation
 import UIKit
+import SnapKit
 
+//MARK : TODO : edit coffeebean
 
 class ItemCell: UITableViewCell {
     
@@ -19,9 +21,13 @@ class ItemCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        titleLabel = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: 100.0, height: 50.0))
-
+        selectionStyle = .default
+        titleLabel = UILabel()
         titleLabel.backgroundColor = UIColor.yellow
+        titleLabel = UILabel(frame: CGRect.zero)
+        titleLabel.textAlignment = .left
+        textLabel?.textColor = UIColor.coffeeBeaan
+
         contentView.addSubview(titleLabel)
 
     }
@@ -35,7 +41,18 @@ class ItemCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.clipsToBounds = true
+        titleLabel.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview().inset(2.0)
+            make.centerY.equalToSuperview().inset(2.0)
+            make.height.equalTo(50.0)
+            make.width.equalTo(170.0)
+        }
+        
     }
+    
+    
     
     
     

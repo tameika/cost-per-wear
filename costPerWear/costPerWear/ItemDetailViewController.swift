@@ -23,12 +23,7 @@ class ItemViewController: UIViewController {
         super.viewWillAppear(true)
         self.navigationController?.navigationBar.isHidden = false
 
-        createGradientLayer()
         
-        OperationQueue.main.addOperation {
-            self.itemDetails = ItemDetailView(frame: CGRect.zero)
-            self.view.addSubview(self.itemDetails)
-        }
     }
 
     override func viewDidLoad() {
@@ -39,10 +34,13 @@ class ItemViewController: UIViewController {
         self.view.addGestureRecognizer(tapGestureRecognizer)
         view.isUserInteractionEnabled = true
         
-//        OperationQueue.main.addOperation {
-//            self.itemDetails = ItemDetailView(frame: CGRect.zero)
-//            self.view.addSubview(self.itemDetails)
-//        }
+        DispatchQueue.main.async {
+            self.itemDetails = ItemDetailView(frame: CGRect.zero)
+            self.view.addSubview(self.itemDetails)
+        }
+        
+        self.createGradientLayer()
+
         
     }
     

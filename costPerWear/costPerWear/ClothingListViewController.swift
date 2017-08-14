@@ -35,10 +35,10 @@ class ClothingListViewController: UIViewController, UITableViewDelegate, UITable
 
         let screenSize: CGRect = UIScreen.main.bounds
         tableView = UITableView(frame: CGRect.init(x: 0.0, y: 0.0, width: screenSize.width, height: screenSize.height))
+        tableView.register(ItemCell.self, forCellReuseIdentifier: "itemCell")
 
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "itemCell")
 
         
         tableView.backgroundColor = UIColor.salmon
@@ -52,20 +52,22 @@ class ClothingListViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        print("3")
         return 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("4")
         return items.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("5")
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath) as? ItemCell else { print("FAILED"); return UITableViewCell() }
+//        guard let cell = self.tableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath) as? ItemCell else { print("FAILED"); return UITableViewCell() }
+        
+       var cell = ItemCell()
+        
+        cell = self.tableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath) as! ItemCell
+        
         
         
         cell.titleLabel.text = items[indexPath.row]
