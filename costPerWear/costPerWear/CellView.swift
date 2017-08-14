@@ -20,10 +20,12 @@ class ItemCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        print("setting up label")
         
+        backgroundColor = UIColor.yellow
         selectionStyle = .default
         titleLabel = UILabel()
-        titleLabel.backgroundColor = UIColor.yellow
+        // titleLabel.backgroundColor = UIColor.purple
         titleLabel = UILabel(frame: CGRect.zero)
         titleLabel.textAlignment = .left
         textLabel?.textColor = UIColor.coffeeBeaan

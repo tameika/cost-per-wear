@@ -15,7 +15,7 @@ class ClothingListViewController: UIViewController, UITableViewDelegate, UITable
     var itemCell: ItemCell!
     
 
-    var items = ["blue tank, black sweater, white tee"]
+    var items = ["blue tank", "black sweater", "white tee"]
 
     var tableView = UITableView()
     
@@ -62,24 +62,23 @@ class ClothingListViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-//        guard let cell = self.tableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath) as? ItemCell else { print("FAILED"); return UITableViewCell() }
+
         
        var cell = ItemCell()
         
         cell = self.tableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath) as! ItemCell
         
+        let item = items[indexPath.row]
+        
+        cell.titleLabel.text = item
+        print(item)
         
         
-        cell.titleLabel.text = items[indexPath.row]
-        
-        
+        cell.titleLabel?.font = UIFont(name: "Avenir-Light", size: 22)
+        cell.titleLabel?.sizeToFit()
+        cell.textLabel?.numberOfLines = 0
 
-//        cell.setupCell()
-//        cell.titleLabel?.text = items[indexPath.row]
-//        cell.titleLabel.backgroundColor = UIColor.blueSmoke
-//        cell.titleLabel?.font = UIFont(name: "Avenir-Light", size: 22)
-//        cell.titleLabel?.sizeToFit()
-//        cell.titleLabel?.lineBreakMode = .byWordWrapping
+        cell.titleLabel?.lineBreakMode = .byWordWrapping
 
         
         print("6")
@@ -91,7 +90,7 @@ class ClothingListViewController: UIViewController, UITableViewDelegate, UITable
         print("i've been touched by an angel")
         //items[indexPath.row]
         let itemDetailVC = ItemViewController()
-        navigationController?.present(itemDetailVC, animated: true, completion: nil)
+        navigationController?.pushViewController(itemDetailVC, animated: true)
     }
 
     
