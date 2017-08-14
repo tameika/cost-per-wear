@@ -17,7 +17,7 @@ class ContentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         creatConstraints()
- 
+        
         self.view.backgroundColor = UIColor.lightGray
         //contentPage = ContentView()
         contentPage.pageTitle.text = pages[self.pageIndex].title
@@ -26,11 +26,11 @@ class ContentViewController: UIViewController {
         
         self.contentPage.enterBtn.addTarget(self, action: #selector(pressed), for: .touchUpInside)
         
-       // Should the above be included in view controller?
+        // Should the above be included in view controller?
         
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -46,7 +46,7 @@ class ContentViewController: UIViewController {
         switch pageIndex {
         case 0:
             itemDetails.itemImage.image = UIImage()
-
+            
             present(vcAtIndex.viewControllerAtIndex(index: 1), animated: true, completion: nil)
         case 1:
             itemDetails.itemName.text = "test text"
@@ -61,8 +61,8 @@ class ContentViewController: UIViewController {
         }
         
         if !(textfieldEntry.text?.isEmpty)! {
-        
-        present(ItemViewController(), animated: true, completion: nil)
+            
+            present(ItemViewController(), animated: true, completion: nil)
             
             
         }
@@ -97,9 +97,9 @@ class ContentViewController: UIViewController {
         contentPage.enterBtn.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 0.0).isActive = true
         contentPage.enterBtn.heightAnchor.constraint(equalTo: self.view.heightAnchor, constant: -50.0).isActive = true
         contentPage.enterBtn.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: -50.0).isActive = true
-
-
+        
+        
     }
     
-  
+    
 }

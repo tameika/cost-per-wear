@@ -11,16 +11,9 @@ import UIKit
 class NewItemDetailViewController: UIViewController {
     
     var pageViewController: UIPageViewController!
-    
     var navigationOrientation: UIPageViewControllerNavigationOrientation!
-
-
     var pageTitles = ["Photo", "Name", "Age", "Cost"]
-    
-
     var viewControllers = [UIViewController]()
-    
-    
     
     
     override func viewDidLoad() {
@@ -30,7 +23,7 @@ class NewItemDetailViewController: UIViewController {
         pc.pageIndicatorTintColor = UIColor.black
         pc.currentPageIndicatorTintColor = UIColor.white
         pc.backgroundColor = UIColor.green
-
+        
         
         self.view.backgroundColor = UIColor.white
         
@@ -40,11 +33,11 @@ class NewItemDetailViewController: UIViewController {
         
         self.pageViewController?.view.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height - 30.0)
         self.restartAction(sender: self)
-
+        
         self.addChildViewController((pageViewController)!)
         self.view.addSubview((pageViewController?.view)!)
         self.pageViewController?.didMove(toParentViewController: self)
-
+        
         
     }
     
@@ -84,7 +77,7 @@ extension NewItemDetailViewController: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         let vc = viewController as! ContentViewController
-       
+        
         var index = vc.pageIndex
         
         if (index == 0 || index == NSNotFound) {
@@ -111,7 +104,7 @@ extension NewItemDetailViewController: UIPageViewControllerDataSource {
             return self.viewControllerAtIndex(index: index)
         }
         
-   
+        
         return nil
     }
     
@@ -125,7 +118,7 @@ extension NewItemDetailViewController: UIPageViewControllerDataSource {
     }
     
     
-
+    
 }
 
 

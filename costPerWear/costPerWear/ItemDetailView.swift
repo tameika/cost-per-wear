@@ -11,7 +11,6 @@ import UIKit
 import SnapKit
 
 
-// TODO: encap in functions?
 
 class ItemDetailView: UIView {
     
@@ -32,7 +31,7 @@ class ItemDetailView: UIView {
     
     override init(frame: CGRect){
         super.init(frame: frame)
-
+        
         // MARK : ITEM IMAGE VIEW
         
         itemImage = UIImageView.init(frame: CGRect.zero)
@@ -49,6 +48,7 @@ class ItemDetailView: UIView {
         
         
         // MARK : DATE ADDED LABEL
+        
         itemDateAdded = UILabel.init(frame: CGRect.zero)
         itemDateAdded.translatesAutoresizingMaskIntoConstraints = false
         itemDateAdded.clipsToBounds = true
@@ -141,7 +141,6 @@ class ItemDetailView: UIView {
             make.height.equalTo(110.0)
             make.width.equalTo(110.0)
         }
-        
         
     }
     

@@ -17,7 +17,6 @@ protocol CostPerWear {
 
 struct Item: CostPerWear {
     internal static var costPerWear: Double = 0.0
-    
     var itemName: String
     var itemAge: String
     static var itemPurchasePrice: Double = 0.0
@@ -25,21 +24,15 @@ struct Item: CostPerWear {
     var itemTags: [ClothingPart]
     var dateCreated: String
     static var numberOfWears: Int = 0
-  
     static var calculateCostPerWear: Double {
         
         get {
-            
            return costPerWear
         }
-        
         set {
-            
             costPerWear = itemPurchasePrice / Double(numberOfWears)
         }
-        
     }
-  
 }
 
 
@@ -103,6 +96,7 @@ enum Neck: String {
 }
 
 enum Rise: String {
+    
     case midRise = "Mid Rise"
     case lowRise = "Low Rise"
     case highRise = "High Rise"
@@ -117,6 +111,7 @@ enum Waist: String {
 }
 
 enum Length: String {
+    
     case floorLength = "Floor Length"
     case maxiLength = "Maxi Length"
     case miniLength = "Mini Length"
@@ -151,6 +146,7 @@ enum Material: String {
 }
 
 enum Toe: String {
+    
     case openToe = "Open-Toe"
     case pointedToe = "Pointed"
     case squareToe = "Square"
@@ -171,6 +167,7 @@ enum HeelStyle: String {
 }
 
 enum HeelHeight: String {
+    
     case flat = "Flat"
     case kittenHeel = "Kitten Heel"
     case highHeel = "High Heel"

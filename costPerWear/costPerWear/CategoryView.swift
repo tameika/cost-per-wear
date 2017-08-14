@@ -26,7 +26,7 @@ class CategoryView: UIView {
     var dressesBtn: UIButton!
     var shoesBtn: UIButton!
     
-   func categoryButtonPressed() {
+    func categoryButtonPressed() {
         delegate?.categorySelected()
     }
     
@@ -72,7 +72,7 @@ class CategoryView: UIView {
             make.centerY.equalToSuperview().inset(-100.0)
             make.height.equalTo(70.0)
             make.width.equalTo(70.0)
-
+            
         }
         
         
@@ -89,7 +89,7 @@ class CategoryView: UIView {
             make.centerY.equalToSuperview().inset(50.0)
             make.height.equalTo(70.0)
             make.width.equalTo(70.0)
-
+            
         }
         
         
@@ -106,25 +106,13 @@ class CategoryView: UIView {
             make.centerY.equalToSuperview().inset(50.0)
             make.height.equalTo(70.0)
             make.width.equalTo(70.0)
-
+            
         }
- 
+        
     }
 }
 
 
 
 
-    
- 
-    
-    
-    
-    
-    
-    
-    
-    
-
-    
 

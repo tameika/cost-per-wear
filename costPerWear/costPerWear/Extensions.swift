@@ -13,7 +13,7 @@ extension UIColor {
     
     static let rose = UIColor(red:0.92, green:0.00, blue:0.40, alpha:1.0)
     static let salmon = UIColor(red:0.93, green:0.53, blue:0.55, alpha:1.0)
-    static let coffeeBeaan = UIColor(red:0.17, green:0.08, blue:0.08, alpha:1.0)
+    static let coffeeBean = UIColor(red:0.17, green:0.08, blue:0.08, alpha:1.0)
     static let bone = UIColor(red:0.98, green:1.00, blue:0.95, alpha:0.50)
     static let bloodOrange = UIColor(red:1.00, green:0.25, blue:0.00, alpha:1.0)
     static let deepTeal = UIColor(red:0.01, green:0.17, blue:0.20, alpha:1.0)
@@ -25,14 +25,13 @@ extension UIColor {
     static let slate = UIColor(red:0.62, green:0.71, blue:0.76, alpha:1.0)
     static let lilacMute = UIColor(red:0.60, green:0.46, blue:0.70, alpha:1.0)
     static let eggplantMute = UIColor(red:0.31, green:0.20, blue:0.46, alpha:1.0)
-
+    
 }
 
 
 extension ItemDetailView: UITextFieldDelegate {
     
     var placeholder: NSAttributedString {return NSAttributedString(string: "enter here", attributes: [NSForegroundColorAttributeName : UIColor.lightText])}
-    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()

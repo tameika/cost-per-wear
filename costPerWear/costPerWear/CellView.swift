@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 import SnapKit
 
-//MARK : TODO : edit coffeebean
 
 class ItemCell: UITableViewCell {
     
@@ -20,18 +19,15 @@ class ItemCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        print("setting up label")
         
         backgroundColor = UIColor.yellow
         selectionStyle = .default
         titleLabel = UILabel()
-        // titleLabel.backgroundColor = UIColor.purple
         titleLabel = UILabel(frame: CGRect.zero)
         titleLabel.textAlignment = .left
-        textLabel?.textColor = UIColor.coffeeBeaan
-
+        textLabel?.textColor = UIColor.coffeeBean
         contentView.addSubview(titleLabel)
-
+        
     }
     
     
@@ -54,17 +50,5 @@ class ItemCell: UITableViewCell {
         
     }
     
-    
-    
-    
-    
-//    func setupCell() {
-//        
-//        titleLabel = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: 170.0, height: 30.0))
-//        //cpwLabel = UILabel(frame: CGRect.init(x: 100.0, y: 0.0, width: 30.0, height: 50.0))
-//        self.contentView.addSubview(titleLabel)
-//        //self.contentView.addSubview(cpwLabel)
-//
-//    }
     
 }
