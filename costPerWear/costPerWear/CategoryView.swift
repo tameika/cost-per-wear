@@ -42,10 +42,11 @@ class CategoryView: UIView {
         topsBtn = UIButton(frame: CGRect.zero)
         topsBtn.isUserInteractionEnabled = true
         topsBtn.translatesAutoresizingMaskIntoConstraints = false
+        topsBtn.layer.cornerRadius = 30.0
         topsBtn.backgroundColor = UIColor.bloodOrange
         topsBtn.setTitle("Tops", for: .normal)
-        topsBtn.setTitleColor(UIColor.blue, for: .normal)
-        topsBtn.setTitleColor(UIColor.gray, for: .highlighted)
+        topsBtn.setTitleColor(UIColor.bone, for: .normal)
+        topsBtn.setTitleColor(UIColor.rose, for: .highlighted)
         topsBtn.addTarget(self, action: #selector(categoryButtonPressed), for: .touchUpInside)
         topsBtn.tag = 1
         addSubview(topsBtn)
@@ -62,8 +63,11 @@ class CategoryView: UIView {
         bottomsBtn = UIButton(frame: CGRect.zero)
         bottomsBtn.isUserInteractionEnabled = true
         bottomsBtn.translatesAutoresizingMaskIntoConstraints = false
+        bottomsBtn.layer.cornerRadius = 30.0
         bottomsBtn.backgroundColor = UIColor.bloodOrange
         bottomsBtn.setTitle("Bottoms", for: .normal)
+        bottomsBtn.setTitleColor(UIColor.bone, for: .normal)
+        bottomsBtn.setTitleColor(UIColor.rose, for: .highlighted)
         bottomsBtn.addTarget(self, action: #selector(categoryButtonPressed), for: .touchUpInside)
         bottomsBtn.tag = 2
         addSubview(bottomsBtn)
@@ -79,8 +83,11 @@ class CategoryView: UIView {
         dressesBtn = UIButton(frame: CGRect.zero)
         bottomsBtn.isUserInteractionEnabled = true
         dressesBtn.translatesAutoresizingMaskIntoConstraints = false
+        dressesBtn.layer.cornerRadius = 30.0
         dressesBtn.backgroundColor = UIColor.bloodOrange
         dressesBtn.setTitle("Dresses", for: .normal)
+        dressesBtn.setTitleColor(UIColor.bone, for: .normal)
+        dressesBtn.setTitleColor(UIColor.rose, for: .highlighted)
         dressesBtn.addTarget(self, action: #selector(categoryButtonPressed), for: .touchUpInside)
         dressesBtn.tag = 3
         addSubview(dressesBtn)
@@ -96,8 +103,11 @@ class CategoryView: UIView {
         shoesBtn = UIButton(frame: CGRect.zero)
         shoesBtn.isUserInteractionEnabled = true
         shoesBtn.translatesAutoresizingMaskIntoConstraints = false
+        shoesBtn.layer.cornerRadius = 30.0
         shoesBtn.backgroundColor = UIColor.bloodOrange
         shoesBtn.setTitle("Shoes", for: .normal)
+        shoesBtn.setTitleColor(UIColor.bone, for: .normal)
+        shoesBtn.setTitleColor(UIColor.rose, for: .highlighted)
         shoesBtn.addTarget(self, action: #selector(categoryButtonPressed), for: .touchUpInside)
         shoesBtn.tag = 4
         addSubview(shoesBtn)
