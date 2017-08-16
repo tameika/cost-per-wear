@@ -20,7 +20,7 @@ class ItemCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        backgroundColor = UIColor.yellow
+        backgroundColor = UIColor.clear
         selectionStyle = .default
         titleLabel = UILabel()
         titleLabel = UILabel(frame: CGRect.zero)

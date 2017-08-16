@@ -32,7 +32,7 @@ class ClothingListViewController: UIViewController, UITableViewDelegate, UITable
         tableView.register(ItemCell.self, forCellReuseIdentifier: "itemCell")
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.backgroundColor = UIColor.salmon
+        tableView.backgroundColor = UIColor.rose
         view.addSubview(tableView)
         
     }
