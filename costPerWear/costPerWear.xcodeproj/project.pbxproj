@@ -17,6 +17,7 @@
 		BC7750031EA81C29009B9B38 /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7750021EA81C29009B9B38 /* ItemDetailView.swift */; };
 		BC7750051EA81C82009B9B38 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7750041EA81C82009B9B38 /* ItemDetailViewController.swift */; };
 		BC7750071EA9B74E009B9B38 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7750061EA9B74E009B9B38 /* ItemDetail.swift */; };
+		BCADA0121F456712000D8233 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADA0111F456712000D8233 /* LoginViewController.swift */; };
 		BCC261A81F2FE48500006CC4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261A71F2FE48500006CC4 /* User.swift */; };
 		BCC261AA1F34F7D300006CC4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261A91F34F7D300006CC4 /* Extensions.swift */; };
 		BCC261AF1F382A8700006CC4 /* CategorySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261AE1F382A8700006CC4 /* CategorySelectionViewController.swift */; };
@@ -42,6 +43,7 @@
 		BC7750021EA81C29009B9B38 /* ItemDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
 		BC7750041EA81C82009B9B38 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		BC7750061EA9B74E009B9B38 /* ItemDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
+		BCADA0111F456712000D8233 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BCC261A71F2FE48500006CC4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BCC261A91F34F7D300006CC4 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BCC261AE1F382A8700006CC4 /* CategorySelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySelectionViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 		BC7750001EA818D5009B9B38 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BCADA0111F456712000D8233 /* LoginViewController.swift */,
 				BCC261AE1F382A8700006CC4 /* CategorySelectionViewController.swift */,
 				BC7750041EA81C82009B9B38 /* ItemDetailViewController.swift */,
 				BCC261B41F3E8E2B00006CC4 /* ClothingListViewController.swift */,
@@ -295,6 +298,7 @@
 				BCC261AF1F382A8700006CC4 /* CategorySelectionViewController.swift in Sources */,
 				BCC261B91F41908B00006CC4 /* TODO.swift in Sources */,
 				BC3033AA1EDF7FFD00332952 /* ContentView.swift in Sources */,
+				BCADA0121F456712000D8233 /* LoginViewController.swift in Sources */,
 				BC774FE51EA73F4B009B9B38 /* AppDelegate.swift in Sources */,
 				BCC261AA1F34F7D300006CC4 /* Extensions.swift in Sources */,
 				BC774FED1EA73F4B009B9B38 /* costPerWear.xcdatamodeld in Sources */,
