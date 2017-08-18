@@ -18,6 +18,7 @@
 		BC7750051EA81C82009B9B38 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7750041EA81C82009B9B38 /* ItemDetailViewController.swift */; };
 		BC7750071EA9B74E009B9B38 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7750061EA9B74E009B9B38 /* ItemDetail.swift */; };
 		BCADA0121F456712000D8233 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADA0111F456712000D8233 /* LoginViewController.swift */; };
+		BCADA0151F46BB70000D8233 /* AWSAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADA0141F46BB70000D8233 /* AWSAuth.swift */; };
 		BCC261A81F2FE48500006CC4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261A71F2FE48500006CC4 /* User.swift */; };
 		BCC261AA1F34F7D300006CC4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261A91F34F7D300006CC4 /* Extensions.swift */; };
 		BCC261AF1F382A8700006CC4 /* CategorySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261AE1F382A8700006CC4 /* CategorySelectionViewController.swift */; };
@@ -44,6 +45,7 @@
 		BC7750041EA81C82009B9B38 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		BC7750061EA9B74E009B9B38 /* ItemDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
 		BCADA0111F456712000D8233 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BCADA0141F46BB70000D8233 /* AWSAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSAuth.swift; sourceTree = "<group>"; };
 		BCC261A71F2FE48500006CC4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BCC261A91F34F7D300006CC4 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BCC261AE1F382A8700006CC4 /* CategorySelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySelectionViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			children = (
 				BCC261B81F41908A00006CC4 /* TODO.swift */,
 				BC774FE41EA73F4B009B9B38 /* AppDelegate.swift */,
+				BCADA0131F46B92D000D8233 /* AWSAPI */,
 				BCC261AB1F3503E400006CC4 /* Constants */,
 				BC774FFF1EA818C4009B9B38 /* Model */,
 				BC7750011EA81915009B9B38 /* View */,
@@ -152,6 +155,14 @@
 				BC3033A91EDF7FFD00332952 /* ContentView.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		BCADA0131F46B92D000D8233 /* AWSAPI */ = {
+			isa = PBXGroup;
+			children = (
+				BCADA0141F46BB70000D8233 /* AWSAuth.swift */,
+			);
+			name = AWSAPI;
 			sourceTree = "<group>";
 		};
 		BCC261AB1F3503E400006CC4 /* Constants */ = {
@@ -302,6 +313,7 @@
 				BC774FE51EA73F4B009B9B38 /* AppDelegate.swift in Sources */,
 				BCC261AA1F34F7D300006CC4 /* Extensions.swift in Sources */,
 				BC774FED1EA73F4B009B9B38 /* costPerWear.xcdatamodeld in Sources */,
+				BCADA0151F46BB70000D8233 /* AWSAuth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
