@@ -8,6 +8,9 @@
 
 import UIKit
 import CoreData
+import AWSCore
+import AWSCognitoIdentityProvider
+import AWSCognito
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +19,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        
+        func createCredentials() {
+            
+            let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "163775170865145")
+            let configuration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialProvider)
+            AWSServiceManager.default().defaultServiceConfiguration = configuration
+            
+            let cognitoId = credentialProvider.identityId
+            
+        }
+        
+        
+        
+        
         // create a window
         window = UIWindow(frame: UIScreen.main.bounds)
         

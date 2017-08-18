@@ -25,15 +25,7 @@ class LoginViewController: UIViewController {
     }
 
     
-    func createCredentials() {
-        
-        let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "163775170865145")
-        let configuration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialProvider)
-        AWSServiceManager.default().defaultServiceConfiguration = configuration
-        
-        let cognitoId = credentialProvider.identityId
-
-    }
+    
     
     
     
