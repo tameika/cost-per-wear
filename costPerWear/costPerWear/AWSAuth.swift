@@ -55,6 +55,10 @@ class CPWIdentityProvider: AWSAbstractCognitoCredentialsProvider {
         }
     }
     
+    override func refresh() -> AWSTask! {
+        return task
+    }
+    
 }
 
 
