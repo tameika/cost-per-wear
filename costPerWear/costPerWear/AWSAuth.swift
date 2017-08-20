@@ -10,14 +10,23 @@ import Foundation
 import AWSCore
 import AWSCognito
 import AWSCognitoIdentityProvider
+import AFNetworking
 
-// MARK : To make my own custom authentication server
+// MARK : To make my own custom authentication server aka "Developer Authentication" (username/email & password)
+
+// Gets a token to give Cognito so it can grant user an authenticated identity
 
 
 class CPWIdentityProvider: AWSAbstractCognitoCredentialsProvider {
     
+    // used to store the token retrieved from our custom authentication system
+    
     var _token: String!
+    
+    // stores strings representing the diff systems (developer, facebook, etc) by which the user has been authenticated
+    
     var _logins: [NSObject : AnyObject]!
+    
     
      override var token: String {
         
@@ -39,6 +48,7 @@ class CPWIdentityProvider: AWSAbstractCognitoCredentialsProvider {
         }
     }
     
+    // checks to see if there is already an identity, and if not, calls the refresh method
     
     override func getIdentityId() -> AWSTask! {
         
@@ -55,9 +65,17 @@ class CPWIdentityProvider: AWSAbstractCognitoCredentialsProvider {
         }
     }
     
+    
+    // retrieves authorization for user in order to update the _token and _logins properties so the SDK can assign user to an authenticated role
+    
     override func refresh() -> AWSTask! {
         return task
     }
+    
+    
+    
+    
+    
     
 }
 
