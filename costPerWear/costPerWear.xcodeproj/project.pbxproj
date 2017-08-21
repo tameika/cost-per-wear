@@ -27,7 +27,7 @@
 		BCC261B71F3EA45000006CC4 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261B61F3EA45000006CC4 /* CellView.swift */; };
 		BCC261B91F41908B00006CC4 /* TODO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261B81F41908A00006CC4 /* TODO.swift */; };
 		BCCD9A5C1EAAABA5003C64E0 /* NewItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCD9A5B1EAAABA5003C64E0 /* NewItemDetailViewController.swift */; };
-		E84967BA077C4173C14BE0F3 /* Pods_costPerWear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D036BDF4FACFA72DFCE381 /* Pods_costPerWear.framework */; };
+		E84967BA077C4173C14BE0F3 /* Pods_costPerWear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D036BDF4FACFA72DFCE381 /* Pods_costPerWear.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */

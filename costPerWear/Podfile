@@ -28,5 +28,6 @@ target 'costPerWear' do
     pod 'AWSSimpleDB'
     pod 'AWSSNS'
     pod 'AWSSQS'
+    pod 'AFNetworking'
 
 end

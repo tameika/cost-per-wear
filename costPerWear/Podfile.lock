@@ -1,4 +1,19 @@
 PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
   - AWSAutoScaling (2.5.9):
     - AWSCore (= 2.5.9)
   - AWSCloudWatch (2.5.9):
@@ -45,6 +60,7 @@ PODS:
   - SnapKit (3.2.0)
 
 DEPENDENCIES:
+  - AFNetworking
   - AWSAutoScaling
   - AWSCloudWatch
   - AWSCognito
@@ -69,6 +85,7 @@ DEPENDENCIES:
   - SnapKit (~> 3.0)
 
 SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   AWSAutoScaling: f55b3218db16a90a8065597cf23f1003c31d9fa4
   AWSCloudWatch: f453baacca1fda963326f5e5208cefaeb8cb8820
   AWSCognito: 5dfe4120e7f77b2e77396b4532e4aacacc4ae08d
@@ -93,6 +110,6 @@ SPEC CHECKSUMS:
   AWSSQS: eaec6df70bd4112d88b8fae0d8c5987b1fd471a3
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
 
-PODFILE CHECKSUM: 6f327c3f6e8bcae5b93d264618bbf8c8196e1a60
+PODFILE CHECKSUM: 01f342479db2af54f7b81657915c82bb4ec00023
 
 COCOAPODS: 1.2.1

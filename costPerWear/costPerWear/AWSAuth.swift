@@ -12,6 +12,7 @@ import AWSCognito
 import AWSCognitoIdentityProvider
 import AFNetworking
 
+
 // MARK : To make my own custom authentication server aka "Developer Authentication" (username/email & password)
 
 // Gets a token to give Cognito so it can grant user an authenticated identity
@@ -70,6 +71,10 @@ class CPWIdentityProvider: AWSAbstractCognitoCredentialsProvider {
     
     override func refresh() -> AWSTask! {
         return task
+        
+        let task = AWSTaskCompletionSource()
+        let request = AFHTTPRequestOperationManager()
+        request.requestSerializer
     }
     
     
