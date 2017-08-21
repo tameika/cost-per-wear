@@ -1,24 +1,22 @@
 //
-//  AWSAuth.swift
+//  DeveloperAuth.swift
 //  costPerWear
 //
-//  Created by Tameika Lawrence on 8/18/17.
+//  Created by Tameika Lawrence on 8/21/17.
 //  Copyright © 2017 Tameika Lawrence. All rights reserved.
 //
 
 import Foundation
 import AWSCore
 import AWSCognito
-import AWSCognitoIdentityProvider
 import AFNetworking
-
 
 // MARK : To make my own custom authentication server aka "Developer Authentication" (username/email & password)
 
 // Gets a token to give Cognito so it can grant user an authenticated identity
 
 
-class CPWIdentityProvider: AWSAbstractCognitoCredentialsProvider {
+class CPWIdentityProvider: NSObject, AWSAbstractIdentityProvider {
     
     // used to store the token retrieved from our custom authentication system
     
@@ -29,7 +27,7 @@ class CPWIdentityProvider: AWSAbstractCognitoCredentialsProvider {
     var _logins: [NSObject : AnyObject]!
     
     
-     override var token: String {
+    override var token: String {
         
         get {
             return _token
@@ -51,7 +49,7 @@ class CPWIdentityProvider: AWSAbstractCognitoCredentialsProvider {
     
     // checks to see if there is already an identity, and if not, calls the refresh method
     
-    override func getIdentityId() -> AWSTask! {
+    override func getIdentityId() -> BFTask! {
         
         if self.identityId != nil {
             return AWSTask(result: self.identityId)
@@ -62,7 +60,7 @@ class CPWIdentityProvider: AWSAbstractCognitoCredentialsProvider {
                 }
                 return AWSTask(result: self.identityId)
             })
-        
+            
         }
     }
     
@@ -83,17 +81,4 @@ class CPWIdentityProvider: AWSAbstractCognitoCredentialsProvider {
     
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 

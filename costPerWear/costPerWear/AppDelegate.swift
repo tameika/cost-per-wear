@@ -9,8 +9,8 @@
 import UIKit
 import CoreData
 import AWSCore
-import AWSCognitoIdentityProvider
 import AWSCognito
+import AWSS3
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,12 +22,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         func createCredentials() {
-            
             let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "163775170865145")
             let configuration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialProvider)
             AWSServiceManager.default().defaultServiceConfiguration = configuration
             
-            let cognitoId = credentialProvider.identityId
+            let transferManager = AWSS3TransferManager.default()
+            
+            let cognitoId = credentialProvider.getIdentityId()
             
         }
         

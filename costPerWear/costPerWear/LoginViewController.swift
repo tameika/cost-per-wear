@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 import AWSCore
 import AWSCognito
-import AWSCognitoIdentityProvider
 
 
 
