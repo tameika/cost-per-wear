@@ -72,11 +72,16 @@ class CPWIdentityProvider: NSObject, AWSAbstractIdentityProvider {
         
         let task = AWSTaskCompletionSource()
         let request = AFHTTPRequestOperationManager()
-        request.requestSerializer
+        request.requestSerializer.setValue(email, forHTTPHeaderField: "email")
+        request.requestSerializer.setValue(password, forHTTPHeaderField: "password")
+        request.GET(Constants.loginUrl.value, parameters: nil, success: { (request: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
+            // The following 3 lines are required as referenced here: http://stackoverflow.com/a/26741208/535363
+            self.logins = [self.developerProvider: self.email]
+
+    })
+    
+    
     }
-    
-    
-    
     
     
     
