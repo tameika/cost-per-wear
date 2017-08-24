@@ -26,8 +26,6 @@ class ContentViewController: UIViewController {
         
         self.contentPage.enterBtn.addTarget(self, action: #selector(pressed), for: .touchUpInside)
         
-        // Should the above be included in view controller?
-        
         
     }
     
