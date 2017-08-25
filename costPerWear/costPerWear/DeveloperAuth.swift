@@ -47,7 +47,7 @@ class CPWIdentityProvider: NSObject, AWSAbstractIdentityProvider {
         }
     }
     
-    // checks to see if there is already an identity, and if not, calls the refresh method
+    // checks to see if there is already an identity and, if not, calls the refresh method
     
     override func getIdentityId() -> BFTask! {
         
@@ -70,20 +70,45 @@ class CPWIdentityProvider: NSObject, AWSAbstractIdentityProvider {
     override func refresh() -> AWSTask! {
         return task
         
+        // returns an AWSTask object from the method
+        
         let task = AWSTaskCompletionSource()
+        
+        // runs the Lambda script through API Gateway
+        
         let request = AFHTTPRequestOperationManager()
+        
+        // headers for request
+        
         request.requestSerializer.setValue(email, forHTTPHeaderField: "email")
         request.requestSerializer.setValue(password, forHTTPHeaderField: "password")
+        
+        // reads email/password and inputs them as parameters to the Lambda function;
+        // function checks for a response and retrieves identity id and token and stores them to class properties
+        
         request.GET(Constants.loginUrl.value, parameters: nil, success: { (request: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
-            // The following 3 lines are required as referenced here: http://stackoverflow.com/a/26741208/535363
+            
+            
             self.logins = [self.developerProvider: self.email]
+            
+            let identityId = response.objectForKey("token") as! String
 
-    })
-    
-    
+            // set identityId and token
+            
+            self.identityId = identityId
+            self._token = token
+            
+            task.setResult(self.identityId)
+            
+            // if function is invoked improperly gives an error message
+        },
+            failure: { (request: AFHTTPRequestOperation?, error: NSError!) -> Void in
+            task.setError(error)
+        })
+        
+        return task.task
+
     }
-    
-    
-    
+  
 }
 
