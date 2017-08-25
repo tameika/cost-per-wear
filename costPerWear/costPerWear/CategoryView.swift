@@ -25,6 +25,7 @@ class CategoryView: UIView {
     var bottomsBtn: UIButton!
     var dressesBtn: UIButton!
     var shoesBtn: UIButton!
+    var addBtn: UIButton!
     
     func categoryButtonPressed() {
         delegate?.categorySelected()
@@ -56,8 +57,8 @@ class CategoryView: UIView {
         topsBtn.tag = 1
         addSubview(topsBtn)
         topsBtn.snp.makeConstraints { (make) in
-            make.centerX.equalToSuperview().inset(-100.0)
-            make.centerY.equalToSuperview().inset(-100.0)
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview().inset(-200.0)
             make.height.equalTo(90.0)
             make.width.equalTo(90.0)
         }
@@ -79,8 +80,8 @@ class CategoryView: UIView {
         bottomsBtn.tag = 2
         addSubview(bottomsBtn)
         bottomsBtn.snp.makeConstraints { (make) in
-            make.centerX.equalToSuperview().inset(100.0)
-            make.centerY.equalToSuperview().inset(-100.0)
+            make.centerX.equalToSuperview()
+            make.centerY.equalTo(topsBtn).inset(110.0)
             make.height.equalTo(90.0)
             make.width.equalTo(90.0)
             
@@ -101,8 +102,8 @@ class CategoryView: UIView {
         dressesBtn.tag = 3
         addSubview(dressesBtn)
         dressesBtn.snp.makeConstraints { (make) in
-            make.centerX.equalToSuperview().inset(-100.0)
-            make.centerY.equalToSuperview().inset(50.0)
+            make.centerX.equalToSuperview()
+            make.centerY.equalTo(bottomsBtn).inset(110.0)
             make.height.equalTo(90.0)
             make.width.equalTo(90.0)
             
@@ -123,12 +124,35 @@ class CategoryView: UIView {
         shoesBtn.tag = 4
         addSubview(shoesBtn)
         shoesBtn.snp.makeConstraints { (make) in
-            make.centerX.equalToSuperview().inset(100.0)
-            make.centerY.equalToSuperview().inset(50.0)
+            make.centerX.equalToSuperview()
+            make.centerY.equalTo(dressesBtn).inset(110.0)
             make.height.equalTo(90.0)
             make.width.equalTo(90.0)
             
         }
+        
+        
+        addBtn = UIButton(frame: CGRect.zero)
+        addBtn.isUserInteractionEnabled = true
+        addBtn.translatesAutoresizingMaskIntoConstraints = false
+        addBtn.layer.cornerRadius = 50.0
+        addBtn.backgroundColor = UIColor.salmon
+        addBtn.layer.borderWidth = 3.0
+        addBtn.layer.borderColor = UIColor.salmon.cgColor
+        addBtn.setTitle("+", for: .normal)
+        addBtn.setTitleColor(UIColor.darkText, for: .normal)
+        addBtn.setTitleColor(UIColor.bone, for: .highlighted)
+        addBtn.addTarget(self, action: #selector(categoryButtonPressed), for: .touchUpInside)
+        addBtn.tag = 5
+        addSubview(addBtn)
+        addBtn.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.centerY.equalTo(shoesBtn).inset(110.0)
+            make.height.equalTo(102.0)
+            make.width.equalTo(102.0)
+            
+        }
+
         
     }
 }
