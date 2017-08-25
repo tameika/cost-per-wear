@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import SnapKit
-
+import Spring
 
 protocol CategoryViewDelegate: class {
     
@@ -152,6 +152,8 @@ class CategoryView: UIView {
             make.width.equalTo(102.0)
             
         }
+        
+        
 
         
     }
