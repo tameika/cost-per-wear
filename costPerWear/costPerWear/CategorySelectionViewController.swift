@@ -23,7 +23,7 @@ class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
         
         navigationController?.isNavigationBarHidden = true
         
-        view.backgroundColor = UIColor.rose 
+        view.backgroundColor = UIColor.richOrange
         categoryView = CategoryView(frame: CGRect(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
         categoryView.delegate = self
         view.addSubview(categoryView)
