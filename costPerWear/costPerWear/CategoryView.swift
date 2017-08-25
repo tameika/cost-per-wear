@@ -46,9 +46,11 @@ class CategoryView: UIView {
 //        topsBtn.layer.shadowColor = UIColor.darkGray.cgColor
 //        topsBtn.layer.shadowRadius = 50.0
 //        topsBtn.layer.shadowOffset = CGSize.init(width: 20.0, height: 20.0)
-        topsBtn.backgroundColor = UIColor.darkText
+        topsBtn.backgroundColor = UIColor.clear
+        topsBtn.layer.borderWidth = 3.0
+        topsBtn.layer.borderColor = UIColor.salmon.cgColor
         topsBtn.setTitle("Tops", for: .normal)
-        topsBtn.setTitleColor(UIColor.rose, for: .normal)
+        topsBtn.setTitleColor(UIColor.darkText, for: .normal)
         topsBtn.setTitleColor(UIColor.bone, for: .highlighted)
         topsBtn.addTarget(self, action: #selector(categoryButtonPressed), for: .touchUpInside)
         topsBtn.tag = 1
@@ -67,9 +69,11 @@ class CategoryView: UIView {
         bottomsBtn.isUserInteractionEnabled = true
         bottomsBtn.translatesAutoresizingMaskIntoConstraints = false
         bottomsBtn.layer.cornerRadius = 45.0
-        bottomsBtn.backgroundColor = UIColor.darkText
+        bottomsBtn.backgroundColor = UIColor.clear
+        bottomsBtn.layer.borderWidth = 3.0
+        bottomsBtn.layer.borderColor = UIColor.salmon.cgColor
         bottomsBtn.setTitle("Bottoms", for: .normal)
-        bottomsBtn.setTitleColor(UIColor.rose, for: .normal)
+        bottomsBtn.setTitleColor(UIColor.darkText, for: .normal)
         bottomsBtn.setTitleColor(UIColor.bone, for: .highlighted)
         bottomsBtn.addTarget(self, action: #selector(categoryButtonPressed), for: .touchUpInside)
         bottomsBtn.tag = 2
@@ -87,9 +91,11 @@ class CategoryView: UIView {
         bottomsBtn.isUserInteractionEnabled = true
         dressesBtn.translatesAutoresizingMaskIntoConstraints = false
         dressesBtn.layer.cornerRadius = 45.0
-        dressesBtn.backgroundColor = UIColor.darkText
+        dressesBtn.backgroundColor = UIColor.clear
+        dressesBtn.layer.borderWidth = 3.0
+        dressesBtn.layer.borderColor = UIColor.salmon.cgColor
         dressesBtn.setTitle("Dresses", for: .normal)
-        dressesBtn.setTitleColor(UIColor.rose, for: .normal)
+        dressesBtn.setTitleColor(UIColor.darkText, for: .normal)
         dressesBtn.setTitleColor(UIColor.bone, for: .highlighted)
         dressesBtn.addTarget(self, action: #selector(categoryButtonPressed), for: .touchUpInside)
         dressesBtn.tag = 3
@@ -107,9 +113,11 @@ class CategoryView: UIView {
         shoesBtn.isUserInteractionEnabled = true
         shoesBtn.translatesAutoresizingMaskIntoConstraints = false
         shoesBtn.layer.cornerRadius = 45.0
-        shoesBtn.backgroundColor = UIColor.darkText
+        shoesBtn.backgroundColor = UIColor.clear
+        shoesBtn.layer.borderWidth = 3.0
+        shoesBtn.layer.borderColor = UIColor.salmon.cgColor
         shoesBtn.setTitle("Shoes", for: .normal)
-        shoesBtn.setTitleColor(UIColor.rose, for: .normal)
+        shoesBtn.setTitleColor(UIColor.darkText, for: .normal)
         shoesBtn.setTitleColor(UIColor.bone, for: .highlighted)
         shoesBtn.addTarget(self, action: #selector(categoryButtonPressed), for: .touchUpInside)
         shoesBtn.tag = 4
