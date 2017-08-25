@@ -100,6 +100,7 @@ class CPWIdentityProvider: NSObject, AWSAbstractIdentityProvider {
             
             task.setResult(self.identityId)
             
+            // if function is invoked improperly gives an error message
         },
             failure: { (request: AFHTTPRequestOperation?, error: NSError!) -> Void in
             task.setError(error)
