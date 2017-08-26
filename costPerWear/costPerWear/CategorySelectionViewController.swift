@@ -15,18 +15,28 @@ class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        print("will appear")
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
         
+        guard let addBtn = categoryView.addBtn else { return }
+        categoryView.animateCategoryButtons(button: addBtn)
         
-        
+        print("did appear")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("did load")
         
         navigationController?.isNavigationBarHidden = true
         
         view.backgroundColor = UIColor.richOrange
         categoryView = CategoryView(frame: CGRect(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
+        
         categoryView.delegate = self
         view.addSubview(categoryView)
         
@@ -38,6 +48,12 @@ class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
         navigationController?.pushViewController(clothingListVC, animated: true)
         
     }
+    
+    func createAnimations() {
+        
+        
+    }
+    
     
     
     //        let tag = sender.tag

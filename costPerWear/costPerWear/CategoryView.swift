@@ -25,12 +25,21 @@ class CategoryView: UIView {
     var bottomsBtn: UIButton!
     var dressesBtn: UIButton!
     var shoesBtn: UIButton!
-    var addBtn: UIButton!
+    var addBtn: SpringButton!
     
+    func animateCategoryButtons(button: SpringButton) {
+        button.animation = "pop"
+        button.duration = 2.0
+        button.animate()
+    }
+
+    
+ 
     func categoryButtonPressed() {
         delegate?.categorySelected()
     }
     
+
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -40,6 +49,9 @@ class CategoryView: UIView {
         super.init(frame: frame)
         
         
+        print("inside categoryview init")
+        
+
         topsBtn = UIButton(frame: CGRect.zero)
         topsBtn.isUserInteractionEnabled = true
         topsBtn.translatesAutoresizingMaskIntoConstraints = false
@@ -132,7 +144,7 @@ class CategoryView: UIView {
         }
         
         
-        addBtn = UIButton(frame: CGRect.zero)
+        addBtn = SpringButton(frame: CGRect.zero)
         addBtn.isUserInteractionEnabled = true
         addBtn.translatesAutoresizingMaskIntoConstraints = false
         addBtn.layer.cornerRadius = 50.0
@@ -151,10 +163,11 @@ class CategoryView: UIView {
             make.height.equalTo(102.0)
             make.width.equalTo(102.0)
             
+            
         }
         
-        
 
+        
         
     }
 }

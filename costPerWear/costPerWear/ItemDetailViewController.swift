@@ -15,7 +15,7 @@ class ItemViewController: UIViewController {
     var currentColorSet = Int()
     var itemDetails = ItemDetailView()
     
-    
+        
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.navigationController?.navigationBar.isHidden = false
