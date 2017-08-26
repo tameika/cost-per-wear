@@ -21,16 +21,20 @@ class CategoryView: UIView {
     
     weak var delegate: CategoryViewDelegate?
     
-    var topsBtn: UIButton!
-    var bottomsBtn: UIButton!
-    var dressesBtn: UIButton!
-    var shoesBtn: UIButton!
+    var topsBtn: SpringButton!
+    var bottomsBtn: SpringButton!
+    var dressesBtn: SpringButton!
+    var shoesBtn: SpringButton!
     var addBtn: SpringButton!
     
-    func animateCategoryButtons(button: SpringButton) {
-        button.animation = "pop"
-        button.duration = 2.0
+    func animateCategoryButtons(button: SpringButton, animation: String, delay: CGFloat, duration: CGFloat, force: CGFloat) {
+        button.animation = animation
+        button.delay = delay
+        button.duration = duration
+        button.force = force
         button.animate()
+        
+        
     }
 
     
@@ -52,7 +56,7 @@ class CategoryView: UIView {
         print("inside categoryview init")
         
 
-        topsBtn = UIButton(frame: CGRect.zero)
+        topsBtn = SpringButton(frame: CGRect.zero)
         topsBtn.isUserInteractionEnabled = true
         topsBtn.translatesAutoresizingMaskIntoConstraints = false
         topsBtn.layer.cornerRadius = 45.0
@@ -78,7 +82,7 @@ class CategoryView: UIView {
         
         
         
-        bottomsBtn = UIButton(frame: CGRect.zero)
+        bottomsBtn = SpringButton(frame: CGRect.zero)
         bottomsBtn.isUserInteractionEnabled = true
         bottomsBtn.translatesAutoresizingMaskIntoConstraints = false
         bottomsBtn.layer.cornerRadius = 45.0
@@ -100,7 +104,7 @@ class CategoryView: UIView {
         }
         
         
-        dressesBtn = UIButton(frame: CGRect.zero)
+        dressesBtn = SpringButton(frame: CGRect.zero)
         bottomsBtn.isUserInteractionEnabled = true
         dressesBtn.translatesAutoresizingMaskIntoConstraints = false
         dressesBtn.layer.cornerRadius = 45.0
@@ -122,7 +126,7 @@ class CategoryView: UIView {
         }
         
         
-        shoesBtn = UIButton(frame: CGRect.zero)
+        shoesBtn = SpringButton(frame: CGRect.zero)
         shoesBtn.isUserInteractionEnabled = true
         shoesBtn.translatesAutoresizingMaskIntoConstraints = false
         shoesBtn.layer.cornerRadius = 45.0
@@ -166,7 +170,7 @@ class CategoryView: UIView {
             
         }
         
-
+        
         
         
     }
