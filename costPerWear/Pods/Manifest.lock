@@ -46,6 +46,7 @@ PODS:
   - AWSSQS (2.5.9):
     - AWSCore (= 2.5.9)
   - SnapKit (3.2.0)
+  - Spring (1.0.3)
 
 DEPENDENCIES:
   - AFNetworking
@@ -66,6 +67,7 @@ DEPENDENCIES:
   - AWSSNS
   - AWSSQS
   - SnapKit (~> 3.0)
+  - Spring (~> 1.0.3)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -86,7 +88,12 @@ SPEC CHECKSUMS:
   AWSSNS: 158640bc69947f179eff6ac96a9ab9d4893675c1
   AWSSQS: eaec6df70bd4112d88b8fae0d8c5987b1fd471a3
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
 
+<<<<<<< HEAD
 PODFILE CHECKSUM: df5cd42221b3891c918b8caaa8be862c24a33812
+=======
+PODFILE CHECKSUM: 1cf976c5a5ca323c48dc17b72853d4ccc7b7a2fc
+>>>>>>> ui
 
 COCOAPODS: 1.2.1

@@ -6,6 +6,8 @@ target 'costPerWear' do
   # Pods for costPerWear
 
  pod 'SnapKit', '~> 3.0'
+ 
+ pod 'Spring', '~> 1.0.3'
 	
     source 'https://github.com/CocoaPods/Specs.git'
     pod 'AWSCore'

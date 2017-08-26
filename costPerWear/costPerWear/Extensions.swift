@@ -25,6 +25,8 @@ extension UIColor {
     static let slate = UIColor(red:0.62, green:0.71, blue:0.76, alpha:1.0)
     static let lilacMute = UIColor(red:0.60, green:0.46, blue:0.70, alpha:1.0)
     static let eggplantMute = UIColor(red:0.31, green:0.20, blue:0.46, alpha:1.0)
+    static let chocoRose = UIColor(red:0.40, green:0.20, blue:0.20, alpha:1.0)
+    static let richOrange = UIColor(red:1.00, green:0.34, blue:0.04, alpha:1.0)
     
 }
 
