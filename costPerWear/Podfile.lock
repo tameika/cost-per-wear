@@ -14,37 +14,37 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - AWSAutoScaling (2.5.9):
-    - AWSCore (= 2.5.9)
-  - AWSCloudWatch (2.5.9):
-    - AWSCore (= 2.5.9)
-  - AWSCognito (2.5.9):
-    - AWSCore (= 2.5.9)
-  - AWSCore (2.5.9)
-  - AWSDynamoDB (2.5.9):
-    - AWSCore (= 2.5.9)
-  - AWSEC2 (2.5.9):
-    - AWSCore (= 2.5.9)
-  - AWSElasticLoadBalancing (2.5.9):
-    - AWSCore (= 2.5.9)
-  - AWSKinesis (2.5.9):
-    - AWSCore (= 2.5.9)
-  - AWSLambda (2.5.9):
-    - AWSCore (= 2.5.9)
-  - AWSMachineLearning (2.5.9):
-    - AWSCore (= 2.5.9)
-  - AWSMobileAnalytics (2.5.9):
-    - AWSCore (= 2.5.9)
-  - AWSS3 (2.5.9):
-    - AWSCore (= 2.5.9)
-  - AWSSES (2.5.9):
-    - AWSCore (= 2.5.9)
-  - AWSSimpleDB (2.5.9):
-    - AWSCore (= 2.5.9)
-  - AWSSNS (2.5.9):
-    - AWSCore (= 2.5.9)
-  - AWSSQS (2.5.9):
-    - AWSCore (= 2.5.9)
+  - AWSAutoScaling (2.6.0):
+    - AWSCore (= 2.6.0)
+  - AWSCloudWatch (2.6.0):
+    - AWSCore (= 2.6.0)
+  - AWSCognito (2.6.0):
+    - AWSCore (= 2.6.0)
+  - AWSCore (2.6.0)
+  - AWSDynamoDB (2.6.0):
+    - AWSCore (= 2.6.0)
+  - AWSEC2 (2.6.0):
+    - AWSCore (= 2.6.0)
+  - AWSElasticLoadBalancing (2.6.0):
+    - AWSCore (= 2.6.0)
+  - AWSKinesis (2.6.0):
+    - AWSCore (= 2.6.0)
+  - AWSLambda (2.6.0):
+    - AWSCore (= 2.6.0)
+  - AWSMachineLearning (2.6.0):
+    - AWSCore (= 2.6.0)
+  - AWSMobileAnalytics (2.6.0):
+    - AWSCore (= 2.6.0)
+  - AWSS3 (2.6.0):
+    - AWSCore (= 2.6.0)
+  - AWSSES (2.6.0):
+    - AWSCore (= 2.6.0)
+  - AWSSimpleDB (2.6.0):
+    - AWSCore (= 2.6.0)
+  - AWSSNS (2.6.0):
+    - AWSCore (= 2.6.0)
+  - AWSSQS (2.6.0):
+    - AWSCore (= 2.6.0)
   - SnapKit (3.2.0)
   - Spring (1.0.3)
 
@@ -67,33 +67,39 @@ DEPENDENCIES:
   - AWSSNS
   - AWSSQS
   - SnapKit (~> 3.0)
-  - Spring (~> 1.0.3)
+  - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
+
+EXTERNAL SOURCES:
+  Spring:
+    :branch: swift3
+    :git: https://github.com/MengTo/Spring.git
+
+CHECKOUT OPTIONS:
+  Spring:
+    :commit: 8201b5c93bd7ebdf4cd18160bcde1e6e88c2be64
+    :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  AWSAutoScaling: f55b3218db16a90a8065597cf23f1003c31d9fa4
-  AWSCloudWatch: f453baacca1fda963326f5e5208cefaeb8cb8820
-  AWSCognito: 5dfe4120e7f77b2e77396b4532e4aacacc4ae08d
-  AWSCore: c71840dd51f271dc0af8de8fd6f352767ebde8b4
-  AWSDynamoDB: 5817c47852d1548645d9eb23f809d57d763975f9
-  AWSEC2: 0e7021d093914ca0d421e8829cf262975467f791
-  AWSElasticLoadBalancing: 998618407dd3108ee84c087ebd401fb4418f5006
-  AWSKinesis: 55631b3f235d363afbe172a08862f13ce3f9b929
-  AWSLambda: 6f0b58a4258b643382a3d9170686768cf90ba56a
-  AWSMachineLearning: 5042a87766b76188594e7ccbabdf676c8785ce65
-  AWSMobileAnalytics: cd23e8c06cc58c42e3326512ce682abbff3345c2
-  AWSS3: c36b91edb50ccd676be4a92836bb72f0c2ac312b
-  AWSSES: 1125079ce6b943a094c92f00a7e8406672da0ac2
-  AWSSimpleDB: b4634cb259b106aa73f63435c6991428fea461f1
-  AWSSNS: 158640bc69947f179eff6ac96a9ab9d4893675c1
-  AWSSQS: eaec6df70bd4112d88b8fae0d8c5987b1fd471a3
+  AWSAutoScaling: 23a9350615869f50a6a09fb4d1264999fbb2538a
+  AWSCloudWatch: 22619c903518b3a3d954a873f92a0de7feaa5b2c
+  AWSCognito: 7f32fd01698928c8320def74db10ca62cab2daef
+  AWSCore: a232d9a402ac11d76f3d87222a3f777e81b85abf
+  AWSDynamoDB: 758d398818c65c9ace685905accc58ef6b0bd77c
+  AWSEC2: d11622e72b7e40a1600f66f463769abc156956e1
+  AWSElasticLoadBalancing: 4f34fdf8d47e701c8be70c2fb172ead5e82e5b7a
+  AWSKinesis: 5c2534964ae29f6f011a12cd5dbb0f3983dd40cf
+  AWSLambda: ded24138e4c038e12e5aa1a1aafa37e85b25ef87
+  AWSMachineLearning: 734ad1a05eb228222dabfb50bceae64bc5e3be64
+  AWSMobileAnalytics: 16e74babb2a35ae99bbd9fa321ed0060e1a93e2b
+  AWSS3: 8d0840944adae39c8668893a484af2df651773b5
+  AWSSES: 1bf5d7b96202a264b2fc0d9c0813758c17feeca4
+  AWSSimpleDB: 6ae767c1acfc1c9fe2ea6f1b069182b0ea0547f8
+  AWSSNS: b4c983283c112fde7ccd66a44740279dbef0bb9a
+  AWSSQS: 5ae7d4fbcdd44000d280088b9c05aa7c0f4880e5
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
 
-<<<<<<< HEAD
-PODFILE CHECKSUM: df5cd42221b3891c918b8caaa8be862c24a33812
-=======
-PODFILE CHECKSUM: 1cf976c5a5ca323c48dc17b72853d4ccc7b7a2fc
->>>>>>> ui
+PODFILE CHECKSUM: 0c25c0943379f7e43c609349d99b9addb6b5a5d3
 
 COCOAPODS: 1.2.1

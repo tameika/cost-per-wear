@@ -5,27 +5,26 @@ use_frameworks!
 target 'costPerWear' do
   # Pods for costPerWear
 
- pod 'SnapKit', '~> 3.0'
- 
- pod 'Spring', '~> 1.0.3'
-	
-    source 'https://github.com/CocoaPods/Specs.git'
-    pod 'AWSCore'
-    pod 'AWSAutoScaling'
-    pod 'AWSCloudWatch'
-    pod 'AWSDynamoDB'
-    pod 'AWSEC2'
-    pod 'AWSElasticLoadBalancing'
-    pod 'AWSKinesis'
-    pod 'AWSLambda'
-    pod 'AWSMachineLearning'
-    pod 'AWSMobileAnalytics'
-    pod 'AWSS3'
-    pod 'AWSSES'
-    pod 'AWSSimpleDB'
-    pod 'AWSSNS'
-    pod 'AWSSQS'
-    pod 'AWSCognito'
-    pod 'AFNetworking'
+pod 'SnapKit', '~> 3.0'
+pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
 
+
+pod 'AWSAutoScaling'
+pod 'AWSCloudWatch'
+pod 'AWSCognito'
+pod 'AWSCore'
+pod 'AWSDynamoDB'
+pod 'AWSEC2'
+pod 'AWSElasticLoadBalancing'
+pod 'AWSKinesis'
+pod 'AWSLambda'
+pod 'AWSMachineLearning'
+pod 'AWSMobileAnalytics'
+pod 'AWSS3'
+pod 'AWSSES'
+pod 'AWSSimpleDB'
+pod 'AWSSNS'
+pod 'AWSSQS'
+pod 'AFNetworking'
+ 
 end
