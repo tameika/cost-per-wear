@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BC3033AA1EDF7FFD00332952 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3033A91EDF7FFD00332952 /* ContentView.swift */; };
 		BC4C49251EB8530900E149E8 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4C49241EB8530900E149E8 /* ContentViewController.swift */; };
+		BC51DE341F57D9DD00C27B27 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51DE331F57D9DD00C27B27 /* LoginView.swift */; };
 		BC774FE71EA73F4B009B9B38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC774FE61EA73F4B009B9B38 /* ViewController.swift */; };
 		BC774FED1EA73F4B009B9B38 /* costPerWear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC774FEB1EA73F4B009B9B38 /* costPerWear.xcdatamodeld */; };
 		BC7750031EA81C29009B9B38 /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7750021EA81C29009B9B38 /* ItemDetailView.swift */; };
@@ -31,6 +32,7 @@
 		23DC76F3BFC357CD4672D41C /* Pods-costPerWear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-costPerWear.release.xcconfig"; path = "Pods/Target Support Files/Pods-costPerWear/Pods-costPerWear.release.xcconfig"; sourceTree = "<group>"; };
 		BC3033A91EDF7FFD00332952 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BC4C49241EB8530900E149E8 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		BC51DE331F57D9DD00C27B27 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BC774FE11EA73F4B009B9B38 /* costPerWear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = costPerWear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC774FE41EA73F4B009B9B38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC774FE61EA73F4B009B9B38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				BCC261B61F3EA45000006CC4 /* CellView.swift */,
 				BC7750021EA81C29009B9B38 /* ItemDetailView.swift */,
 				BC3033A91EDF7FFD00332952 /* ContentView.swift */,
+				BC51DE331F57D9DD00C27B27 /* LoginView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				BCCD9A5C1EAAABA5003C64E0 /* NewItemDetailViewController.swift in Sources */,
 				BCC261AF1F382A8700006CC4 /* CategorySelectionViewController.swift in Sources */,
 				BCA99CB71F4A979D007119A7 /* AppDelegate.swift in Sources */,
+				BC51DE341F57D9DD00C27B27 /* LoginView.swift in Sources */,
 				BCC261B91F41908B00006CC4 /* TODO.swift in Sources */,
 				BC3033AA1EDF7FFD00332952 /* ContentView.swift in Sources */,
 				BCADA0121F456712000D8233 /* LoginViewController.swift in Sources */,

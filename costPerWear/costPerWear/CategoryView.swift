@@ -34,17 +34,9 @@ class CategoryView: UIView {
         button.force = force
         button.animate()
         
-        
     }
 
-    
  
-    func categoryButtonPressed() {
-        delegate?.categorySelected()
-    }
-    
-
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -60,9 +52,6 @@ class CategoryView: UIView {
         topsBtn.isUserInteractionEnabled = true
         topsBtn.translatesAutoresizingMaskIntoConstraints = false
         topsBtn.layer.cornerRadius = 45.0
-//        topsBtn.layer.shadowColor = UIColor.darkGray.cgColor
-//        topsBtn.layer.shadowRadius = 50.0
-//        topsBtn.layer.shadowOffset = CGSize.init(width: 20.0, height: 20.0)
         topsBtn.backgroundColor = UIColor.clear
         topsBtn.layer.borderWidth = 3.0
         topsBtn.layer.borderColor = UIColor.salmon.cgColor
@@ -174,8 +163,21 @@ class CategoryView: UIView {
         
         
     }
+    
+    
+    
+    
 }
 
+
+extension CategoryView {
+    
+    func categoryButtonPressed() {
+        delegate?.categorySelected()
+    }
+    
+    
+}
 
 
 
