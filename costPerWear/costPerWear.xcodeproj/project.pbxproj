@@ -158,11 +158,11 @@
 		BC7750011EA81915009B9B38 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BC51DE331F57D9DD00C27B27 /* LoginView.swift */,
 				BCC261B01F382AD400006CC4 /* CategoryView.swift */,
 				BCC261B61F3EA45000006CC4 /* CellView.swift */,
 				BC7750021EA81C29009B9B38 /* ItemDetailView.swift */,
 				BC3033A91EDF7FFD00332952 /* ContentView.swift */,
-				BC51DE331F57D9DD00C27B27 /* LoginView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";

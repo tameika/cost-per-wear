@@ -148,6 +148,18 @@ class ItemDetailView: UIView {
 
 
 
+extension ItemDetailView: UITextFieldDelegate {
+    
+    var placeholder: NSAttributedString {return NSAttributedString(string: "enter here", attributes: [NSForegroundColorAttributeName : UIColor.lightText])}
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return false
+    }
+    
+    
+    
+}
 
 
 

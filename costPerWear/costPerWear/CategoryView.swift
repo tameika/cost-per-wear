@@ -27,15 +27,7 @@ class CategoryView: UIView {
     var shoesBtn: SpringButton!
     var addBtn: SpringButton!
     
-    func animateCategoryButtons(button: SpringButton, animation: String, delay: CGFloat, duration: CGFloat, force: CGFloat) {
-        button.animation = animation
-        button.delay = delay
-        button.duration = duration
-        button.force = force
-        button.animate()
-        
-    }
-
+    
  
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -43,9 +35,6 @@ class CategoryView: UIView {
     
     override init(frame: CGRect){
         super.init(frame: frame)
-        
-        
-        print("inside categoryview init")
         
 
         topsBtn = SpringButton(frame: CGRect.zero)
@@ -176,6 +165,16 @@ extension CategoryView {
         delegate?.categorySelected()
     }
     
+    
+    func animateCategoryButtons(button: SpringButton, animation: String, delay: CGFloat, duration: CGFloat, force: CGFloat) {
+        button.animation = animation
+        button.delay = delay
+        button.duration = duration
+        button.force = force
+        button.animate()
+        
+    }
+
     
 }
 
