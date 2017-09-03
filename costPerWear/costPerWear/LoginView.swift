@@ -14,14 +14,11 @@ import Spring
 
 
 class LoginView: UIView {
-    
     var backgroundImage: UIImageView!
-    var backgroundBlur: UIBlurEffect!
-    
+
     var usernameField: UITextField!
     var passwordField: UITextField!
     var enterBtn: UIButton!
-    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -29,6 +26,10 @@ class LoginView: UIView {
 
     override init(frame: CGRect){
         super.init(frame: frame)
+        
+        backgroundImageg {
+            
+        }
         
         
         usernameField = UITextField(frame: CGRect.zero)
@@ -81,7 +82,7 @@ class LoginView: UIView {
             make.centerX.equalTo(passwordField)
             make.centerY.equalTo(passwordField).inset(150.0)
             make.height.equalTo(70.0)
-            make.width.equalTo(40.0)
+            make.width.equalTo(40.0) 
         }
 
         

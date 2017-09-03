@@ -10,6 +10,7 @@
 		BC3033AA1EDF7FFD00332952 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3033A91EDF7FFD00332952 /* ContentView.swift */; };
 		BC4C49251EB8530900E149E8 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4C49241EB8530900E149E8 /* ContentViewController.swift */; };
 		BC51DE341F57D9DD00C27B27 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51DE331F57D9DD00C27B27 /* LoginView.swift */; };
+		BC51DE361F5895F000C27B27 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51DE351F5895F000C27B27 /* BlurView.swift */; };
 		BC774FE71EA73F4B009B9B38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC774FE61EA73F4B009B9B38 /* ViewController.swift */; };
 		BC774FED1EA73F4B009B9B38 /* costPerWear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC774FEB1EA73F4B009B9B38 /* costPerWear.xcdatamodeld */; };
 		BC7750031EA81C29009B9B38 /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7750021EA81C29009B9B38 /* ItemDetailView.swift */; };
@@ -33,6 +34,7 @@
 		BC3033A91EDF7FFD00332952 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BC4C49241EB8530900E149E8 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		BC51DE331F57D9DD00C27B27 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		BC51DE351F5895F000C27B27 /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		BC774FE11EA73F4B009B9B38 /* costPerWear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = costPerWear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC774FE41EA73F4B009B9B38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC774FE61EA73F4B009B9B38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				BC51DE331F57D9DD00C27B27 /* LoginView.swift */,
+				BC51DE351F5895F000C27B27 /* BlurView.swift */,
 				BCC261B01F382AD400006CC4 /* CategoryView.swift */,
 				BCC261B61F3EA45000006CC4 /* CellView.swift */,
 				BC7750021EA81C29009B9B38 /* ItemDetailView.swift */,
@@ -320,6 +323,7 @@
 				BCC261B91F41908B00006CC4 /* TODO.swift in Sources */,
 				BC3033AA1EDF7FFD00332952 /* ContentView.swift in Sources */,
 				BCADA0121F456712000D8233 /* LoginViewController.swift in Sources */,
+				BC51DE361F5895F000C27B27 /* BlurView.swift in Sources */,
 				BCC261AA1F34F7D300006CC4 /* Extensions.swift in Sources */,
 				BC774FED1EA73F4B009B9B38 /* costPerWear.xcdatamodeld in Sources */,
 			);
