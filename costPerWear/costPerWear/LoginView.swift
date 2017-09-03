@@ -14,7 +14,7 @@ import Spring
 
 
 class LoginView: UIView {
-    var backgroundImage: UIImageView!
+    //var backgroundImage: UIImageView!
 
     var usernameField: UITextField!
     var passwordField: UITextField!
@@ -27,8 +27,12 @@ class LoginView: UIView {
     override init(frame: CGRect){
         super.init(frame: frame)
         
-        backgroundImageg {
-            
+        var backgroundImage: UIImageView {
+            let backgroundImage = UIImageView()
+            backgroundImage.translatesAutoresizingMaskIntoConstraints = false
+            backgroundImage.backgroundColor = UIColor.blueSmoke
+            addSubview(backgroundImage)
+            return backgroundImage
         }
         
         
@@ -41,7 +45,8 @@ class LoginView: UIView {
         usernameField.layer.borderColor = UIColor.bone.cgColor
         usernameField.placeholder = "username"
         usernameField.clearsOnBeginEditing = true
-        addSubview(usernameField)
+        //addSubview(usernameField)
+        backgroundImage.addSubview(usernameField)
         usernameField.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview().inset(-300.0)
@@ -59,7 +64,8 @@ class LoginView: UIView {
         passwordField.layer.borderColor = UIColor.bone.cgColor
         passwordField.placeholder = "username"
         passwordField.clearsOnBeginEditing = true
-        addSubview(passwordField)
+        //addSubview(passwordField)
+        backgroundImage.addSubview(passwordField)
         passwordField.snp.makeConstraints { (make) in
             make.centerX.equalTo(usernameField)
             make.centerY.equalTo(usernameField).inset(120.0)
@@ -77,7 +83,8 @@ class LoginView: UIView {
         enterBtn.layer.borderColor = UIColor.bone.cgColor
         enterBtn.setTitle("enter", for: .normal)
         enterBtn.setTitleColor(UIColor.bloodOrange, for: .highlighted)
-        addSubview(enterBtn)
+        //addSubview(enterBtn)
+        backgroundImage.addSubview(enterBtn)
         passwordField.snp.makeConstraints { (make) in
             make.centerX.equalTo(passwordField)
             make.centerY.equalTo(passwordField).inset(150.0)
