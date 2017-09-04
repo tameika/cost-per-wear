@@ -27,13 +27,13 @@ class LoginView: UIView {
     override init(frame: CGRect){
         super.init(frame: frame)
         
-        var backgroundImage: UIImageView {
-            let backgroundImage = UIImageView()
-            backgroundImage.translatesAutoresizingMaskIntoConstraints = false
-            backgroundImage.backgroundColor = UIColor.blueSmoke
-            addSubview(backgroundImage)
-            return backgroundImage
-        }
+//        var backgroundImage: UIImageView {
+//            let backgroundImage = UIImageView()
+//            backgroundImage.translatesAutoresizingMaskIntoConstraints = false
+//            backgroundImage.backgroundColor = UIColor.eggplantMute
+//            addSubview(backgroundImage)
+//            return backgroundImage
+//        }
         
         
         usernameField = UITextField(frame: CGRect.zero)
@@ -45,32 +45,33 @@ class LoginView: UIView {
         usernameField.layer.borderColor = UIColor.bone.cgColor
         usernameField.placeholder = "username"
         usernameField.clearsOnBeginEditing = true
-        //addSubview(usernameField)
-        backgroundImage.addSubview(usernameField)
+        addSubview(usernameField)
+        //backgroundImage.addSubview(usernameField)
         usernameField.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview().inset(-300.0)
-            make.height.equalTo(70.0)
-            make.width.equalTo(40.0)
+            make.centerY.equalToSuperview().inset(100.0)
+            make.height.equalTo(50.0)
+            make.width.equalTo(100.0)
         }
         
         
         passwordField = UITextField(frame: CGRect.zero)
+        //passwordField.delegate = self
         passwordField.isUserInteractionEnabled = true
         passwordField.translatesAutoresizingMaskIntoConstraints = false
         passwordField.layer.cornerRadius = 10.0
         passwordField.backgroundColor = UIColor.clear
         passwordField.layer.borderWidth = 2.0
         passwordField.layer.borderColor = UIColor.bone.cgColor
-        passwordField.placeholder = "username"
+        passwordField.placeholder = "password"
         passwordField.clearsOnBeginEditing = true
-        //addSubview(passwordField)
-        backgroundImage.addSubview(passwordField)
+        addSubview(passwordField)
+        //backgroundImage.addSubview(passwordField)
         passwordField.snp.makeConstraints { (make) in
             make.centerX.equalTo(usernameField)
             make.centerY.equalTo(usernameField).inset(120.0)
-            make.height.equalTo(70.0)
-            make.width.equalTo(40.0)
+            make.height.equalTo(50.0)
+            make.width.equalTo(100.0)
         }
         
         
@@ -83,13 +84,14 @@ class LoginView: UIView {
         enterBtn.layer.borderColor = UIColor.bone.cgColor
         enterBtn.setTitle("enter", for: .normal)
         enterBtn.setTitleColor(UIColor.bloodOrange, for: .highlighted)
-        //addSubview(enterBtn)
-        backgroundImage.addSubview(enterBtn)
+        enterBtn.addTarget(self, action: #selector(LoginViewController.loginBtnPressed), for: .touchUpInside)
+        addSubview(enterBtn)
+        //backgroundImage.addSubview(enterBtn)
         passwordField.snp.makeConstraints { (make) in
             make.centerX.equalTo(passwordField)
             make.centerY.equalTo(passwordField).inset(150.0)
-            make.height.equalTo(70.0)
-            make.width.equalTo(40.0) 
+            make.height.equalTo(50.0)
+            make.width.equalTo(100.0)
         }
 
         
