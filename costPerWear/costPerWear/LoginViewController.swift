@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.blueSmokeDeep
+        view.backgroundColor = UIColor.salmon
         loginView = LoginView.init(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
         
         view.addSubview(loginView)

@@ -49,9 +49,9 @@ class LoginView: UIView {
         //backgroundImage.addSubview(usernameField)
         usernameField.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview().inset(100.0)
+            make.centerY.equalToSuperview().inset(-100.0)
             make.height.equalTo(50.0)
-            make.width.equalTo(100.0)
+            make.width.equalTo(150.0)
         }
         
         
@@ -68,10 +68,10 @@ class LoginView: UIView {
         addSubview(passwordField)
         //backgroundImage.addSubview(passwordField)
         passwordField.snp.makeConstraints { (make) in
-            make.centerX.equalTo(usernameField)
-            make.centerY.equalTo(usernameField).inset(120.0)
+            make.centerX.equalToSuperview()
+            make.centerY.equalTo(usernameField).inset(70.0)
             make.height.equalTo(50.0)
-            make.width.equalTo(100.0)
+            make.width.equalTo(150.0)
         }
         
         
@@ -87,9 +87,9 @@ class LoginView: UIView {
         enterBtn.addTarget(self, action: #selector(LoginViewController.loginBtnPressed), for: .touchUpInside)
         addSubview(enterBtn)
         //backgroundImage.addSubview(enterBtn)
-        passwordField.snp.makeConstraints { (make) in
-            make.centerX.equalTo(passwordField)
-            make.centerY.equalTo(passwordField).inset(150.0)
+        enterBtn.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.centerY.equalTo(passwordField).inset(100.0)
             make.height.equalTo(50.0)
             make.width.equalTo(100.0)
         }
