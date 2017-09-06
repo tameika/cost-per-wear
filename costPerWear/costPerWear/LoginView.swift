@@ -12,13 +12,20 @@ import SnapKit
 import Spring
 
 
+protocol LoginViewDelegate: class {
+    
+    func loginBtnPressed()
+}
+
 
 class LoginView: UIView {
     //var backgroundImage: UIImageView!
 
     var usernameField: UITextField!
     var passwordField: UITextField!
-    var enterBtn: UIButton!
+    var loginBtn: UIButton!
+    
+    weak var delegate: LoginViewDelegate!
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -75,19 +82,19 @@ class LoginView: UIView {
         }
         
         
-        enterBtn = UIButton(frame: CGRect.zero)
-        enterBtn.isUserInteractionEnabled = true
-        enterBtn.translatesAutoresizingMaskIntoConstraints = false
-        enterBtn.layer.cornerRadius = 20.0
-        enterBtn.backgroundColor = UIColor.clear
-        enterBtn.layer.borderWidth = 2.0
-        enterBtn.layer.borderColor = UIColor.bone.cgColor
-        enterBtn.setTitle("enter", for: .normal)
-        enterBtn.setTitleColor(UIColor.bloodOrange, for: .highlighted)
-        enterBtn.addTarget(self, action: #selector(LoginViewController.loginBtnPressed), for: .touchUpInside)
-        addSubview(enterBtn)
+        loginBtn = UIButton(frame: CGRect.zero)
+        loginBtn.isUserInteractionEnabled = true
+        loginBtn.translatesAutoresizingMaskIntoConstraints = false
+        loginBtn.layer.cornerRadius = 20.0
+        loginBtn.backgroundColor = UIColor.clear
+        loginBtn.layer.borderWidth = 2.0
+        loginBtn.layer.borderColor = UIColor.bone.cgColor
+        loginBtn.setTitle("login", for: .normal)
+        loginBtn.setTitleColor(UIColor.bloodOrange, for: .highlighted)
+        loginBtn.addTarget(self, action: #selector(loggingIn), for: .touchUpInside)
+        addSubview(loginBtn)
         //backgroundImage.addSubview(enterBtn)
-        enterBtn.snp.makeConstraints { (make) in
+        loginBtn.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
             make.centerY.equalTo(passwordField).inset(100.0)
             make.height.equalTo(40.0)
@@ -100,7 +107,13 @@ class LoginView: UIView {
 }
 
 
-
+extension LoginView {
+    
+    func loggingIn() {
+        
+        delegate?.loginBtnPressed()
+    }
+}
 
 
 

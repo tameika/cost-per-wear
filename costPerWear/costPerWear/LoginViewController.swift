@@ -12,7 +12,7 @@ import AWSCore
 import AWSCognito
 
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, LoginViewDelegate {
     
     var loginView = LoginView()
     
@@ -31,6 +31,9 @@ class LoginViewController: UIViewController {
 
     
     func loginBtnPressed() {
+        
+        let categoryVC = CategorySelectionViewController()
+        navigationController?.pushViewController(categoryVC, animated: true)
         
         print("logging in")
     }
