@@ -39,7 +39,7 @@ class LoginView: UIView {
         usernameField = UITextField(frame: CGRect.zero)
         usernameField.isUserInteractionEnabled = true
         usernameField.translatesAutoresizingMaskIntoConstraints = false
-        usernameField.layer.cornerRadius = 10.0
+        usernameField.layer.cornerRadius = 20.0
         usernameField.backgroundColor = UIColor.clear
         usernameField.layer.borderWidth = 2.0
         usernameField.layer.borderColor = UIColor.bone.cgColor
@@ -50,8 +50,8 @@ class LoginView: UIView {
         usernameField.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview().inset(-100.0)
-            make.height.equalTo(50.0)
-            make.width.equalTo(150.0)
+            make.height.equalTo(40.0)
+            make.width.equalTo(250.0)
         }
         
         
@@ -59,7 +59,7 @@ class LoginView: UIView {
         //passwordField.delegate = self
         passwordField.isUserInteractionEnabled = true
         passwordField.translatesAutoresizingMaskIntoConstraints = false
-        passwordField.layer.cornerRadius = 10.0
+        passwordField.layer.cornerRadius = 20.0
         passwordField.backgroundColor = UIColor.clear
         passwordField.layer.borderWidth = 2.0
         passwordField.layer.borderColor = UIColor.bone.cgColor
@@ -70,15 +70,15 @@ class LoginView: UIView {
         passwordField.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
             make.centerY.equalTo(usernameField).inset(70.0)
-            make.height.equalTo(50.0)
-            make.width.equalTo(150.0)
+            make.height.equalTo(40.0)
+            make.width.equalTo(250.0)
         }
         
         
         enterBtn = UIButton(frame: CGRect.zero)
         enterBtn.isUserInteractionEnabled = true
         enterBtn.translatesAutoresizingMaskIntoConstraints = false
-        enterBtn.layer.cornerRadius = 10.0
+        enterBtn.layer.cornerRadius = 20.0
         enterBtn.backgroundColor = UIColor.clear
         enterBtn.layer.borderWidth = 2.0
         enterBtn.layer.borderColor = UIColor.bone.cgColor
@@ -90,8 +90,8 @@ class LoginView: UIView {
         enterBtn.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
             make.centerY.equalTo(passwordField).inset(100.0)
-            make.height.equalTo(50.0)
-            make.width.equalTo(100.0)
+            make.height.equalTo(40.0)
+            make.width.equalTo(250.0)
         }
 
         
