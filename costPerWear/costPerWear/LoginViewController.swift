@@ -21,9 +21,10 @@ class LoginViewController: UIViewController, LoginViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.chocoRose
+        navigationController?.isNavigationBarHidden = true
+        view.backgroundColor = UIColor.bloodOrange
         loginView = LoginView.init(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
-        loginView.delegate = self 
+        loginView.delegate = self
         view.addSubview(loginView)
         
 
@@ -31,11 +32,9 @@ class LoginViewController: UIViewController, LoginViewDelegate {
 
     
     func loginBtnPressed() {
-        print("login pressed")
         let categoryVC = CategorySelectionViewController()
         navigationController?.pushViewController(categoryVC, animated: true)
         
-        print("logging in")
     }
     
     

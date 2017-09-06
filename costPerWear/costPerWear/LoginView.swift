@@ -51,6 +51,7 @@ class LoginView: UIView {
         usernameField.layer.borderWidth = 2.0
         usernameField.layer.borderColor = UIColor.bone.cgColor
         usernameField.placeholder = "username"
+        usernameField.textAlignment = .center
         usernameField.clearsOnBeginEditing = true
         addSubview(usernameField)
         //backgroundImage.addSubview(usernameField)
@@ -71,6 +72,7 @@ class LoginView: UIView {
         passwordField.layer.borderWidth = 2.0
         passwordField.layer.borderColor = UIColor.bone.cgColor
         passwordField.placeholder = "password"
+        passwordField.textAlignment = .center
         passwordField.clearsOnBeginEditing = true
         addSubview(passwordField)
         //backgroundImage.addSubview(passwordField)
