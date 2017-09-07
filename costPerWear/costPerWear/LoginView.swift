@@ -137,12 +137,12 @@ extension LoginView: CAAnimationDelegate {
         print("inside animateLayer func")
         let keyframeAnimation = CAKeyframeAnimation(keyPath: "bounds")
         keyframeAnimation.delegate = self
-        keyframeAnimation.duration = 1
-        keyframeAnimation.beginTime = 2
+        keyframeAnimation.duration = 3.0
+        keyframeAnimation.beginTime = 0.0
         
-        let initialBounds = l.bounds
-        let middleBounds = l.bounds.height - 10
-        let finalBounds = l.bounds.height * 2
+        let initialBounds = NSValue(cgRect: CGRect.init(x: 0.0, y: 0.0, width: 250.0, height: 40.0))
+        let middleBounds = NSValue(cgRect: CGRect.init(x: 0.0, y: 0.0, width: 200.0, height: 30.0))
+        let finalBounds = NSValue(cgRect: CGRect.init(x: 0.0, y: 0.0, width: 300.0, height: 80.0))
         
         keyframeAnimation.values = [initialBounds, middleBounds, finalBounds]
         keyframeAnimation.keyTimes = [0.0, 0.4, 1.0]
