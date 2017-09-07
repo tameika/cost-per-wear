@@ -26,10 +26,11 @@ class LoginView: UIView {
     var loginBtn: UIButton!
     
     weak var delegate: LoginViewDelegate!
-    
-    var fieldForLayer: UITextField!
-    var l: CALayer {
-        return usernameField.layer
+    let border = CALayer()
+    let width = CGFloat(2.0)
+    //var viewForLayer = UIView()
+    var l: CALayer{
+        return loginBtn.layer
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -123,18 +124,33 @@ extension LoginView: CAAnimationDelegate {
     
     
     func setUpLayer() {
-        print("inside setUpLayer func")
-        l.backgroundColor = UIColor.blue.cgColor
-        l.borderWidth = 100.0
-        l.borderColor = UIColor.red.cgColor
+        l.frame = usernameField.bounds
+        l.backgroundColor = UIColor.gray.cgColor
+        l.borderWidth = 2.0
+        l.borderColor = UIColor.bone.cgColor
         l.shadowOpacity = 0.7
-        l.shadowRadius = 10.0
-        print("end of setUpLayer func")
+        l.shadowRadius = 6.0
+        l.shadowColor = UIColor.blueSmokeDeep.cgColor
+        //l.opacity = 1.0
+        l.shadowOffset = CGSize(width: 0, height: 3)
+        //usernameField.layer.addSublayer(l)
+        
     }
     
     
+    func setUpBorder() {
+        usernameField.borderStyle = .none
+        border.borderColor = UIColor.bone.cgColor
+        border.frame = CGRect(x: 0.0, y: usernameField.frame.size.height - width, width: usernameField.frame.size.width, height: usernameField.frame.size.height)
+        border.borderWidth = width
+        usernameField.layer.addSublayer(border)
+        usernameField.layer.masksToBounds = true
+
+    }
+    
+    
+    
     func animateLayer() {
-        print("inside animateLayer func")
         let keyframeAnimation = CAKeyframeAnimation(keyPath: "bounds")
         keyframeAnimation.delegate = self
         keyframeAnimation.duration = 3.0
@@ -151,7 +167,6 @@ extension LoginView: CAAnimationDelegate {
         
         self.l.add(keyframeAnimation, forKey: "bounds")
         
-        print("end of animateLayer func")
     }
     
     
@@ -162,7 +177,18 @@ extension LoginView: CAAnimationDelegate {
 
 
 
-
+extension UITextField {
+    
+    func setBottomBorder() {
+       
+        self.borderStyle = .none
+        self.layer.backgroundColor = UIColor.clear.cgColor
+        self.layer.borderColor = UIColor.bone.cgColor
+        self.layer.masksToBounds = true
+        self.layer.borderWidth = 2.0
+        
+    }
+}
 
 
 
