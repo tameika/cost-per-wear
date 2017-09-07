@@ -174,6 +174,18 @@ extension CategoryView {
         button.animate()
         
     }
+    
+    
+    func createAnimations() {
+        
+        animateCategoryButtons(button: topsBtn, animation: "pop", delay: 0.90, duration: 1.5, force: 1.3)
+        animateCategoryButtons(button: bottomsBtn, animation: "pop", delay: 0.70, duration: 1.5, force: 1.5)
+        animateCategoryButtons(button: dressesBtn, animation: "pop", delay: 0.60, duration: 1.5, force: 1.1)
+        animateCategoryButtons(button: shoesBtn, animation: "pop", delay: 0.80, duration: 1.5, force: 1.6)
+        animateCategoryButtons(button: addBtn, animation: "pop", delay: 1.10, duration: 2.0, force: 1.0)
+        
+    }
+
 
     
 }
