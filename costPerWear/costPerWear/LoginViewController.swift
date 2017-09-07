@@ -20,6 +20,9 @@ class LoginViewController: UIViewController, LoginViewDelegate {
         super.viewWillAppear(true)
         navigationItem.hidesBackButton = true
         navigationController?.navigationBar.isHidden = true
+        loginView.setUpLayer()
+        loginView.animateLayer()
+
 
     }
     
@@ -27,8 +30,7 @@ class LoginViewController: UIViewController, LoginViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        loginView.setUpLayer()
+        loginView.usernameField.center.x -= view.frame.width
         view.backgroundColor = UIColor.bloodOrange
         loginView = LoginView.init(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
         loginView.delegate = self

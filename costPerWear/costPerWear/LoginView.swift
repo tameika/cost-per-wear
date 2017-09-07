@@ -123,21 +123,35 @@ extension LoginView: CAAnimationDelegate {
     
     
     func setUpLayer() {
+        print("inside setUpLayer func")
         l.backgroundColor = UIColor.blue.cgColor
         l.borderWidth = 100.0
         l.borderColor = UIColor.red.cgColor
         l.shadowOpacity = 0.7
         l.shadowRadius = 10.0
+        print("end of setUpLayer func")
     }
     
     
     func animateLayer() {
-        
+        print("inside animateLayer func")
         let keyframeAnimation = CAKeyframeAnimation(keyPath: "bounds")
         keyframeAnimation.delegate = self
         keyframeAnimation.duration = 1
-        keyframeAnimation.beginTime = 0.1
+        keyframeAnimation.beginTime = 2
         
+        let initialBounds = l.bounds
+        let middleBounds = l.bounds.height - 10
+        let finalBounds = l.bounds.height * 2
+        
+        keyframeAnimation.values = [initialBounds, middleBounds, finalBounds]
+        keyframeAnimation.keyTimes = [0.0, 0.4, 1.0]
+        
+        keyframeAnimation.timingFunctions = [CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseInEaseOut), CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseOut)]
+        
+        self.l.add(keyframeAnimation, forKey: "bounds")
+        
+        print("end of animateLayer func")
     }
     
     
