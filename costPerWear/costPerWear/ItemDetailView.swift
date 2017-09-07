@@ -148,6 +148,12 @@ class ItemDetailView: UIView {
 
 
 
+extension ItemDetailView {
+    
+    
+    
+}
+
 extension ItemDetailView: UITextFieldDelegate {
     
     var placeholder: NSAttributedString {return NSAttributedString(string: "enter here", attributes: [NSForegroundColorAttributeName : UIColor.lightText])}

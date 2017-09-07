@@ -27,6 +27,11 @@ class LoginView: UIView {
     
     weak var delegate: LoginViewDelegate!
     
+    var fieldForLayer: UITextField!
+    var l: CALayer {
+        return usernameField.layer
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -109,12 +114,36 @@ class LoginView: UIView {
 }
 
 
-extension LoginView {
+extension LoginView: CAAnimationDelegate {
     
     func loggingIn() {
         
         delegate?.loginBtnPressed()
     }
+    
+    
+    func setUpLayer() {
+        l.backgroundColor = UIColor.blue.cgColor
+        l.borderWidth = 100.0
+        l.borderColor = UIColor.red.cgColor
+        l.shadowOpacity = 0.7
+        l.shadowRadius = 10.0
+    }
+    
+    
+    func animateLayer() {
+        
+        let keyframeAnimation = CAKeyframeAnimation(keyPath: "bounds")
+        keyframeAnimation.delegate = self
+        keyframeAnimation.duration = 1
+        keyframeAnimation.beginTime = 0.1
+        
+    }
+    
+    
+    
+    
+    
 }
 
 
