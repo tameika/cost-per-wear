@@ -55,10 +55,7 @@ class LoginView: UIView {
         usernameField = UITextField(frame: CGRect.zero)
         usernameField.isUserInteractionEnabled = true
         usernameField.translatesAutoresizingMaskIntoConstraints = true
-        //usernameField.layer.cornerRadius = 20.0
         usernameField.backgroundColor = UIColor.clear
-        //usernameField.layer.borderWidth = 2.0
-        //usernameField.layer.borderColor = UIColor.bone.cgColor
         usernameField.placeholder = "username"
         usernameField.textAlignment = .center
         usernameField.clearsOnBeginEditing = true
@@ -73,13 +70,9 @@ class LoginView: UIView {
         
         
         passwordField = UITextField(frame: CGRect.zero)
-        //passwordField.delegate = self
         passwordField.isUserInteractionEnabled = true
         passwordField.translatesAutoresizingMaskIntoConstraints = false
-        passwordField.layer.cornerRadius = 20.0
         passwordField.backgroundColor = UIColor.clear
-        passwordField.layer.borderWidth = 2.0
-        passwordField.layer.borderColor = UIColor.bone.cgColor
         passwordField.placeholder = "password"
         passwordField.textAlignment = .center
         passwordField.clearsOnBeginEditing = true
@@ -134,7 +127,7 @@ extension LoginView: CAAnimationDelegate {
         l.shadowOpacity = 0.7
         l.shadowRadius = 6.0
         l.shadowColor = UIColor.blueSmokeDeep.cgColor
-        //l.opacity = 1.0
+        l.opacity = 1.0
         l.shadowOffset = CGSize(width: 0, height: 3)
         //usernameField.layer.addSublayer(l)
         
@@ -179,28 +172,8 @@ extension LoginView: CAAnimationDelegate {
         
     }
     
-    
-    
-    
-    
+   
 }
-
-
-
-//extension UITextField {
-//    
-//    func setBottomBorder() {
-//       
-//        self.borderStyle = .none
-//        self.layer.backgroundColor = UIColor.clear.cgColor
-//        self.layer.borderColor = UIColor.bone.cgColor
-//        self.layer.masksToBounds = false
-//        self.layer.borderWidth = 2.0
-//        
-//    }
-//}
-//
-
 
 
 
