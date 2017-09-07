@@ -27,7 +27,10 @@ class LoginView: UIView {
     
     weak var delegate: LoginViewDelegate!
     let border = CALayer()
+    let border2 = CALayer()
     let width = CGFloat(2.0)
+    let width2 = CGFloat(2.0)
+
     //var viewForLayer = UIView()
     var l: CALayer{
         return loginBtn.layer
@@ -51,11 +54,11 @@ class LoginView: UIView {
         
         usernameField = UITextField(frame: CGRect.zero)
         usernameField.isUserInteractionEnabled = true
-        usernameField.translatesAutoresizingMaskIntoConstraints = false
-        usernameField.layer.cornerRadius = 20.0
+        usernameField.translatesAutoresizingMaskIntoConstraints = true
+        //usernameField.layer.cornerRadius = 20.0
         usernameField.backgroundColor = UIColor.clear
-        usernameField.layer.borderWidth = 2.0
-        usernameField.layer.borderColor = UIColor.bone.cgColor
+        //usernameField.layer.borderWidth = 2.0
+        //usernameField.layer.borderColor = UIColor.bone.cgColor
         usernameField.placeholder = "username"
         usernameField.textAlignment = .center
         usernameField.clearsOnBeginEditing = true
@@ -145,6 +148,13 @@ extension LoginView: CAAnimationDelegate {
         border.borderWidth = width
         usernameField.layer.addSublayer(border)
         usernameField.layer.masksToBounds = true
+        
+        passwordField.borderStyle = .none
+        border2.borderColor = UIColor.bone.cgColor
+        border2.frame = CGRect(x: 0.0, y: passwordField.frame.size.height - width2, width: passwordField.frame.size.width, height: passwordField.frame.size.height)
+        border2.borderWidth = width2
+        passwordField.layer.addSublayer(border2)
+        passwordField.layer.masksToBounds = true
 
     }
     
@@ -177,19 +187,19 @@ extension LoginView: CAAnimationDelegate {
 
 
 
-extension UITextField {
-    
-    func setBottomBorder() {
-       
-        self.borderStyle = .none
-        self.layer.backgroundColor = UIColor.clear.cgColor
-        self.layer.borderColor = UIColor.bone.cgColor
-        self.layer.masksToBounds = true
-        self.layer.borderWidth = 2.0
-        
-    }
-}
-
+//extension UITextField {
+//    
+//    func setBottomBorder() {
+//       
+//        self.borderStyle = .none
+//        self.layer.backgroundColor = UIColor.clear.cgColor
+//        self.layer.borderColor = UIColor.bone.cgColor
+//        self.layer.masksToBounds = false
+//        self.layer.borderWidth = 2.0
+//        
+//    }
+//}
+//
 
 
 

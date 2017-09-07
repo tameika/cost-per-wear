@@ -27,7 +27,7 @@ class LoginViewController: UIViewController, LoginViewDelegate {
     }
     
     override func viewDidLayoutSubviews() {
-        //loginView.setUpBorder()
+        loginView.setUpBorder()
 
     }
     
@@ -35,7 +35,7 @@ class LoginViewController: UIViewController, LoginViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginView.usernameField.setBottomBorder()
+        //loginView.usernameField.setBottomBorder()
         loginView.usernameField.center.x -= view.frame.width
         view.backgroundColor = UIColor.bloodOrange
         loginView = LoginView.init(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
