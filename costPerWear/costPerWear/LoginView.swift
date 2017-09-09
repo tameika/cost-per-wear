@@ -28,8 +28,8 @@ class LoginView: UIView {
     weak var delegate: LoginViewDelegate!
     let border = CALayer()
     let border2 = CALayer()
-    let width = CGFloat(2.0)
-    let width2 = CGFloat(2.0)
+    let width = CGFloat(1.0)
+    let width2 = CGFloat(1.0)
 
     //var viewForLayer = UIView()
     var l: CALayer{
@@ -56,8 +56,9 @@ class LoginView: UIView {
         usernameField.isUserInteractionEnabled = true
         usernameField.translatesAutoresizingMaskIntoConstraints = true
         usernameField.backgroundColor = UIColor.clear
-        usernameField.placeholder = "username"
-        usernameField.textAlignment = .center
+        usernameField.font = UIFont.avenirNext
+        usernameField.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSForegroundColorAttributeName: UIColor.bone])
+        usernameField.textAlignment = .left
         usernameField.clearsOnBeginEditing = true
         addSubview(usernameField)
         //backgroundImage.addSubview(usernameField)
@@ -65,7 +66,7 @@ class LoginView: UIView {
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview().inset(-100.0)
             make.height.equalTo(40.0)
-            make.width.equalTo(250.0)
+            make.width.equalTo(270.0)
         }
         
         
@@ -73,8 +74,9 @@ class LoginView: UIView {
         passwordField.isUserInteractionEnabled = true
         passwordField.translatesAutoresizingMaskIntoConstraints = false
         passwordField.backgroundColor = UIColor.clear
-        passwordField.placeholder = "password"
-        passwordField.textAlignment = .center
+        passwordField.font = UIFont.avenirNext
+        passwordField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSForegroundColorAttributeName: UIColor.bone])
+        passwordField.textAlignment = .left
         passwordField.clearsOnBeginEditing = true
         addSubview(passwordField)
         //backgroundImage.addSubview(passwordField)
@@ -82,7 +84,7 @@ class LoginView: UIView {
             make.centerX.equalToSuperview()
             make.centerY.equalTo(usernameField).inset(70.0)
             make.height.equalTo(40.0)
-            make.width.equalTo(250.0)
+            make.width.equalTo(270.0)
         }
         
         
@@ -93,6 +95,7 @@ class LoginView: UIView {
         loginBtn.backgroundColor = UIColor.clear
         loginBtn.layer.borderWidth = 2.0
         loginBtn.layer.borderColor = UIColor.bone.cgColor
+    
         loginBtn.setTitle("login", for: .normal)
         loginBtn.setTitleColor(UIColor.bloodOrange, for: .highlighted)
         loginBtn.addTarget(self, action: #selector(loggingIn), for: .touchUpInside)
@@ -102,7 +105,7 @@ class LoginView: UIView {
             make.centerX.equalToSuperview()
             make.centerY.equalTo(passwordField).inset(100.0)
             make.height.equalTo(40.0)
-            make.width.equalTo(250.0)
+            make.width.equalTo(270.0)
         }
 
         
@@ -120,9 +123,9 @@ extension LoginView: CAAnimationDelegate {
     
     
     func setUpLayer() {
-        l.frame = usernameField.bounds
-        l.backgroundColor = UIColor.gray.cgColor
-        l.borderWidth = 2.0
+        //l.frame = usernameField.bounds
+        l.backgroundColor = UIColor.clear.cgColor
+        l.borderWidth = 1.0
         l.borderColor = UIColor.bone.cgColor
         l.shadowOpacity = 0.7
         l.shadowRadius = 6.0
@@ -176,7 +179,10 @@ extension LoginView: CAAnimationDelegate {
 }
 
 
-
+extension UITextFieldDelegate {
+    
+    
+}
 
 
 

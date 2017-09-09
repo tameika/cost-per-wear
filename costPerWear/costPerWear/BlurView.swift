@@ -13,13 +13,19 @@ import SnapKit
 
 class Blurview: UIVisualEffectView {
     
-    var backgroundBlur: UIBlurEffect!
+    var backgroundBlur: UIVisualEffectView
+    
     
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    func createBlurView() {
+        
+        backgroundBlur.effect = UIBlurEffect(style: .dark)
+    }
 
 }
 

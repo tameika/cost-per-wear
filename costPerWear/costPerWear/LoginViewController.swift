@@ -15,6 +15,7 @@ import AWSCognito
 class LoginViewController: UIViewController, LoginViewDelegate {
     
     var loginView = LoginView()
+    var blurView = UIVisualEffectView()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -36,8 +37,8 @@ class LoginViewController: UIViewController, LoginViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         //loginView.usernameField.setBottomBorder()
-        loginView.usernameField.center.x -= view.frame.width
-        view.backgroundColor = UIColor.bloodOrange
+        //loginView.usernameField.center.x -= view.frame.width
+        view.backgroundColor = UIColor.deepTealNew
         loginView = LoginView.init(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
         loginView.delegate = self
         view.addSubview(loginView)

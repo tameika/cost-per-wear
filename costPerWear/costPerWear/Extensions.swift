@@ -31,3 +31,8 @@ extension UIColor {
 }
 
 
+extension UIFont {
+    
+    static let avenirNext = UIFont(name: "Avenir Next", size: 17.0)
+}
+
