@@ -15,16 +15,14 @@ import AWSCognito
 class LoginViewController: UIViewController, LoginViewDelegate {
     
     var loginView = LoginView()
-    var blurView = UIVisualEffectView()
+    var blurView: Blurview!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         navigationItem.hidesBackButton = true
         navigationController?.navigationBar.isHidden = true
         loginView.setUpLayer()
-        //loginView.animateLayer()
-
-
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -36,13 +34,16 @@ class LoginViewController: UIViewController, LoginViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //loginView.usernameField.setBottomBorder()
-        //loginView.usernameField.center.x -= view.frame.width
         view.backgroundColor = UIColor.deepTealNew
-        loginView = LoginView.init(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
-        loginView.delegate = self
-        view.addSubview(loginView)
         
+        view.addSubview(blurView)
+        print("4")
+        loginView = LoginView.init(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
+        print("5")
+        loginView.delegate = self
+        print("7")
+        view.addSubview(loginView)
+        print("8")
 
     }
 
