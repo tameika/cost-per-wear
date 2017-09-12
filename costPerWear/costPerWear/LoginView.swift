@@ -24,6 +24,8 @@ class LoginView: UIView {
     var usernameField: UITextField!
     var passwordField: UITextField!
     var loginBtn: UIButton!
+    var imageView: UIImageView!
+
     
     weak var delegate: LoginViewDelegate!
     let border = CALayer()
@@ -43,13 +45,19 @@ class LoginView: UIView {
     override init(frame: CGRect){
         super.init(frame: frame)
         
-//        var backgroundImage: UIImageView {
-//            let backgroundImage = UIImageView()
-//            backgroundImage.translatesAutoresizingMaskIntoConstraints = false
-//            backgroundImage.backgroundColor = UIColor.eggplantMute
-//            addSubview(backgroundImage)
-//            return backgroundImage
-//        }
+        let image = UIImage(named: "hanging-clothes.jpg")
+        imageView = UIImageView(image: image)
+        imageView.frame = self.bounds
+        imageView.contentMode = .scaleToFill
+        imageView.alpha = 0.9
+        addSubview(imageView)
+        imageView.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
+            make.height.equalToSuperview()
+            make.width.equalToSuperview()
+        }
+
         
         
         usernameField = UITextField(frame: CGRect.zero)
@@ -57,11 +65,10 @@ class LoginView: UIView {
         usernameField.translatesAutoresizingMaskIntoConstraints = true
         usernameField.backgroundColor = UIColor.clear
         usernameField.font = UIFont.avenirNext
-        usernameField.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSForegroundColorAttributeName: UIColor.bone])
+        usernameField.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSForegroundColorAttributeName: UIColor.beigeLife])
         usernameField.textAlignment = .left
         usernameField.clearsOnBeginEditing = true
         addSubview(usernameField)
-        //backgroundImage.addSubview(usernameField)
         usernameField.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview().inset(-100.0)
@@ -75,11 +82,10 @@ class LoginView: UIView {
         passwordField.translatesAutoresizingMaskIntoConstraints = false
         passwordField.backgroundColor = UIColor.clear
         passwordField.font = UIFont.avenirNext
-        passwordField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSForegroundColorAttributeName: UIColor.bone])
+        passwordField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSForegroundColorAttributeName: UIColor.beigeLife])
         passwordField.textAlignment = .left
         passwordField.clearsOnBeginEditing = true
         addSubview(passwordField)
-        //backgroundImage.addSubview(passwordField)
         passwordField.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
             make.centerY.equalTo(usernameField).inset(70.0)
@@ -92,15 +98,14 @@ class LoginView: UIView {
         loginBtn.isUserInteractionEnabled = true
         loginBtn.translatesAutoresizingMaskIntoConstraints = false
         loginBtn.layer.cornerRadius = 20.0
-        loginBtn.backgroundColor = UIColor.clear
-        loginBtn.layer.borderWidth = 2.0
-        loginBtn.layer.borderColor = UIColor.bone.cgColor
+        loginBtn.backgroundColor = UIColor.orangeLeather
+        //loginBtn.layer.borderWidth = 2.0
+        //loginBtn.layer.borderColor = UIColor.bone.cgColor
     
         loginBtn.setTitle("login", for: .normal)
-        loginBtn.setTitleColor(UIColor.bloodOrange, for: .highlighted)
+        loginBtn.setTitleColor(UIColor.bone, for: .highlighted)
         loginBtn.addTarget(self, action: #selector(loggingIn), for: .touchUpInside)
         addSubview(loginBtn)
-        //backgroundImage.addSubview(enterBtn)
         loginBtn.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
             make.centerY.equalTo(passwordField).inset(100.0)
@@ -124,9 +129,9 @@ extension LoginView: CAAnimationDelegate {
     
     func setUpLayer() {
         //l.frame = usernameField.bounds
-        l.backgroundColor = UIColor.clear.cgColor
+        l.backgroundColor = UIColor.orangeLeather.cgColor
         l.borderWidth = 1.0
-        l.borderColor = UIColor.bone.cgColor
+        l.borderColor = UIColor.clear.cgColor
         l.shadowOpacity = 0.7
         l.shadowRadius = 6.0
         l.shadowColor = UIColor.blueSmokeDeep.cgColor
@@ -139,14 +144,14 @@ extension LoginView: CAAnimationDelegate {
     
     func setUpBorder() {
         usernameField.borderStyle = .none
-        border.borderColor = UIColor.bone.cgColor
+        border.borderColor = UIColor.beigeLife.cgColor
         border.frame = CGRect(x: 0.0, y: usernameField.frame.size.height - width, width: usernameField.frame.size.width, height: usernameField.frame.size.height)
         border.borderWidth = width
         usernameField.layer.addSublayer(border)
         usernameField.layer.masksToBounds = true
         
         passwordField.borderStyle = .none
-        border2.borderColor = UIColor.bone.cgColor
+        border2.borderColor = UIColor.beigeLife.cgColor
         border2.frame = CGRect(x: 0.0, y: passwordField.frame.size.height - width2, width: passwordField.frame.size.width, height: passwordField.frame.size.height)
         border2.borderWidth = width2
         passwordField.layer.addSublayer(border2)
@@ -177,24 +182,6 @@ extension LoginView: CAAnimationDelegate {
     
    
 }
-
-
-//extension LoginViewController {
-//    
-//    func createBlurView() -> UIVisualEffectView {
-//        
-//        let blurEffect = UIBlurEffect(style: .light)
-//        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-//        blurEffectView.frame = self.view.bounds
-//        view.addSubview(blurEffectView)
-//        return blurEffectView
-//        
-//    }
-//    
-//}
-
-
-
 
 
 

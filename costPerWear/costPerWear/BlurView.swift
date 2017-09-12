@@ -13,10 +13,8 @@ import SnapKit
 
 class Blurview: UIView {
     
-    var imageView: UIImageView!
     var blurEffect: UIBlurEffect!
     var blurEffectView: UIVisualEffectView!
-    //let backgroundImage = "#imageLiteral(resourceName: "people-2598015_1920")"
     
     
     required init?(coder aDecoder: NSCoder) {
@@ -28,32 +26,15 @@ class Blurview: UIView {
         
         
         
-        print("1")
-        let image = UIImage(named: "fashiongirl")
-        imageView = UIImageView(image: image)
-        imageView.frame = self.bounds
-        imageView.contentMode = .scaleToFill
-        print("2")
-        addSubview(imageView)
-        print("3")
-        imageView.snp.makeConstraints { (make) in
-            make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview()
-            make.height.equalToSuperview()
-            make.width.equalToSuperview()
-        }
-        
+                
 
-        print("4")
-        blurEffect = UIBlurEffect(style: .light)
+        blurEffect = UIBlurEffect(style: .regular)
         blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.translatesAutoresizingMaskIntoConstraints = false
         blurEffectView.alpha = 1.0
         //blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         //blurEffectView.frame = self.bounds
-        print("5")
         addSubview(blurEffectView)
-        print("6")
         blurEffectView.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview()
@@ -62,7 +43,6 @@ class Blurview: UIView {
             
         }
         
-        print("7")
     
     }
 

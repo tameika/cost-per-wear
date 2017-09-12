@@ -14,16 +14,16 @@ import AWSCognito
 
 class LoginViewController: UIViewController, LoginViewDelegate {
     
-    var loginView = LoginView()
+    var loginView = LoginView() 
     var blurView: Blurview!
-    let image = UIImage(named: "people-2598015_1920.jpg")
+    let image = Blurview()
 
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         navigationItem.hidesBackButton = true
         navigationController?.navigationBar.isHidden = true
-        loginView.setUpLayer()
+        //loginView.setUpLayer()
         
     }
     
@@ -38,15 +38,15 @@ class LoginViewController: UIViewController, LoginViewDelegate {
         super.viewDidLoad()
         view.backgroundColor = UIColor.clear
         
-       let imageView = UIImageView(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
-        imageView.image = image
-        view.addSubview(imageView)
+        
+       // UIImageView(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
         
         blurView = Blurview(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: 667.0))
-        view.addSubview(blurView)
+        //view.addSubview(blurView)
         loginView = LoginView.init(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
         loginView.delegate = self
-        blurView.blurEffectView.contentView.addSubview(loginView)
+        //blurView.blurEffectView.contentView.addSubview(loginView)
+        view.addSubview(loginView)
 
     }
 
