@@ -179,19 +179,19 @@ extension LoginView: CAAnimationDelegate {
 }
 
 
-extension LoginViewController {
-    
-    func createBlurView() -> UIVisualEffectView {
-        
-        let blurEffect = UIBlurEffect(style: .light)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = self.view.bounds
-        view.addSubview(blurEffectView)
-        return blurEffectView
-        
-    }
-    
-}
+//extension LoginViewController {
+//    
+//    func createBlurView() -> UIVisualEffectView {
+//        
+//        let blurEffect = UIBlurEffect(style: .light)
+//        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+//        blurEffectView.frame = self.view.bounds
+//        view.addSubview(blurEffectView)
+//        return blurEffectView
+//        
+//    }
+//    
+//}
 
 
 

@@ -16,6 +16,8 @@ class LoginViewController: UIViewController, LoginViewDelegate {
     
     var loginView = LoginView()
     var blurView: Blurview!
+    let image = UIImage(named: "people-2598015_1920.jpg")
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -34,16 +36,17 @@ class LoginViewController: UIViewController, LoginViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.deepTealNew
+        view.backgroundColor = UIColor.clear
         
-        view.addSubview(blurView)
-        print("4")
+       let imageView = UIImageView(frame: CGRect.init(x: 0.0, y: 0.0, width: 500.0, height: 500.0))
+        imageView.image = image
+        view.addSubview(imageView)
+        
+        blurView = Blurview(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.width))
+        //view.addSubview(blurView)
         loginView = LoginView.init(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
-        print("5")
         loginView.delegate = self
-        print("7")
-        view.addSubview(loginView)
-        print("8")
+        //blurView.addSubview(loginView)
 
     }
 
