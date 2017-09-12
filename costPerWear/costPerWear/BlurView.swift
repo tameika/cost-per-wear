@@ -50,7 +50,7 @@ class Blurview: UIView {
         blurEffectView.translatesAutoresizingMaskIntoConstraints = false
         blurEffectView.alpha = 1.0
         //blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        blurEffectView.frame = self.bounds
+        //blurEffectView.frame = self.bounds
         print("5")
         addSubview(blurEffectView)
         print("6")

@@ -26,6 +26,11 @@
 		BCC261B71F3EA45000006CC4 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261B61F3EA45000006CC4 /* CellView.swift */; };
 		BCC261B91F41908B00006CC4 /* TODO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261B81F41908A00006CC4 /* TODO.swift */; };
 		BCC5CAB81F6631CB0016640D /* people-2598015_1920.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCC5CAB71F6631CB0016640D /* people-2598015_1920.jpg */; };
+		BCC5CABA1F681DB90016640D /* fashion-2539879_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCC5CAB91F681DB90016640D /* fashion-2539879_1280.jpg */; };
+		BCC5CABC1F681DC50016640D /* people-2572856_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCC5CABB1F681DC50016640D /* people-2572856_1280.jpg */; };
+		BCC5CABE1F681DD70016640D /* fashion-show-1746602_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCC5CABD1F681DD70016640D /* fashion-show-1746602_1280.jpg */; };
+		BCC5CAC01F681DE30016640D /* fashion-511494_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCC5CABF1F681DE30016640D /* fashion-511494_1280.jpg */; };
+		BCC5CAC21F681DEB0016640D /* woman-1245922_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCC5CAC11F681DEB0016640D /* woman-1245922_1280.jpg */; };
 		BCCD9A5C1EAAABA5003C64E0 /* NewItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCD9A5B1EAAABA5003C64E0 /* NewItemDetailViewController.swift */; };
 		CB623769579A43C4204FF727 /* Pods_costPerWear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D036BDF4FACFA72DFCE381 /* Pods_costPerWear.framework */; };
 /* End PBXBuildFile section */
@@ -61,6 +66,11 @@
 		BCC261B61F3EA45000006CC4 /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		BCC261B81F41908A00006CC4 /* TODO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODO.swift; sourceTree = "<group>"; };
 		BCC5CAB71F6631CB0016640D /* people-2598015_1920.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "people-2598015_1920.jpg"; path = "../../../../Downloads/people-2598015_1920.jpg"; sourceTree = "<group>"; };
+		BCC5CAB91F681DB90016640D /* fashion-2539879_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "fashion-2539879_1280.jpg"; path = "../../../../Downloads/fashion-2539879_1280.jpg"; sourceTree = "<group>"; };
+		BCC5CABB1F681DC50016640D /* people-2572856_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "people-2572856_1280.jpg"; path = "../../../../Downloads/people-2572856_1280.jpg"; sourceTree = "<group>"; };
+		BCC5CABD1F681DD70016640D /* fashion-show-1746602_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "fashion-show-1746602_1280.jpg"; path = "../../../../Downloads/fashion-show-1746602_1280.jpg"; sourceTree = "<group>"; };
+		BCC5CABF1F681DE30016640D /* fashion-511494_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "fashion-511494_1280.jpg"; path = "../../../../Downloads/fashion-511494_1280.jpg"; sourceTree = "<group>"; };
+		BCC5CAC11F681DEB0016640D /* woman-1245922_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "woman-1245922_1280.jpg"; path = "../../../../Downloads/woman-1245922_1280.jpg"; sourceTree = "<group>"; };
 		BCCD9A5B1EAAABA5003C64E0 /* NewItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemDetailViewController.swift; sourceTree = "<group>"; };
 		D9D036BDF4FACFA72DFCE381 /* Pods_costPerWear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_costPerWear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC32A6F38C8C6C8B57026FBE /* Pods-costPerWear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-costPerWear.debug.xcconfig"; path = "Pods/Target Support Files/Pods-costPerWear/Pods-costPerWear.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +140,11 @@
 				BC7750001EA818D5009B9B38 /* Controller */,
 				BC774FE61EA73F4B009B9B38 /* ViewController.swift */,
 				BC774FEE1EA73F4B009B9B38 /* Assets.xcassets */,
+				BCC5CAC11F681DEB0016640D /* woman-1245922_1280.jpg */,
+				BCC5CABF1F681DE30016640D /* fashion-511494_1280.jpg */,
+				BCC5CABD1F681DD70016640D /* fashion-show-1746602_1280.jpg */,
+				BCC5CABB1F681DC50016640D /* people-2572856_1280.jpg */,
+				BCC5CAB91F681DB90016640D /* fashion-2539879_1280.jpg */,
 				BCC5CAB71F6631CB0016640D /* people-2598015_1920.jpg */,
 				BC774FF31EA73F4B009B9B38 /* Info.plist */,
 				BC774FEB1EA73F4B009B9B38 /* costPerWear.xcdatamodeld */,
@@ -252,7 +267,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCC5CABC1F681DC50016640D /* people-2572856_1280.jpg in Resources */,
 				BCC5CAB81F6631CB0016640D /* people-2598015_1920.jpg in Resources */,
+				BCC5CABA1F681DB90016640D /* fashion-2539879_1280.jpg in Resources */,
+				BCC5CAC21F681DEB0016640D /* woman-1245922_1280.jpg in Resources */,
+				BCC5CABE1F681DD70016640D /* fashion-show-1746602_1280.jpg in Resources */,
+				BCC5CAC01F681DE30016640D /* fashion-511494_1280.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
