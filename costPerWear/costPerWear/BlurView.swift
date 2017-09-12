@@ -31,8 +31,8 @@ class Blurview: UIView {
         print("1")
         let image = UIImage(named: "fashiongirl")
         imageView = UIImageView(image: image)
-        //imageView.frame = self.bounds
-        //imageView.contentMode = .scaleAspectFill
+        imageView.frame = self.bounds
+        imageView.contentMode = .scaleToFill
         print("2")
         addSubview(imageView)
         print("3")
@@ -43,21 +43,24 @@ class Blurview: UIView {
             make.width.equalToSuperview()
         }
         
-//
-//        print("4")
-//        blurEffect = UIBlurEffect(style: .light)
-//        blurEffectView = UIVisualEffectView(effect: blurEffect)
-//        //blurEffectView.frame = self.bounds
-//        print("5")
-//        addSubview(blurEffectView)
-//        print("6")
-//        blurEffectView.snp.makeConstraints { (make) in
-//            make.centerX.equalToSuperview()
-//            make.centerY.equalToSuperview()
-//            make.height.equalToSuperview()
-//            make.width.equalToSuperview()
-//            
-//        }
+
+        print("4")
+        blurEffect = UIBlurEffect(style: .light)
+        blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.translatesAutoresizingMaskIntoConstraints = false
+        blurEffectView.alpha = 1.0
+        //blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        blurEffectView.frame = self.bounds
+        print("5")
+        addSubview(blurEffectView)
+        print("6")
+        blurEffectView.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
+            make.height.equalToSuperview()
+            make.width.equalToSuperview()
+            
+        }
         
         print("7")
     

@@ -38,15 +38,15 @@ class LoginViewController: UIViewController, LoginViewDelegate {
         super.viewDidLoad()
         view.backgroundColor = UIColor.clear
         
-       let imageView = UIImageView(frame: CGRect.init(x: 0.0, y: 0.0, width: 500.0, height: 500.0))
+       let imageView = UIImageView(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
         imageView.image = image
         view.addSubview(imageView)
         
         blurView = Blurview(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.width))
-        //view.addSubview(blurView)
+        imageView.addSubview(blurView)
         loginView = LoginView.init(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
         loginView.delegate = self
-        //blurView.addSubview(loginView)
+        blurView.blurEffectView.contentView.addSubview(loginView)
 
     }
 
