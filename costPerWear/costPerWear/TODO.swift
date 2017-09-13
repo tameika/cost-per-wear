@@ -16,6 +16,9 @@ import Foundation
  - redo frames with snapkit
  - customize tableview cells
  
+ BACKEND:
+ -
+ 
  Other
  - remove root controller nav bar 
  

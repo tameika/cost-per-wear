@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SnapKit
 
 class ContentView: UIView {
     
@@ -23,30 +24,64 @@ class ContentView: UIView {
     override init(frame: CGRect){
         super.init(frame: frame)
         
-        self.pageTitle = UILabel(frame: CGRect(x: 70.0, y: 100.0, width: 100.0, height: 50.0))
-        self.pageTitle.backgroundColor = UIColor.green
-        self.addSubview(pageTitle)
+        pageTitle = UILabel(frame: CGRect.zero)
+        pageTitle.translatesAutoresizingMaskIntoConstraints = true
+        pageTitle.backgroundColor = UIColor.green
+        addSubview(pageTitle)
+        pageTitle.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview().inset(-200.0)
+            make.height.equalTo(50.0)
+            make.width.equalTo(80.0)
+        }
         
-        pageDescription = UILabel(frame: CGRect.init(x: 70.0, y: 50.0, width: 200.0, height: 50.0))
+        
+        pageDescription = UILabel(frame: CGRect.zero)
         pageDescription.backgroundColor = UIColor.red
-        self.addSubview(pageDescription)
+        addSubview(pageDescription)
+        pageDescription.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.centerY.equalTo(pageTitle).inset(100.0)
+            make.height.equalTo(50.0)
+            make.width.equalTo(120.0)
+        }
         
-        self.textfieldEntry = UITextField(frame: CGRect.init(x: 70.0, y: 200.0, width: 300.0, height: 60.0))
-        self.textfieldEntry.backgroundColor = UIColor.blue
+        
+        textfieldEntry = UITextField(frame: CGRect.zero)
+        textfieldEntry.backgroundColor = UIColor.blue
         //textfieldEntry.delegate = self
-        self.textfieldEntry.placeholder = "enter text here"
-        self.textfieldEntry.clearsOnBeginEditing = true
-        self.addSubview(textfieldEntry)
+        textfieldEntry.placeholder = "enter text here"
+        textfieldEntry.clearsOnBeginEditing = true
+        addSubview(textfieldEntry)
+        textfieldEntry.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.centerY.equalTo(pageDescription).inset(120)
+            make.height.equalTo(50.0)
+            make.width.equalTo(80.0)
+        }
+
         
-        self.enterBtn = UIButton(type: .roundedRect)
-        self.enterBtn = UIButton(frame: CGRect(x: 70.0, y: 300.0, width: 100.0, height: 50.0))
-        self.enterBtn.backgroundColor = UIColor.darkText
-        self.enterBtn.setTitle("enter!", for: .normal)
-        self.enterBtn.addTarget(self, action: #selector(ContentViewController.pressed), for: .touchUpInside)
-        self.addSubview(enterBtn)
+        
+        enterBtn = UIButton(frame: CGRect.zero)
+        enterBtn = UIButton(type: .roundedRect)
+        enterBtn.backgroundColor = UIColor.darkText
+        enterBtn.setTitle("enter!", for: .normal)
+        enterBtn.addTarget(self, action: #selector(ContentViewController.pressed), for: .touchUpInside)
+        addSubview(enterBtn)
+        enterBtn.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.centerY.equalTo(textfieldEntry).inset(120)
+            make.height.equalTo(50.0)
+            make.width.equalTo(80.0)
+        }
+
         
         
     }
+    
+    
+
+
     
     
 }

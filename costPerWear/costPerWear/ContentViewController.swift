@@ -11,33 +11,37 @@ import UIKit
 class ContentViewController: UIViewController {
     
     var pageIndex = 0
-    var contentPage = ContentView()
     var itemDetails = ItemDetailView()
+    var contentView = ContentView()
+    var blurView = Blurview()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        creatConstraints()
         
-        self.view.backgroundColor = UIColor.lightGray
-        //contentPage = ContentView()
-        contentPage.pageTitle.text = pages[self.pageIndex].title
-        contentPage.pageDescription.text = pages[self.pageIndex].description
-        self.view.addSubview(contentPage)
+        view.backgroundColor = UIColor.clear
         
-        self.contentPage.enterBtn.addTarget(self, action: #selector(pressed), for: .touchUpInside)
         
+        contentView = ContentView(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
+        contentView.pageTitle.text = pages[self.pageIndex].title
+        contentView.pageDescription.text = pages[self.pageIndex].description
+        contentView.enterBtn.addTarget(self, action: #selector(pressed), for: .touchUpInside)
+        view.addSubview(contentView)
+        
+        blurView = Blurview(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
+        view.addSubview(blurView)
+
+
         
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     
     func pressed() {        
         
         let vcAtIndex = NewItemDetailViewController()
-        guard let textfieldEntry = contentPage.textfieldEntry else { return }
+        guard let textfieldEntry = contentView.textfieldEntry else { return }
         
         switch pageIndex {
         case 0:
@@ -64,38 +68,6 @@ class ContentViewController: UIViewController {
         }
     }
     
-    // MARK: TO DO: Recreate with snapkit
-    
-    func creatConstraints() {
-        
-        contentPage.pageTitle.translatesAutoresizingMaskIntoConstraints = false
-        contentPage.pageTitle.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0.0).isActive = true
-        contentPage.pageTitle.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 0.0).isActive = true
-        contentPage.pageTitle.heightAnchor.constraint(equalTo: self.view.heightAnchor, constant: -50.0).isActive = true
-        contentPage.pageTitle.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: -50.0).isActive = true
-        
-        contentPage.pageDescription.translatesAutoresizingMaskIntoConstraints = false
-        contentPage.pageDescription.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0.0).isActive = true
-        contentPage.pageDescription.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 0.0).isActive = true
-        contentPage.pageDescription.heightAnchor.constraint(equalTo: self.view.heightAnchor, constant: -50.0).isActive = true
-        contentPage.pageDescription.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: -50.0).isActive = true
-        
-        
-        contentPage.textfieldEntry.translatesAutoresizingMaskIntoConstraints = false
-        contentPage.textfieldEntry.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0.0).isActive = true
-        contentPage.textfieldEntry.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 0.0).isActive = true
-        contentPage.textfieldEntry.heightAnchor.constraint(equalTo: self.view.heightAnchor, constant: -50.0).isActive = true
-        contentPage.textfieldEntry.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: -50.0).isActive = true
-        
-        
-        contentPage.enterBtn.translatesAutoresizingMaskIntoConstraints = false
-        contentPage.enterBtn.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0.0).isActive = true
-        contentPage.enterBtn.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 0.0).isActive = true
-        contentPage.enterBtn.heightAnchor.constraint(equalTo: self.view.heightAnchor, constant: -50.0).isActive = true
-        contentPage.enterBtn.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: -50.0).isActive = true
-        
-        
-    }
-    
+     
     
 }
