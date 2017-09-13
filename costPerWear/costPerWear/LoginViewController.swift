@@ -46,7 +46,7 @@ class LoginViewController: UIViewController, LoginViewDelegate {
         view.addSubview(loginImage)
         
         blurView = Blurview(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: 667.0))
-        view.addSubview(blurView)
+        //view.addSubview(blurView)
         loginView = LoginView.init(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
         loginView.delegate = self
         //blurView.blurEffectView.contentView.addSubview(loginView)

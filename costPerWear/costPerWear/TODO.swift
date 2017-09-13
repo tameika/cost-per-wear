@@ -14,6 +14,7 @@ import Foundation
  UI
  - redo constraints with snapkit
  - redo frames with snapkit
+ - customize tableview cells
  
  Other
  - remove root controller nav bar 
