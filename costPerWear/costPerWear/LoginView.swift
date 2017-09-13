@@ -25,6 +25,7 @@ class LoginView: UIView {
     var passwordField: UITextField!
     var loginBtn: UIButton!
     var imageView: UIImageView!
+    var mottoLabel: UILabel!
 
     
     weak var delegate: LoginViewDelegate!
@@ -49,13 +50,30 @@ class LoginView: UIView {
         imageView = UIImageView(image: image)
         imageView.frame = self.bounds
         imageView.contentMode = .scaleToFill
-        imageView.alpha = 0.9
+        imageView.alpha = 1.0
         addSubview(imageView)
         imageView.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview()
             make.height.equalToSuperview()
             make.width.equalToSuperview()
+        }
+        
+        
+        mottoLabel = UILabel(frame: CGRect.zero)
+        mottoLabel.translatesAutoresizingMaskIntoConstraints = true
+        mottoLabel.backgroundColor = UIColor.clear
+        mottoLabel.font = UIFont(name: "avenirNext", size: 18.5)
+        mottoLabel.textAlignment = .center
+        mottoLabel.textColor = UIColor.beigeLife
+        mottoLabel.numberOfLines = 2
+        mottoLabel.text = "Use your money and closet space wisely."
+        addSubview(mottoLabel)
+        mottoLabel.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview().inset(-150.0)
+            make.height.equalTo(50.0)
+            make.width.equalTo(300.00)
         }
 
         
@@ -71,7 +89,7 @@ class LoginView: UIView {
         addSubview(usernameField)
         usernameField.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview().inset(-100.0)
+            make.centerY.equalToSuperview().inset(-50.0)
             make.height.equalTo(40.0)
             make.width.equalTo(270.0)
         }
@@ -103,6 +121,7 @@ class LoginView: UIView {
         //loginBtn.layer.borderColor = UIColor.bone.cgColor
     
         loginBtn.setTitle("login", for: .normal)
+        loginBtn.setTitleColor(UIColor.beigeLife, for: .normal)
         loginBtn.setTitleColor(UIColor.bone, for: .highlighted)
         loginBtn.addTarget(self, action: #selector(loggingIn), for: .touchUpInside)
         addSubview(loginBtn)
@@ -128,16 +147,16 @@ extension LoginView: CAAnimationDelegate {
     
     
     func setUpLayer() {
-        //l.frame = usernameField.bounds
+        l.frame = usernameField.bounds
         l.backgroundColor = UIColor.orangeLeather.cgColor
         l.borderWidth = 1.0
         l.borderColor = UIColor.clear.cgColor
         l.shadowOpacity = 0.7
         l.shadowRadius = 6.0
-        l.shadowColor = UIColor.blueSmokeDeep.cgColor
+        l.shadowColor = UIColor.darkGray.cgColor
         l.opacity = 1.0
         l.shadowOffset = CGSize(width: 0, height: 3)
-        //usernameField.layer.addSublayer(l)
+        //loginBtn.layer.addSublayer(l)
         
     }
     

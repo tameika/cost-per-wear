@@ -30,7 +30,7 @@ class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //navigationController?.isNavigationBarHidden = true
+        navigationController?.isNavigationBarHidden = false
         
         view.backgroundColor = UIColor.richOrange
         categoryView = CategoryView(frame: CGRect(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))

@@ -23,7 +23,7 @@ class LoginViewController: UIViewController, LoginViewDelegate {
         super.viewWillAppear(true)
         navigationItem.hidesBackButton = true
         navigationController?.navigationBar.isHidden = true
-        //loginView.setUpLayer()
+        loginView.setUpLayer()
         
     }
     
