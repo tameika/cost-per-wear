@@ -29,6 +29,7 @@ extension UIColor {
     static let richOrange = UIColor(red:1.00, green:0.34, blue:0.04, alpha:1.0)
     static let orangeLeather = UIColor(red:0.99, green:0.43, blue:0.27, alpha:1.0)
     static let beigeLife = UIColor(red:1.00, green:0.91, blue:0.88, alpha:1.0)
+    static let fleshPink = UIColor(red:0.91, green:0.78, blue:0.73, alpha:1.0)
     
 
     

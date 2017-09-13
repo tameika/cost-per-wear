@@ -24,7 +24,6 @@ class LoginView: UIView {
     var usernameField: UITextField!
     var passwordField: UITextField!
     var loginBtn: UIButton!
-    var imageView: UIImageView!
     var mottoLabel: UILabel!
 
     
@@ -46,26 +45,14 @@ class LoginView: UIView {
     override init(frame: CGRect){
         super.init(frame: frame)
         
-        let image = UIImage(named: "hanging-clothes.jpg")
-        imageView = UIImageView(image: image)
-        imageView.frame = self.bounds
-        imageView.contentMode = .scaleToFill
-        imageView.alpha = 1.0
-        addSubview(imageView)
-        imageView.snp.makeConstraints { (make) in
-            make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview()
-            make.height.equalToSuperview()
-            make.width.equalToSuperview()
-        }
-        
+                
         
         mottoLabel = UILabel(frame: CGRect.zero)
         mottoLabel.translatesAutoresizingMaskIntoConstraints = true
         mottoLabel.backgroundColor = UIColor.clear
         mottoLabel.font = UIFont(name: "avenirNext", size: 18.5)
         mottoLabel.textAlignment = .center
-        mottoLabel.textColor = UIColor.beigeLife
+        mottoLabel.textColor = UIColor.bone
         mottoLabel.numberOfLines = 2
         mottoLabel.text = "Use your money and closet space wisely."
         addSubview(mottoLabel)
@@ -83,7 +70,7 @@ class LoginView: UIView {
         usernameField.translatesAutoresizingMaskIntoConstraints = true
         usernameField.backgroundColor = UIColor.clear
         usernameField.font = UIFont.avenirNext
-        usernameField.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSForegroundColorAttributeName: UIColor.beigeLife])
+        usernameField.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSForegroundColorAttributeName: UIColor.bone])
         usernameField.textAlignment = .left
         usernameField.clearsOnBeginEditing = true
         addSubview(usernameField)
@@ -100,7 +87,7 @@ class LoginView: UIView {
         passwordField.translatesAutoresizingMaskIntoConstraints = false
         passwordField.backgroundColor = UIColor.clear
         passwordField.font = UIFont.avenirNext
-        passwordField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSForegroundColorAttributeName: UIColor.beigeLife])
+        passwordField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSForegroundColorAttributeName: UIColor.bone])
         passwordField.textAlignment = .left
         passwordField.clearsOnBeginEditing = true
         addSubview(passwordField)
@@ -121,7 +108,7 @@ class LoginView: UIView {
         //loginBtn.layer.borderColor = UIColor.bone.cgColor
     
         loginBtn.setTitle("login", for: .normal)
-        loginBtn.setTitleColor(UIColor.beigeLife, for: .normal)
+        loginBtn.setTitleColor(UIColor.bone, for: .normal)
         loginBtn.setTitleColor(UIColor.bone, for: .highlighted)
         loginBtn.addTarget(self, action: #selector(loggingIn), for: .touchUpInside)
         addSubview(loginBtn)
@@ -163,14 +150,14 @@ extension LoginView: CAAnimationDelegate {
     
     func setUpBorder() {
         usernameField.borderStyle = .none
-        border.borderColor = UIColor.beigeLife.cgColor
+        border.borderColor = UIColor.bone.cgColor
         border.frame = CGRect(x: 0.0, y: usernameField.frame.size.height - width, width: usernameField.frame.size.width, height: usernameField.frame.size.height)
         border.borderWidth = width
         usernameField.layer.addSublayer(border)
         usernameField.layer.masksToBounds = true
         
         passwordField.borderStyle = .none
-        border2.borderColor = UIColor.beigeLife.cgColor
+        border2.borderColor = UIColor.bone.cgColor
         border2.frame = CGRect(x: 0.0, y: passwordField.frame.size.height - width2, width: passwordField.frame.size.width, height: passwordField.frame.size.height)
         border2.borderWidth = width2
         passwordField.layer.addSublayer(border2)

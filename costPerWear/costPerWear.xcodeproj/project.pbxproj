@@ -16,6 +16,7 @@
 		BC7750031EA81C29009B9B38 /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7750021EA81C29009B9B38 /* ItemDetailView.swift */; };
 		BC7750051EA81C82009B9B38 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7750041EA81C82009B9B38 /* ItemDetailViewController.swift */; };
 		BC7750071EA9B74E009B9B38 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7750061EA9B74E009B9B38 /* ItemDetail.swift */; };
+		BC8DA3D91F69A04400E3F263 /* LoginImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8DA3D81F69A04400E3F263 /* LoginImageView.swift */; };
 		BCA99CB71F4A979D007119A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC774FE41EA73F4B009B9B38 /* AppDelegate.swift */; };
 		BCADA0121F456712000D8233 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADA0111F456712000D8233 /* LoginViewController.swift */; };
 		BCC261A81F2FE48500006CC4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261A71F2FE48500006CC4 /* User.swift */; };
@@ -59,6 +60,7 @@
 		BC7750021EA81C29009B9B38 /* ItemDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
 		BC7750041EA81C82009B9B38 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		BC7750061EA9B74E009B9B38 /* ItemDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
+		BC8DA3D81F69A04400E3F263 /* LoginImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginImageView.swift; sourceTree = "<group>"; };
 		BCA99CB51F4A9470007119A7 /* DeveloperAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DeveloperAuth.swift; sourceTree = "<group>"; };
 		BCA99CBD1F4AADC1007119A7 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "../../../Library/Developer/Xcode/DerivedData/costPerWear-frhyebnrzzarulgwhmkzmgltubjw/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework"; sourceTree = "<group>"; };
 		BCA99CBF1F4AADC8007119A7 /* AWSCognito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCognito.framework; path = "../../../Library/Developer/Xcode/DerivedData/costPerWear-frhyebnrzzarulgwhmkzmgltubjw/Build/Products/Debug-iphonesimulator/AWSCognito/AWSCognito.framework"; sourceTree = "<group>"; };
@@ -202,8 +204,9 @@
 		BC7750011EA81915009B9B38 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BC51DE331F57D9DD00C27B27 /* LoginView.swift */,
+				BC8DA3D81F69A04400E3F263 /* LoginImageView.swift */,
 				BC51DE351F5895F000C27B27 /* BlurView.swift */,
+				BC51DE331F57D9DD00C27B27 /* LoginView.swift */,
 				BCC261B01F382AD400006CC4 /* CategoryView.swift */,
 				BCC261B61F3EA45000006CC4 /* CellView.swift */,
 				BC7750021EA81C29009B9B38 /* ItemDetailView.swift */,
@@ -365,6 +368,7 @@
 			files = (
 				BC4C49251EB8530900E149E8 /* ContentViewController.swift in Sources */,
 				BC7750031EA81C29009B9B38 /* ItemDetailView.swift in Sources */,
+				BC8DA3D91F69A04400E3F263 /* LoginImageView.swift in Sources */,
 				BCC261A81F2FE48500006CC4 /* User.swift in Sources */,
 				BC7750071EA9B74E009B9B38 /* ItemDetail.swift in Sources */,
 				BCC261B71F3EA45000006CC4 /* CellView.swift in Sources */,

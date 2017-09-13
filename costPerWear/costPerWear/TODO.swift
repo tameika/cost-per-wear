@@ -19,7 +19,10 @@ import Foundation
  - remove root controller nav bar 
  
  
- 
+ FINISHING TOUCHES:
+
+ - insert login icons 
+ - create app Icon 
  
  
  */
