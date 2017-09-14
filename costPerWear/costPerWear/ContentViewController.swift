@@ -19,11 +19,12 @@ class ContentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        print("a")
+        view.backgroundColor = nil
         
-        view.backgroundColor = UIColor.clear
         
-        
-        contentView = ContentView(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: 667.0))
+        contentView = ContentView(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
         //contentView.pageTitle.text = pages[self.pageIndex].title
         //contentView.pageDescription.text = pages[self.pageIndex].description
         contentView.enterBtn.addTarget(self, action: #selector(pressed), for: .touchUpInside)

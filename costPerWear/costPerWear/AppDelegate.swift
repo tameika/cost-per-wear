@@ -16,6 +16,8 @@ import AWSS3
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let nav = UINavigationController()
+
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -36,31 +38,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         // create a window
-        window = UIWindow(frame: UIScreen.main.bounds)
         
         // create a nav controller
-        let nav = UINavigationController()
         
         // create a vc type to represent desired vc's
         
         // mainVC
-        let mainView = UIViewController(nibName: nil, bundle: nil)
+        let viewController = LoginViewController()
+        self.nav.pushViewController(viewController, animated: true)
+        window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = nav
+        window?.makeKeyAndVisible()
+        
+        return true
         
         
         // assign nav stack to the general desired future stack
-        nav.viewControllers = [mainView]
+        //nav.viewControllers = [mainView]
      //   nav.viewControllers = [UIViewController(nibName: nil, bundle: nil), NewItemViewController(), NewItemViewController()]
         
         //(nav.viewControllers).append(NewItemDetailViewController())
         //nav.viewControllers.append(ItemViewController())
-        nav.viewControllers.append(LoginViewController())
+        
+
         
         // set nav vc as initial (root) vc upon launch
-        window?.rootViewController = nav
         
-        window?.makeKeyAndVisible()
         
-        return true
         
         
         

@@ -30,7 +30,7 @@ class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.isNavigationBarHidden = false
+        //navigationController?.isNavigationBarHidden = false
         
         view.backgroundColor = UIColor.richOrange
         categoryView = CategoryView(frame: CGRect(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
@@ -48,8 +48,9 @@ class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
     }
     
     func addSelected() {
-        
         let newItemDetailVC = NewItemDetailViewController()
+        //newItemDetailVC.modalTransitionStyle = .coverVertical
+        //self.present(newItemDetailVC, animated: true, completion: nil)
         navigationController?.present(newItemDetailVC, animated: true, completion: nil)
     }
     

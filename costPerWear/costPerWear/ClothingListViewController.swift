@@ -25,7 +25,7 @@ class ClothingListViewController: UIViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.isNavigationBarHidden = false
+        //navigationController?.isNavigationBarHidden = false
         self.tableView.isUserInteractionEnabled = true
         let screenSize: CGRect = UIScreen.main.bounds
         tableView = UITableView(frame: CGRect.init(x: 0.0, y: 0.0, width: screenSize.width, height: screenSize.height))

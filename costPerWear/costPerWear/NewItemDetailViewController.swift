@@ -23,30 +23,33 @@ class NewItemDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = nil
+        print("1")
+        
         let pc = UIPageControl.appearance()
         pc.pageIndicatorTintColor = UIColor.salmon
         pc.currentPageIndicatorTintColor = UIColor.bone
-        pc.backgroundColor = UIColor.clear
+        //pc.backgroundColor = UIColor.clear
         
         
-        view.backgroundColor = UIColor.clear
         
         blurView = Blurview(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
-        view.addSubview(blurView)
-        
+        //view.addSubview(blurView)
+        print("2")
         pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: [UIPageViewControllerOptionInterPageSpacingKey: 1.0])
         
         
         pageViewController.dataSource = self
         
-        pageViewController?.view.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height - 30.0)
+        pageViewController?.view.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.height)
         
         restartAction(sender: self)
         
+        print("3")
         addChildViewController((pageViewController)!)
         view.addSubview((pageViewController?.view)!)
         pageViewController?.didMove(toParentViewController: self)
-        
+        print("4")
         
     }
     

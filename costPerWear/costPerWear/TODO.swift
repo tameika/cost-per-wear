@@ -29,4 +29,12 @@ import Foundation
  - create app Icon 
  
  
+ 
+ 
+ 
+ Questions for Jim:
+ 
+ should vc extentions live in vc or extention.swift file?
+ 
+ 
  */
