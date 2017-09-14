@@ -36,6 +36,7 @@ import Foundation
  
  should vc extentions live in vc or extention.swift file?
  which occasions result in back buton
+ use lazy when necessary or ahead of time 
  
  
  */

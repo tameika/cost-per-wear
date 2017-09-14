@@ -46,7 +46,9 @@ class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
     
     func addSelected() {
         let newItemDetailVC = NewItemDetailViewController()
-        navigationController?.pushViewController(newItemDetailVC, animated: true)
+        newItemDetailVC.modalPresentationStyle = .overCurrentContext
+        present(newItemDetailVC, animated: true, completion: nil)
+        
     }
     
     

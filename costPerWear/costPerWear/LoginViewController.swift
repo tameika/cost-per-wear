@@ -22,8 +22,8 @@ class LoginViewController: UIViewController, LoginViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        navigationItem.hidesBackButton = true
-        navigationController?.navigationBar.isHidden = true
+        //navigationItem.hidesBackButton = true
+        //navigationController?.navigationBar.isHidden = true
         loginView.animateLayer()
 
         
