@@ -32,9 +32,10 @@ import Foundation
  
  
  
- Questions for Jim:
+ Questions:
  
  should vc extentions live in vc or extention.swift file?
+ which occasions result in back buton
  
  
  */

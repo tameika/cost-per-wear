@@ -17,13 +17,14 @@ class NewItemDetailViewController: UIViewController {
     var blurView = Blurview()
     
     let pages = [Page(title: "Item Photo", description: "Take a photo"), Page(title: "Item Name", description: "Give your item a name"), Page(title: "Item Age", description: "Enter age in months"), Page(title: "Item Price", description: "Enter how much it cost")]
-
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = nil
+        view.backgroundColor = UIColor.clear
+        
         print("1")
         
         let pc = UIPageControl.appearance()
@@ -35,7 +36,6 @@ class NewItemDetailViewController: UIViewController {
         
         blurView = Blurview(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
         //view.addSubview(blurView)
-        print("2")
         pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: [UIPageViewControllerOptionInterPageSpacingKey: 1.0])
         
         
@@ -45,15 +45,14 @@ class NewItemDetailViewController: UIViewController {
         
         restartAction(sender: self)
         
-        print("3")
-        addChildViewController((pageViewController)!)
-        view.addSubview((pageViewController?.view)!)
-        pageViewController?.didMove(toParentViewController: self)
+        self.addChildViewController((self.pageViewController)!)
+        self.view.addSubview((self.pageViewController?.view)!)
+        self.pageViewController?.didMove(toParentViewController: self)
         print("4")
         
     }
     
-
+    
     
     func restartAction(sender: Any) {
         
@@ -72,9 +71,6 @@ class NewItemDetailViewController: UIViewController {
         
         return vc
     }
-    
-    
-    
     
 }
 

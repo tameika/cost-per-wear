@@ -17,7 +17,7 @@ class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -29,8 +29,6 @@ class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //navigationController?.isNavigationBarHidden = false
         
         view.backgroundColor = UIColor.richOrange
         categoryView = CategoryView(frame: CGRect(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
@@ -44,35 +42,12 @@ class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
     func categorySelected() {
         let clothingListVC = ClothingListViewController()
         navigationController?.pushViewController(clothingListVC, animated: true)
-        
     }
     
     func addSelected() {
         let newItemDetailVC = NewItemDetailViewController()
-        //newItemDetailVC.modalTransitionStyle = .coverVertical
-        //self.present(newItemDetailVC, animated: true, completion: nil)
-        navigationController?.present(newItemDetailVC, animated: true, completion: nil)
+        navigationController?.pushViewController(newItemDetailVC, animated: true)
     }
-    
-    
-    
-    //        let tag = sender.tag
-    //        switch tag {
-    //        case 1:
-    //            print("tops selected")
-    //        case 2:
-    //            print("bottoms selected")
-    //        case 3:
-    //            print("dresses selected")
-    //        case 4:
-    //            print("shoes selected")
-    //        default:
-    //            print("none selected")
-    //        }
-    
-    
-    
-    
     
     
 }

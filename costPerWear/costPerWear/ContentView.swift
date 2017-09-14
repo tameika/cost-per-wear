@@ -10,12 +10,21 @@ import Foundation
 import UIKit
 import SnapKit
 
+protocol ContentViewDelegate: class {
+    
+    func cancelSelected()
+    
+    func enterSelected()
+}
+
 class ContentView: UIView {
     
     var pageTitle: UILabel!
     var pageDescription: UILabel!
     var textfieldEntry: UITextField!
     var enterBtn: UIButton!
+    var cancelBtn: UIButton!
+    weak var delegate: ContentViewDelegate?
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -75,7 +84,7 @@ class ContentView: UIView {
         enterBtn = UIButton(type: .roundedRect)
         enterBtn.backgroundColor = UIColor.bone
         enterBtn.setTitle("enter!", for: .normal)
-        enterBtn.addTarget(self, action: #selector(ContentViewController.pressed), for: .touchUpInside)
+        enterBtn.addTarget(self, action: #selector(enterButtonPressed), for: .touchUpInside)
         addSubview(enterBtn)
         enterBtn.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
@@ -83,15 +92,37 @@ class ContentView: UIView {
             make.height.equalTo(50.0)
             make.width.equalTo(100.0)
         }
-
+        
+        
+        cancelBtn = UIButton(frame: CGRect.zero)
+        cancelBtn = UIButton(type: .roundedRect)
+        cancelBtn.backgroundColor = UIColor.bone
+        cancelBtn.setTitle("cancel", for: .normal)
+        cancelBtn.addTarget(self, action: #selector(cancelButtonPressed), for: .touchUpInside)
+        addSubview(cancelBtn)
+        cancelBtn.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.centerY.equalTo(enterBtn).inset(100.0)
+            make.height.equalTo(50.0)
+            make.width.equalTo(100.0)
+        }
         
         
     }
-    
-    
-
-
-    
+   
     
 }
 
+
+extension ContentView {
+    
+    func cancelButtonPressed() {
+        print("inside cancel pressed")
+        delegate?.cancelSelected()
+        
+    }
+    
+    func enterButtonPressed() {
+        delegate?.enterSelected()
+    }
+}

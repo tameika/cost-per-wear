@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ContentViewController: UIViewController {
+class ContentViewController: UIViewController, ContentViewDelegate {
     
     var pageIndex = 0
     var itemDetails = ItemDetailView()
@@ -19,56 +19,35 @@ class ContentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        print("a")
-        view.backgroundColor = nil
         
+        self.view.backgroundColor = UIColor.clear
         
-        contentView = ContentView(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
+        self.contentView = ContentView(frame: CGRect.init(x: 0.0, y: 0.0, width: self.view.frame.width, height: self.view.frame.height))
         //contentView.pageTitle.text = pages[self.pageIndex].title
         //contentView.pageDescription.text = pages[self.pageIndex].description
-        contentView.enterBtn.addTarget(self, action: #selector(pressed), for: .touchUpInside)
-        view.addSubview(contentView)
+        contentView.delegate = self
         
-        blurView = Blurview(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
+        self.view.addSubview(self.contentView)
+        
+        self.blurView = Blurview(frame: CGRect.init(x: 0.0, y: 0.0, width: self.view.frame.width, height: self.view.frame.height))
         //view.addSubview(blurView)
-
-
+        
         
     }
-    
-    
-    
-    func pressed() {        
-        
-        let vcAtIndex = NewItemDetailViewController()
-        guard let textfieldEntry = contentView.textfieldEntry else { return }
-        
-        switch pageIndex {
-        case 0:
-            itemDetails.itemImage.image = UIImage()
-            
-            present(vcAtIndex.viewControllerAtIndex(index: 1), animated: true, completion: nil)
-        case 1:
-            itemDetails.itemName.text = "test text"
-            present(vcAtIndex.viewControllerAtIndex(index: 2), animated: true, completion: nil)
-        case 2:
-            itemDetails.itemAge.text = textfieldEntry.text
-            present(vcAtIndex.viewControllerAtIndex(index: 3), animated: true, completion: nil)
-        case 3:
-            itemDetails.itemPurchasePrice.text = textfieldEntry.text
-        default:
-            return
-        }
-        
-        if !(textfieldEntry.text?.isEmpty)! {
-            
-            present(ItemViewController(), animated: true, completion: nil)
-            
-            
-        }
-    }
-    
-     
     
 }
+
+
+extension ContentViewController {
+    
+    func cancelSelected() {
+        print("inside cancel selected")
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func enterSelected() {
+        print("enter selected")
+    }
+}
+
+
