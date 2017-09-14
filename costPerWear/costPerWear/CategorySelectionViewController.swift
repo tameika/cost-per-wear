@@ -47,6 +47,12 @@ class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
         
     }
     
+    func addSelected() {
+        
+        let newItemDetailVC = NewItemDetailViewController()
+        navigationController?.present(newItemDetailVC, animated: true, completion: nil)
+    }
+    
     
     
     //        let tag = sender.tag

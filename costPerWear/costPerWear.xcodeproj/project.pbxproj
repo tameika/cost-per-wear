@@ -192,10 +192,10 @@
 			children = (
 				BCADA0111F456712000D8233 /* LoginViewController.swift */,
 				BCC261AE1F382A8700006CC4 /* CategorySelectionViewController.swift */,
+				BC4C49241EB8530900E149E8 /* ContentViewController.swift */,
+				BCCD9A5B1EAAABA5003C64E0 /* NewItemDetailViewController.swift */,
 				BC7750041EA81C82009B9B38 /* ItemDetailViewController.swift */,
 				BCC261B41F3E8E2B00006CC4 /* ClothingListViewController.swift */,
-				BCCD9A5B1EAAABA5003C64E0 /* NewItemDetailViewController.swift */,
-				BC4C49241EB8530900E149E8 /* ContentViewController.swift */,
 				BC774FF01EA73F4B009B9B38 /* LaunchScreen.storyboard */,
 			);
 			name = Controller;
@@ -207,10 +207,10 @@
 				BC8DA3D81F69A04400E3F263 /* LoginImageView.swift */,
 				BC51DE351F5895F000C27B27 /* BlurView.swift */,
 				BC51DE331F57D9DD00C27B27 /* LoginView.swift */,
+				BC3033A91EDF7FFD00332952 /* ContentView.swift */,
 				BCC261B01F382AD400006CC4 /* CategoryView.swift */,
 				BCC261B61F3EA45000006CC4 /* CellView.swift */,
 				BC7750021EA81C29009B9B38 /* ItemDetailView.swift */,
-				BC3033A91EDF7FFD00332952 /* ContentView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";

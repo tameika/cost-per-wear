@@ -23,14 +23,14 @@ class ContentViewController: UIViewController {
         view.backgroundColor = UIColor.clear
         
         
-        contentView = ContentView(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
-        contentView.pageTitle.text = pages[self.pageIndex].title
-        contentView.pageDescription.text = pages[self.pageIndex].description
+        contentView = ContentView(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: 667.0))
+        //contentView.pageTitle.text = pages[self.pageIndex].title
+        //contentView.pageDescription.text = pages[self.pageIndex].description
         contentView.enterBtn.addTarget(self, action: #selector(pressed), for: .touchUpInside)
         view.addSubview(contentView)
         
         blurView = Blurview(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
-        view.addSubview(blurView)
+        //view.addSubview(blurView)
 
 
         

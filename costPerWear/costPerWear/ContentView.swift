@@ -25,19 +25,26 @@ class ContentView: UIView {
         super.init(frame: frame)
         
         pageTitle = UILabel(frame: CGRect.zero)
-        pageTitle.translatesAutoresizingMaskIntoConstraints = true
-        pageTitle.backgroundColor = UIColor.green
+        pageTitle.translatesAutoresizingMaskIntoConstraints = false
+        pageTitle.clipsToBounds = true
+        pageTitle.backgroundColor = UIColor.clear
+        pageTitle.textAlignment = .center
+        pageTitle.textColor = UIColor.bone
         addSubview(pageTitle)
         pageTitle.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview().inset(-200.0)
             make.height.equalTo(50.0)
-            make.width.equalTo(80.0)
+            make.width.equalTo(100.0)
         }
         
         
         pageDescription = UILabel(frame: CGRect.zero)
-        pageDescription.backgroundColor = UIColor.red
+        pageDescription.translatesAutoresizingMaskIntoConstraints = false
+        pageDescription.clipsToBounds = true
+        pageDescription.backgroundColor = UIColor.clear
+        pageDescription.textAlignment = .center
+        pageDescription.textColor = UIColor.bone
         addSubview(pageDescription)
         pageDescription.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
@@ -48,7 +55,9 @@ class ContentView: UIView {
         
         
         textfieldEntry = UITextField(frame: CGRect.zero)
-        textfieldEntry.backgroundColor = UIColor.blue
+        textfieldEntry.translatesAutoresizingMaskIntoConstraints = false
+        textfieldEntry.clipsToBounds = true 
+        textfieldEntry.backgroundColor = UIColor.bone
         //textfieldEntry.delegate = self
         textfieldEntry.placeholder = "enter text here"
         textfieldEntry.clearsOnBeginEditing = true
@@ -57,14 +66,14 @@ class ContentView: UIView {
             make.centerX.equalToSuperview()
             make.centerY.equalTo(pageDescription).inset(120)
             make.height.equalTo(50.0)
-            make.width.equalTo(80.0)
+            make.width.equalTo(150.0)
         }
 
         
         
         enterBtn = UIButton(frame: CGRect.zero)
         enterBtn = UIButton(type: .roundedRect)
-        enterBtn.backgroundColor = UIColor.darkText
+        enterBtn.backgroundColor = UIColor.bone
         enterBtn.setTitle("enter!", for: .normal)
         enterBtn.addTarget(self, action: #selector(ContentViewController.pressed), for: .touchUpInside)
         addSubview(enterBtn)
@@ -72,7 +81,7 @@ class ContentView: UIView {
             make.centerX.equalToSuperview()
             make.centerY.equalTo(textfieldEntry).inset(120)
             make.height.equalTo(50.0)
-            make.width.equalTo(80.0)
+            make.width.equalTo(100.0)
         }
 
         

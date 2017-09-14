@@ -14,6 +14,8 @@ import Spring
 protocol CategoryViewDelegate: class {
     
     func categorySelected()
+    
+    func addSelected()
 }
 
 
@@ -136,7 +138,7 @@ class CategoryView: UIView {
         addBtn.setTitle("+", for: .normal)
         addBtn.setTitleColor(UIColor.darkText, for: .normal)
         addBtn.setTitleColor(UIColor.bone, for: .highlighted)
-        addBtn.addTarget(self, action: #selector(categoryButtonPressed), for: .touchUpInside)
+        addBtn.addTarget(self, action: #selector(addButtonPressed), for: .touchUpInside)
         addBtn.tag = 5
         addSubview(addBtn)
         addBtn.snp.makeConstraints { (make) in
@@ -163,6 +165,10 @@ extension CategoryView {
     
     func categoryButtonPressed() {
         delegate?.categorySelected()
+    }
+    
+    func addButtonPressed() {
+        delegate?.addSelected()
     }
     
     

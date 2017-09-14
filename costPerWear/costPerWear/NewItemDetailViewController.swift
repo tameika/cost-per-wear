@@ -14,41 +14,47 @@ class NewItemDetailViewController: UIViewController {
     var navigationOrientation: UIPageViewControllerNavigationOrientation!
     var pageTitles = ["Photo", "Name", "Age", "Cost"]
     var viewControllers = [UIViewController]()
+    var blurView = Blurview()
+    
+    let pages = [Page(title: "Item Photo", description: "Take a photo"), Page(title: "Item Name", description: "Give your item a name"), Page(title: "Item Age", description: "Enter age in months"), Page(title: "Item Price", description: "Enter how much it cost")]
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let pc = UIPageControl.appearance()
-        pc.pageIndicatorTintColor = UIColor.black
-        pc.currentPageIndicatorTintColor = UIColor.white
-        pc.backgroundColor = UIColor.green
+        pc.pageIndicatorTintColor = UIColor.salmon
+        pc.currentPageIndicatorTintColor = UIColor.bone
+        pc.backgroundColor = UIColor.clear
         
         
-        self.view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.clear
         
-        self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: [UIPageViewControllerOptionInterPageSpacingKey: 1.0])
+        blurView = Blurview(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
+        view.addSubview(blurView)
         
-        self.pageViewController.dataSource = self
+        pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: [UIPageViewControllerOptionInterPageSpacingKey: 1.0])
         
-        self.pageViewController?.view.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height - 30.0)
-        self.restartAction(sender: self)
         
-        self.addChildViewController((pageViewController)!)
-        self.view.addSubview((pageViewController?.view)!)
-        self.pageViewController?.didMove(toParentViewController: self)
+        pageViewController.dataSource = self
+        
+        pageViewController?.view.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height - 30.0)
+        
+        restartAction(sender: self)
+        
+        addChildViewController((pageViewController)!)
+        view.addSubview((pageViewController?.view)!)
+        pageViewController?.didMove(toParentViewController: self)
         
         
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
+
     
     func restartAction(sender: Any) {
         
-        self.pageViewController.setViewControllers([self.viewControllerAtIndex(index: 0)], direction: .forward, animated: true, completion: nil)
+        pageViewController.setViewControllers([self.viewControllerAtIndex(index: 0)], direction: .forward, animated: true, completion: nil)
     }
     
     func viewControllerAtIndex(index: Int) -> UIViewController {
