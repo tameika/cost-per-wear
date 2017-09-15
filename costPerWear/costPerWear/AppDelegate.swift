@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // create a vc type to represent desired vc's
         
         // mainVC
-        let viewController = LoginViewController()
+        let viewController = CameraViewController()
         self.nav.pushViewController(viewController, animated: true)
         window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = nav
