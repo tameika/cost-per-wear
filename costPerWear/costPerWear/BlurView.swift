@@ -28,7 +28,7 @@ class Blurview: UIView {
         
                 
 
-        blurEffect = UIBlurEffect(style: .regular)
+        blurEffect = UIBlurEffect(style: .light)
         blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.translatesAutoresizingMaskIntoConstraints = false
         blurEffectView.alpha = 1.0

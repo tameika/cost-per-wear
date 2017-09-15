@@ -28,9 +28,9 @@ class NewItemDetailViewController: UIViewController {
         print("1")
         
         let pc = UIPageControl.appearance()
-        pc.pageIndicatorTintColor = UIColor.salmon
+        pc.pageIndicatorTintColor = UIColor.clear
         pc.currentPageIndicatorTintColor = UIColor.bone
-        //pc.backgroundColor = UIColor.clear
+        pc.backgroundColor = UIColor.clear 
         
         
         

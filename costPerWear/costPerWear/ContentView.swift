@@ -36,13 +36,14 @@ class ContentView: UIView {
         pageTitle = UILabel(frame: CGRect.zero)
         pageTitle.translatesAutoresizingMaskIntoConstraints = false
         pageTitle.clipsToBounds = true
-        pageTitle.backgroundColor = UIColor.clear
+        pageTitle.layer.cornerRadius = 20.0
+        pageTitle.backgroundColor = UIColor.bone
         pageTitle.textAlignment = .center
         pageTitle.textColor = UIColor.bone
         addSubview(pageTitle)
         pageTitle.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview().inset(-200.0)
+            make.centerY.equalToSuperview().inset(-300.0)
             make.height.equalTo(50.0)
             make.width.equalTo(100.0)
         }
@@ -51,9 +52,10 @@ class ContentView: UIView {
         pageDescription = UILabel(frame: CGRect.zero)
         pageDescription.translatesAutoresizingMaskIntoConstraints = false
         pageDescription.clipsToBounds = true
-        pageDescription.backgroundColor = UIColor.clear
+        pageDescription.layer.cornerRadius = 20.0
+        pageDescription.backgroundColor = UIColor.bone
         pageDescription.textAlignment = .center
-        pageDescription.textColor = UIColor.bone
+        pageDescription.textColor = UIColor.darkGray
         addSubview(pageDescription)
         pageDescription.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
@@ -65,7 +67,8 @@ class ContentView: UIView {
         
         textfieldEntry = UITextField(frame: CGRect.zero)
         textfieldEntry.translatesAutoresizingMaskIntoConstraints = false
-        textfieldEntry.clipsToBounds = true 
+        textfieldEntry.clipsToBounds = true
+        textfieldEntry.layer.cornerRadius = 20.0
         textfieldEntry.backgroundColor = UIColor.bone
         //textfieldEntry.delegate = self
         textfieldEntry.placeholder = "enter text here"
@@ -82,6 +85,7 @@ class ContentView: UIView {
         
         enterBtn = UIButton(frame: CGRect.zero)
         enterBtn = UIButton(type: .roundedRect)
+        enterBtn.layer.cornerRadius = 20.0
         enterBtn.backgroundColor = UIColor.bone
         enterBtn.setTitle("enter!", for: .normal)
         enterBtn.addTarget(self, action: #selector(enterButtonPressed), for: .touchUpInside)
@@ -96,6 +100,7 @@ class ContentView: UIView {
         
         cancelBtn = UIButton(frame: CGRect.zero)
         cancelBtn = UIButton(type: .roundedRect)
+        cancelBtn.layer.cornerRadius = 20.0
         cancelBtn.backgroundColor = UIColor.bone
         cancelBtn.setTitle("cancel", for: .normal)
         cancelBtn.addTarget(self, action: #selector(cancelButtonPressed), for: .touchUpInside)

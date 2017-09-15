@@ -17,6 +17,8 @@
 		BC7750051EA81C82009B9B38 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7750041EA81C82009B9B38 /* ItemDetailViewController.swift */; };
 		BC7750071EA9B74E009B9B38 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7750061EA9B74E009B9B38 /* ItemDetail.swift */; };
 		BC8DA3D91F69A04400E3F263 /* LoginImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8DA3D81F69A04400E3F263 /* LoginImageView.swift */; };
+		BC8DA3DB1F6B436E00E3F263 /* pastel-skies.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC8DA3DA1F6B436E00E3F263 /* pastel-skies.jpg */; };
+		BC8DA3DD1F6B63E200E3F263 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8DA3DC1F6B63E200E3F263 /* CameraViewController.swift */; };
 		BCA99CB71F4A979D007119A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC774FE41EA73F4B009B9B38 /* AppDelegate.swift */; };
 		BCADA0121F456712000D8233 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADA0111F456712000D8233 /* LoginViewController.swift */; };
 		BCC261A81F2FE48500006CC4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261A71F2FE48500006CC4 /* User.swift */; };
@@ -61,6 +63,8 @@
 		BC7750041EA81C82009B9B38 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		BC7750061EA9B74E009B9B38 /* ItemDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
 		BC8DA3D81F69A04400E3F263 /* LoginImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginImageView.swift; sourceTree = "<group>"; };
+		BC8DA3DA1F6B436E00E3F263 /* pastel-skies.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "pastel-skies.jpg"; path = "../../../pastel-skies.jpg"; sourceTree = "<group>"; };
+		BC8DA3DC1F6B63E200E3F263 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		BCA99CB51F4A9470007119A7 /* DeveloperAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DeveloperAuth.swift; sourceTree = "<group>"; };
 		BCA99CBD1F4AADC1007119A7 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "../../../Library/Developer/Xcode/DerivedData/costPerWear-frhyebnrzzarulgwhmkzmgltubjw/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework"; sourceTree = "<group>"; };
 		BCA99CBF1F4AADC8007119A7 /* AWSCognito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCognito.framework; path = "../../../Library/Developer/Xcode/DerivedData/costPerWear-frhyebnrzzarulgwhmkzmgltubjw/Build/Products/Debug-iphonesimulator/AWSCognito/AWSCognito.framework"; sourceTree = "<group>"; };
@@ -158,6 +162,7 @@
 				BC7750001EA818D5009B9B38 /* Controller */,
 				BC774FE61EA73F4B009B9B38 /* ViewController.swift */,
 				BC774FEE1EA73F4B009B9B38 /* Assets.xcassets */,
+				BC8DA3DA1F6B436E00E3F263 /* pastel-skies.jpg */,
 				BCC5CAD11F6853B90016640D /* hanging-clothes.jpg */,
 				BCC5CACF1F6853B20016640D /* neutral-minimal-clothes.jpg */,
 				BCC5CACD1F6853A30016640D /* fashion-collection-prints.jpg */,
@@ -194,6 +199,7 @@
 				BCC261AE1F382A8700006CC4 /* CategorySelectionViewController.swift */,
 				BC4C49241EB8530900E149E8 /* ContentViewController.swift */,
 				BCCD9A5B1EAAABA5003C64E0 /* NewItemDetailViewController.swift */,
+				BC8DA3DC1F6B63E200E3F263 /* CameraViewController.swift */,
 				BC7750041EA81C82009B9B38 /* ItemDetailViewController.swift */,
 				BCC261B41F3E8E2B00006CC4 /* ClothingListViewController.swift */,
 				BC774FF01EA73F4B009B9B38 /* LaunchScreen.storyboard */,
@@ -308,6 +314,7 @@
 				BCC5CAC61F684D020016640D /* girl-2417600_1280.jpg in Resources */,
 				BCC5CABE1F681DD70016640D /* fashion-show-1746602_1280.jpg in Resources */,
 				BCC5CAC01F681DE30016640D /* fashion-511494_1280.jpg in Resources */,
+				BC8DA3DB1F6B436E00E3F263 /* pastel-skies.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +384,7 @@
 				BCC261B51F3E8E2B00006CC4 /* ClothingListViewController.swift in Sources */,
 				BC7750051EA81C82009B9B38 /* ItemDetailViewController.swift in Sources */,
 				BCCD9A5C1EAAABA5003C64E0 /* NewItemDetailViewController.swift in Sources */,
+				BC8DA3DD1F6B63E200E3F263 /* CameraViewController.swift in Sources */,
 				BCC261AF1F382A8700006CC4 /* CategorySelectionViewController.swift in Sources */,
 				BCA99CB71F4A979D007119A7 /* AppDelegate.swift in Sources */,
 				BC51DE341F57D9DD00C27B27 /* LoginView.swift in Sources */,

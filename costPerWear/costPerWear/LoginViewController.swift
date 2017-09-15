@@ -24,6 +24,7 @@ class LoginViewController: UIViewController, LoginViewDelegate {
         super.viewWillAppear(true)
         //navigationItem.hidesBackButton = true
         //navigationController?.navigationBar.isHidden = true
+        navigationController?.navigationBar.isTranslucent = true 
         loginView.animateLayer()
 
         
