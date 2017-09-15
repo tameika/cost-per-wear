@@ -40,6 +40,7 @@ import Foundation
  which occasions result in back buton
  use lazy when necessary or ahead of time 
  programmatically, should all properties be declare as weak var like storyboard does 
+ whats the general feeling on long method names 
  
  
  */

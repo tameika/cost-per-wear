@@ -10,13 +10,20 @@ import UIKit
 
 class CameraViewController: UIViewController {
     
-    var imagePicked: UIImageView!
+    //var imagePicked: UIImageView!
+    
+    weak var cameraView: CameraView!
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
+        
+        cameraView = CameraView(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
+        
+        
+        cameraView.delegate = self
+
     }
 
     
@@ -27,9 +34,9 @@ class CameraViewController: UIViewController {
 
 
 extension CameraViewController: UIImagePickerControllerDelegate,
-UINavigationControllerDelegate {
+UINavigationControllerDelegate, CameraViewDelegate {
     
-    func openCamera(sender: AnyObject) {
+    func openCameraSelected() {
         
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             let imagePicker = UIImagePickerController()
@@ -40,7 +47,7 @@ UINavigationControllerDelegate {
         }
     }
     
-    func openPhotoLibrary(sender: AnyObject) {
+    func openPhotoLibrarySelected() {
         
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             let imagePicker = UIImagePickerController()
@@ -55,13 +62,15 @@ UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-        imagePicked.image = image
+        guard let imageChosen = cameraView.imagePicked else { print("failed to unwrap image"); return }
+        imageChosen.image = image
         dismiss(animated: true, completion: nil)
     }
     
     
     func saveImage(sender: AnyObject) {
-        guard let image = imagePicked.image else { print("could not unwrap image"); return }
+        guard let imageChosen = cameraView.imagePicked else { print("failed to unwrap image"); return }
+        guard let image = imageChosen.image else { print("could not unwrap image"); return }
         guard let imageData = UIImageJPEGRepresentation(image, 0.6) else { print("could not jpg"); return }
         guard let compressedJPGImage = UIImage(data: imageData) else { print("could not compress"); return }
         UIImageWriteToSavedPhotosAlbum(compressedJPGImage, nil, nil, nil)
