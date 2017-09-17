@@ -23,7 +23,6 @@ class CameraView: UIView {
     weak var delegate: CameraViewDelegate?
     weak var openCameraBtn: UIButton!
     weak var openPhotoLibraryBtn: UIButton!
-    weak var imagePicked: UIImageView!
     
     
     required init?(coder aDecoder: NSCoder) {
@@ -35,20 +34,10 @@ class CameraView: UIView {
         
         
         
-        imagePicked = UIImageView(frame: CGRect.zero)
-        //imagePicked.layer.cornerRadius = 20.0
-        addSubview(imagePicked)
-        imagePicked.snp.makeConstraints { (make) in
-            make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview().inset(-100)
-            make.height.equalTo(400.0)
-            make.width.equalToSuperview()
-        }
-        
         
         openCameraBtn = UIButton(frame: CGRect.zero)
         openCameraBtn = UIButton(type: .roundedRect)
-        openCameraBtn.layer.cornerRadius = 20.0
+        //openCameraBtn.layer.cornerRadius = 20.0
         openCameraBtn.backgroundColor = UIColor.bone
         openCameraBtn.setTitle("enter!", for: .normal)
         openCameraBtn.addTarget(self, action: #selector(openCameraButtonPressed), for: .touchUpInside)
