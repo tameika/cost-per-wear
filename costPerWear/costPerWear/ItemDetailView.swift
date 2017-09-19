@@ -148,11 +148,6 @@ class ItemDetailView: UIView {
 
 
 
-extension ItemDetailView {
-    
-    
-    
-}
 
 extension ItemDetailView: UITextFieldDelegate {
     
@@ -166,10 +161,6 @@ extension ItemDetailView: UITextFieldDelegate {
     
     
 }
-
-
-
-
 
 
 

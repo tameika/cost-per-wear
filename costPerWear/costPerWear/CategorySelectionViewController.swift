@@ -16,12 +16,12 @@ class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
     
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+        super.viewWillAppear(animated)
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
+        super.viewDidAppear(animated)
         
         categoryView.createAnimations()
         

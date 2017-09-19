@@ -23,10 +23,7 @@ class Blurview: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        
-        
-                
+       
 
         blurEffect = UIBlurEffect(style: .light)
         blurEffectView = UIVisualEffectView(effect: blurEffect)
@@ -47,37 +44,6 @@ class Blurview: UIView {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

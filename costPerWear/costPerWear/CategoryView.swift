@@ -149,14 +149,8 @@ class CategoryView: UIView {
             
             
         }
-        
-        
-        
-        
+
     }
-    
-    
-    
     
 }
 
@@ -192,8 +186,6 @@ extension CategoryView {
         
     }
 
-
-    
 }
 
 

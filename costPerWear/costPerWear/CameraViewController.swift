@@ -18,28 +18,7 @@ class CameraViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        // cameraView = CameraView(frame: CGRect.init(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
-        print(1)
-        
-        // cameraView.delegate = self
-        print(2)
     }
-
-//    func createImage() {
-//        
-//        imagePicked = UIImageView(frame: CGRect.init(x: 0.0, y: 0.0, width: 500.0, height: 400))
-//        imagePicked?.translatesAutoresizingMaskIntoConstraints = false
-//        view.addSubview(imagePicked!)
-//        imagePicked?.snp.makeConstraints { (make) in
-//            make.centerX.equalToSuperview()
-//            make.centerY.equalToSuperview().inset(-100)
-//            make.height.equalTo(400.0)
-//            make.width.equalToSuperview()
-//        }
-//
-//    }
-    
 
    
 }
