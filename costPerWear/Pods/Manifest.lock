@@ -1,71 +1,8 @@
 PODS:
-  - AFNetworking (3.1.0):
-    - AFNetworking/NSURLSession (= 3.1.0)
-    - AFNetworking/Reachability (= 3.1.0)
-    - AFNetworking/Security (= 3.1.0)
-    - AFNetworking/Serialization (= 3.1.0)
-    - AFNetworking/UIKit (= 3.1.0)
-  - AFNetworking/NSURLSession (3.1.0):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.1.0)
-  - AFNetworking/Security (3.1.0)
-  - AFNetworking/Serialization (3.1.0)
-  - AFNetworking/UIKit (3.1.0):
-    - AFNetworking/NSURLSession
-  - AWSAutoScaling (2.6.0):
-    - AWSCore (= 2.6.0)
-  - AWSCloudWatch (2.6.0):
-    - AWSCore (= 2.6.0)
-  - AWSCognito (2.6.0):
-    - AWSCore (= 2.6.0)
-  - AWSCore (2.6.0)
-  - AWSDynamoDB (2.6.0):
-    - AWSCore (= 2.6.0)
-  - AWSEC2 (2.6.0):
-    - AWSCore (= 2.6.0)
-  - AWSElasticLoadBalancing (2.6.0):
-    - AWSCore (= 2.6.0)
-  - AWSKinesis (2.6.0):
-    - AWSCore (= 2.6.0)
-  - AWSLambda (2.6.0):
-    - AWSCore (= 2.6.0)
-  - AWSMachineLearning (2.6.0):
-    - AWSCore (= 2.6.0)
-  - AWSMobileAnalytics (2.6.0):
-    - AWSCore (= 2.6.0)
-  - AWSS3 (2.6.0):
-    - AWSCore (= 2.6.0)
-  - AWSSES (2.6.0):
-    - AWSCore (= 2.6.0)
-  - AWSSimpleDB (2.6.0):
-    - AWSCore (= 2.6.0)
-  - AWSSNS (2.6.0):
-    - AWSCore (= 2.6.0)
-  - AWSSQS (2.6.0):
-    - AWSCore (= 2.6.0)
   - SnapKit (3.2.0)
   - Spring (1.0.3)
 
 DEPENDENCIES:
-  - AFNetworking
-  - AWSAutoScaling
-  - AWSCloudWatch
-  - AWSCognito
-  - AWSCore
-  - AWSDynamoDB
-  - AWSEC2
-  - AWSElasticLoadBalancing
-  - AWSKinesis
-  - AWSLambda
-  - AWSMachineLearning
-  - AWSMobileAnalytics
-  - AWSS3
-  - AWSSES
-  - AWSSimpleDB
-  - AWSSNS
-  - AWSSQS
   - SnapKit (~> 3.0)
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
 
@@ -80,26 +17,9 @@ CHECKOUT OPTIONS:
     :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
-  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  AWSAutoScaling: 23a9350615869f50a6a09fb4d1264999fbb2538a
-  AWSCloudWatch: 22619c903518b3a3d954a873f92a0de7feaa5b2c
-  AWSCognito: 7f32fd01698928c8320def74db10ca62cab2daef
-  AWSCore: a232d9a402ac11d76f3d87222a3f777e81b85abf
-  AWSDynamoDB: 758d398818c65c9ace685905accc58ef6b0bd77c
-  AWSEC2: d11622e72b7e40a1600f66f463769abc156956e1
-  AWSElasticLoadBalancing: 4f34fdf8d47e701c8be70c2fb172ead5e82e5b7a
-  AWSKinesis: 5c2534964ae29f6f011a12cd5dbb0f3983dd40cf
-  AWSLambda: ded24138e4c038e12e5aa1a1aafa37e85b25ef87
-  AWSMachineLearning: 734ad1a05eb228222dabfb50bceae64bc5e3be64
-  AWSMobileAnalytics: 16e74babb2a35ae99bbd9fa321ed0060e1a93e2b
-  AWSS3: 8d0840944adae39c8668893a484af2df651773b5
-  AWSSES: 1bf5d7b96202a264b2fc0d9c0813758c17feeca4
-  AWSSimpleDB: 6ae767c1acfc1c9fe2ea6f1b069182b0ea0547f8
-  AWSSNS: b4c983283c112fde7ccd66a44740279dbef0bb9a
-  AWSSQS: 5ae7d4fbcdd44000d280088b9c05aa7c0f4880e5
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
 
-PODFILE CHECKSUM: 0c25c0943379f7e43c609349d99b9addb6b5a5d3
+PODFILE CHECKSUM: c0918fa04c5ef9237f2f9c14618fd7b21887f26f
 
 COCOAPODS: 1.2.1

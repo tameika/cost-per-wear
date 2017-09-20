@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import AWSCognito
 
 struct User {
     
