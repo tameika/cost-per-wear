@@ -112,3 +112,41 @@ class CPWIdentityProvider: NSObject, AWSAbstractIdentityProvider {
   
 }
 
+
+
+
+/* create new proj
+
+federated is social
+custom is email. creates a user pool 
+add config file into same file as plist
+user sign in instructions
+ (pods: authcore, authuserpoolsignin, 
+ 
+ 
+
+
+
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

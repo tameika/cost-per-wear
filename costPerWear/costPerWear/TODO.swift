@@ -32,8 +32,6 @@ import Foundation
  
  
  
- 
- 
  Questions:
  
  should vc extentions live in vc or extention.swift file?
@@ -42,5 +40,22 @@ import Foundation
  programmatically, should all properties be declare as weak var like storyboard does 
  whats the general feeling on long method names 
  
+ 
+ 
+ 
+ mobile hub - aggregator of other aws services 
+ create a proj
+ select features 
+ cloud logic- api gateway with lambda function
+ s3 store user data
+ 
+ 
+ Cognito
+ 
+ authentication
+ authorization  - protect data
+ pools:
+ severless authentication and user management , managed user directionry, enhance security features (verify numbers and email and offer multi factor auth)
+ cognito sync - allows you to keep the same state in multiple devices 
  
  */
