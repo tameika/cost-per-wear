@@ -38,7 +38,7 @@
 /* Begin PBXFileReference section */
 		23DC76F3BFC357CD4672D41C /* Pods-costPerWear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-costPerWear.release.xcconfig"; path = "Pods/Target Support Files/Pods-costPerWear/Pods-costPerWear.release.xcconfig"; sourceTree = "<group>"; };
 		BC20EB5D1F72E22900FA87AA /* AWSCognitoAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSCognitoAuth.swift; sourceTree = "<group>"; };
-		BC20EB661F72FBC200FA87AA /* awsconfiguration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../../awsconfiguration.json; sourceTree = "<group>"; };
+		BC20EB681F74723D00FA87AA /* awsconfiguration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		BC3033A91EDF7FFD00332952 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BC4C49241EB8530900E149E8 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		BC51DE331F57D9DD00C27B27 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -148,12 +148,12 @@
 				BC7750011EA81915009B9B38 /* View */,
 				BC7750001EA818D5009B9B38 /* Controller */,
 				BC20EB601F72FA7E00FA87AA /* Files */,
-				BCC5CAD11F6853B90016640D /* hanging-clothes.jpg */,
 				BCC5CAC91F6853960016640D /* red-knits.jpg */,
 				BCC5CAB71F6631CB0016640D /* people-2598015_1920.jpg */,
 				BC774FEB1EA73F4B009B9B38 /* costPerWear.xcdatamodeld */,
+				BCC5CAD11F6853B90016640D /* hanging-clothes.jpg */,
+				BC20EB681F74723D00FA87AA /* awsconfiguration.json */,
 				BC774FF31EA73F4B009B9B38 /* Info.plist */,
-				BC20EB661F72FBC200FA87AA /* awsconfiguration.json */,
 			);
 			path = costPerWear;
 			sourceTree = "<group>";

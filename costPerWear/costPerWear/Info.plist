@@ -40,4 +40,27 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 </dict>
+<key>AWS</key>
+<dict>
+    <key>CognitoUserPool</key>
+    <dict>
+        <key>Default</key>
+        <dict>
+            <key>CognitoUserPoolAppClientId</key>
+            <string>274babdgtsc6ht802lrfne4l97</string>
+            <key>CognitoUserPoolAppClientSecret</key>
+            <string>5sm71v4dc36muo7gt8nmp703ph9rufl0a5j1iq1a6bvnco0butm</string>
+            <key>CognitoAuthWebDomain</key>
+            <string>https://costperwear.auth.us-east-1.amazoncognito.com</string>
+            <key>CognitoAuthSignInRedirectUri</key>
+            <string>SETME</string>
+            <key>CognitoAuthSignOutRedirectUri</key>
+            <string>SETME</string>
+            <key>CognitoAuthScopes</key>
+            <array>
+                <string>SETME</string>
+            </array>
+        </dict>
+    </dict>
+</dict>
 </plist>

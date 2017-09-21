@@ -35,7 +35,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("Result: \(String(describing: result)) \n Error: \(String(describing: error))")
             })
         }
-
+        
+//        let credentialsProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "IDENTITY_POOL_ID")
+//        let configuration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialsProvider)
+//        AWSServiceManager.default().defaultServiceConfiguration = configuration
+//        
         return didFinishLaunching
         
     }
