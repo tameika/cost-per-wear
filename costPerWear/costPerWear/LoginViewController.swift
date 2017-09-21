@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 import AWSCore
-import AWSCognito
 
 
 class LoginViewController: UIViewController, LoginViewDelegate {

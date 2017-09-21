@@ -12,14 +12,11 @@
 		BC4C49251EB8530900E149E8 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4C49241EB8530900E149E8 /* ContentViewController.swift */; };
 		BC51DE341F57D9DD00C27B27 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51DE331F57D9DD00C27B27 /* LoginView.swift */; };
 		BC51DE361F5895F000C27B27 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51DE351F5895F000C27B27 /* BlurView.swift */; };
-		BC6CBBCE1F718EA400D5BF8D /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = BC6CBBCD1F718EA400D5BF8D /* awsconfiguration.json */; };
-		BC774FE71EA73F4B009B9B38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC774FE61EA73F4B009B9B38 /* ViewController.swift */; };
 		BC774FED1EA73F4B009B9B38 /* costPerWear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC774FEB1EA73F4B009B9B38 /* costPerWear.xcdatamodeld */; };
 		BC7750031EA81C29009B9B38 /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7750021EA81C29009B9B38 /* ItemDetailView.swift */; };
 		BC7750051EA81C82009B9B38 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7750041EA81C82009B9B38 /* ItemDetailViewController.swift */; };
 		BC7750071EA9B74E009B9B38 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7750061EA9B74E009B9B38 /* ItemDetail.swift */; };
 		BC8DA3D91F69A04400E3F263 /* LoginImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8DA3D81F69A04400E3F263 /* LoginImageView.swift */; };
-		BC8DA3DB1F6B436E00E3F263 /* pastel-skies.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC8DA3DA1F6B436E00E3F263 /* pastel-skies.jpg */; };
 		BC8DA3DD1F6B63E200E3F263 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8DA3DC1F6B63E200E3F263 /* CameraViewController.swift */; };
 		BC8DA3DF1F6B71DD00E3F263 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8DA3DE1F6B71DD00E3F263 /* CameraView.swift */; };
 		BCA99CB71F4A979D007119A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC774FE41EA73F4B009B9B38 /* AppDelegate.swift */; };
@@ -32,18 +29,7 @@
 		BCC261B71F3EA45000006CC4 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261B61F3EA45000006CC4 /* CellView.swift */; };
 		BCC261B91F41908B00006CC4 /* TODO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261B81F41908A00006CC4 /* TODO.swift */; };
 		BCC5CAB81F6631CB0016640D /* people-2598015_1920.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCC5CAB71F6631CB0016640D /* people-2598015_1920.jpg */; };
-		BCC5CABA1F681DB90016640D /* fashion-2539879_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCC5CAB91F681DB90016640D /* fashion-2539879_1280.jpg */; };
-		BCC5CABC1F681DC50016640D /* people-2572856_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCC5CABB1F681DC50016640D /* people-2572856_1280.jpg */; };
-		BCC5CABE1F681DD70016640D /* fashion-show-1746602_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCC5CABD1F681DD70016640D /* fashion-show-1746602_1280.jpg */; };
-		BCC5CAC01F681DE30016640D /* fashion-511494_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCC5CABF1F681DE30016640D /* fashion-511494_1280.jpg */; };
-		BCC5CAC21F681DEB0016640D /* woman-1245922_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCC5CAC11F681DEB0016640D /* woman-1245922_1280.jpg */; };
-		BCC5CAC41F684CF80016640D /* heel-2593356_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCC5CAC31F684CF80016640D /* heel-2593356_1280.jpg */; };
-		BCC5CAC61F684D020016640D /* girl-2417600_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCC5CAC51F684D020016640D /* girl-2417600_1280.jpg */; };
-		BCC5CAC81F6853920016640D /* red-street-style.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCC5CAC71F6853920016640D /* red-street-style.jpg */; };
 		BCC5CACA1F6853960016640D /* red-knits.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCC5CAC91F6853960016640D /* red-knits.jpg */; };
-		BCC5CACC1F68539E0016640D /* plaid-coat-woman.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCC5CACB1F68539E0016640D /* plaid-coat-woman.jpg */; };
-		BCC5CACE1F6853A30016640D /* fashion-collection-prints.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCC5CACD1F6853A30016640D /* fashion-collection-prints.jpg */; };
-		BCC5CAD01F6853B20016640D /* neutral-minimal-clothes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCC5CACF1F6853B20016640D /* neutral-minimal-clothes.jpg */; };
 		BCC5CAD21F6853B90016640D /* hanging-clothes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCC5CAD11F6853B90016640D /* hanging-clothes.jpg */; };
 		BCCD9A5C1EAAABA5003C64E0 /* NewItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCD9A5B1EAAABA5003C64E0 /* NewItemDetailViewController.swift */; };
 		CB623769579A43C4204FF727 /* Pods_costPerWear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D036BDF4FACFA72DFCE381 /* Pods_costPerWear.framework */; };
@@ -52,14 +38,13 @@
 /* Begin PBXFileReference section */
 		23DC76F3BFC357CD4672D41C /* Pods-costPerWear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-costPerWear.release.xcconfig"; path = "Pods/Target Support Files/Pods-costPerWear/Pods-costPerWear.release.xcconfig"; sourceTree = "<group>"; };
 		BC20EB5D1F72E22900FA87AA /* AWSCognitoAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSCognitoAuth.swift; sourceTree = "<group>"; };
+		BC20EB661F72FBC200FA87AA /* awsconfiguration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../../awsconfiguration.json; sourceTree = "<group>"; };
 		BC3033A91EDF7FFD00332952 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BC4C49241EB8530900E149E8 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		BC51DE331F57D9DD00C27B27 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BC51DE351F5895F000C27B27 /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
-		BC6CBBCD1F718EA400D5BF8D /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../../../Downloads/awsconfiguration.json; sourceTree = "<group>"; };
 		BC774FE11EA73F4B009B9B38 /* costPerWear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = costPerWear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC774FE41EA73F4B009B9B38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BC774FE61EA73F4B009B9B38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BC774FEC1EA73F4B009B9B38 /* costPerWear.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = costPerWear.xcdatamodel; sourceTree = "<group>"; };
 		BC774FEE1EA73F4B009B9B38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC774FF11EA73F4B009B9B38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -68,7 +53,6 @@
 		BC7750041EA81C82009B9B38 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		BC7750061EA9B74E009B9B38 /* ItemDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
 		BC8DA3D81F69A04400E3F263 /* LoginImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginImageView.swift; sourceTree = "<group>"; };
-		BC8DA3DA1F6B436E00E3F263 /* pastel-skies.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "pastel-skies.jpg"; path = "../../../pastel-skies.jpg"; sourceTree = "<group>"; };
 		BC8DA3DC1F6B63E200E3F263 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		BC8DA3DE1F6B71DD00E3F263 /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		BCA99CB51F4A9470007119A7 /* DeveloperAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DeveloperAuth.swift; sourceTree = "<group>"; };
@@ -86,18 +70,7 @@
 		BCC261B61F3EA45000006CC4 /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		BCC261B81F41908A00006CC4 /* TODO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODO.swift; sourceTree = "<group>"; };
 		BCC5CAB71F6631CB0016640D /* people-2598015_1920.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "people-2598015_1920.jpg"; path = "../../../../Downloads/people-2598015_1920.jpg"; sourceTree = "<group>"; };
-		BCC5CAB91F681DB90016640D /* fashion-2539879_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "fashion-2539879_1280.jpg"; path = "../../../../Downloads/fashion-2539879_1280.jpg"; sourceTree = "<group>"; };
-		BCC5CABB1F681DC50016640D /* people-2572856_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "people-2572856_1280.jpg"; path = "../../../../Downloads/people-2572856_1280.jpg"; sourceTree = "<group>"; };
-		BCC5CABD1F681DD70016640D /* fashion-show-1746602_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "fashion-show-1746602_1280.jpg"; path = "../../../../Downloads/fashion-show-1746602_1280.jpg"; sourceTree = "<group>"; };
-		BCC5CABF1F681DE30016640D /* fashion-511494_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "fashion-511494_1280.jpg"; path = "../../../../Downloads/fashion-511494_1280.jpg"; sourceTree = "<group>"; };
-		BCC5CAC11F681DEB0016640D /* woman-1245922_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "woman-1245922_1280.jpg"; path = "../../../../Downloads/woman-1245922_1280.jpg"; sourceTree = "<group>"; };
-		BCC5CAC31F684CF80016640D /* heel-2593356_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "heel-2593356_1280.jpg"; path = "../../../../Downloads/heel-2593356_1280.jpg"; sourceTree = "<group>"; };
-		BCC5CAC51F684D020016640D /* girl-2417600_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "girl-2417600_1280.jpg"; path = "../../../../Downloads/girl-2417600_1280.jpg"; sourceTree = "<group>"; };
-		BCC5CAC71F6853920016640D /* red-street-style.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "red-street-style.jpg"; path = "../../../red-street-style.jpg"; sourceTree = "<group>"; };
 		BCC5CAC91F6853960016640D /* red-knits.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "red-knits.jpg"; path = "../../../red-knits.jpg"; sourceTree = "<group>"; };
-		BCC5CACB1F68539E0016640D /* plaid-coat-woman.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "plaid-coat-woman.jpg"; path = "../../../plaid-coat-woman.jpg"; sourceTree = "<group>"; };
-		BCC5CACD1F6853A30016640D /* fashion-collection-prints.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "fashion-collection-prints.jpg"; path = "../../../fashion-collection-prints.jpg"; sourceTree = "<group>"; };
-		BCC5CACF1F6853B20016640D /* neutral-minimal-clothes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "neutral-minimal-clothes.jpg"; path = "../../../neutral-minimal-clothes.jpg"; sourceTree = "<group>"; };
 		BCC5CAD11F6853B90016640D /* hanging-clothes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "hanging-clothes.jpg"; path = "../../../hanging-clothes.jpg"; sourceTree = "<group>"; };
 		BCCD9A5B1EAAABA5003C64E0 /* NewItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemDetailViewController.swift; sourceTree = "<group>"; };
 		D9D036BDF4FACFA72DFCE381 /* Pods_costPerWear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_costPerWear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +111,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BC20EB601F72FA7E00FA87AA /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				BC774FEE1EA73F4B009B9B38 /* Assets.xcassets */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
 		BC774FD81EA73F4A009B9B38 = {
 			isa = PBXGroup;
 			children = (
@@ -166,26 +147,13 @@
 				BC774FFF1EA818C4009B9B38 /* Model */,
 				BC7750011EA81915009B9B38 /* View */,
 				BC7750001EA818D5009B9B38 /* Controller */,
-				BC774FE61EA73F4B009B9B38 /* ViewController.swift */,
-				BC6CBBCD1F718EA400D5BF8D /* awsconfiguration.json */,
-				BC774FEE1EA73F4B009B9B38 /* Assets.xcassets */,
-				BC774FF31EA73F4B009B9B38 /* Info.plist */,
-				BC8DA3DA1F6B436E00E3F263 /* pastel-skies.jpg */,
+				BC20EB601F72FA7E00FA87AA /* Files */,
 				BCC5CAD11F6853B90016640D /* hanging-clothes.jpg */,
-				BCC5CACF1F6853B20016640D /* neutral-minimal-clothes.jpg */,
-				BCC5CACD1F6853A30016640D /* fashion-collection-prints.jpg */,
-				BCC5CACB1F68539E0016640D /* plaid-coat-woman.jpg */,
 				BCC5CAC91F6853960016640D /* red-knits.jpg */,
-				BCC5CAC71F6853920016640D /* red-street-style.jpg */,
-				BCC5CAC11F681DEB0016640D /* woman-1245922_1280.jpg */,
-				BCC5CABF1F681DE30016640D /* fashion-511494_1280.jpg */,
-				BCC5CABD1F681DD70016640D /* fashion-show-1746602_1280.jpg */,
-				BCC5CABB1F681DC50016640D /* people-2572856_1280.jpg */,
-				BCC5CAB91F681DB90016640D /* fashion-2539879_1280.jpg */,
 				BCC5CAB71F6631CB0016640D /* people-2598015_1920.jpg */,
-				BCC5CAC31F684CF80016640D /* heel-2593356_1280.jpg */,
-				BCC5CAC51F684D020016640D /* girl-2417600_1280.jpg */,
 				BC774FEB1EA73F4B009B9B38 /* costPerWear.xcdatamodeld */,
+				BC774FF31EA73F4B009B9B38 /* Info.plist */,
+				BC20EB661F72FBC200FA87AA /* awsconfiguration.json */,
 			);
 			path = costPerWear;
 			sourceTree = "<group>";
@@ -309,22 +277,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC6CBBCE1F718EA400D5BF8D /* awsconfiguration.json in Resources */,
 				BCC5CAD21F6853B90016640D /* hanging-clothes.jpg in Resources */,
-				BCC5CAD01F6853B20016640D /* neutral-minimal-clothes.jpg in Resources */,
-				BCC5CACC1F68539E0016640D /* plaid-coat-woman.jpg in Resources */,
-				BCC5CABC1F681DC50016640D /* people-2572856_1280.jpg in Resources */,
 				BCC5CAB81F6631CB0016640D /* people-2598015_1920.jpg in Resources */,
 				BCC5CACA1F6853960016640D /* red-knits.jpg in Resources */,
-				BCC5CABA1F681DB90016640D /* fashion-2539879_1280.jpg in Resources */,
-				BCC5CAC81F6853920016640D /* red-street-style.jpg in Resources */,
-				BCC5CAC41F684CF80016640D /* heel-2593356_1280.jpg in Resources */,
-				BCC5CAC21F681DEB0016640D /* woman-1245922_1280.jpg in Resources */,
-				BCC5CACE1F6853A30016640D /* fashion-collection-prints.jpg in Resources */,
-				BCC5CAC61F684D020016640D /* girl-2417600_1280.jpg in Resources */,
-				BCC5CABE1F681DD70016640D /* fashion-show-1746602_1280.jpg in Resources */,
-				BCC5CAC01F681DE30016640D /* fashion-511494_1280.jpg in Resources */,
-				BC8DA3DB1F6B436E00E3F263 /* pastel-skies.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,7 +344,6 @@
 				BCC261A81F2FE48500006CC4 /* User.swift in Sources */,
 				BC7750071EA9B74E009B9B38 /* ItemDetail.swift in Sources */,
 				BCC261B71F3EA45000006CC4 /* CellView.swift in Sources */,
-				BC774FE71EA73F4B009B9B38 /* ViewController.swift in Sources */,
 				BC8DA3DF1F6B71DD00E3F263 /* CameraView.swift in Sources */,
 				BC20EB5E1F72E22900FA87AA /* AWSCognitoAuth.swift in Sources */,
 				BCC261B11F382AD400006CC4 /* CategoryView.swift in Sources */,

@@ -8,65 +8,35 @@
 
 import UIKit
 import CoreData
-import AWSCore
-import AWSCognito
-import AWSS3
+import AWSAuthCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let nav = UINavigationController()
-
+    
+    // set up the initialized flag
+    var isInitialized = false
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        
-        func createCredentials() {
-            let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "163775170865145")
-            let configuration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialProvider)
-            AWSServiceManager.default().defaultServiceConfiguration = configuration
-            
-            let transferManager = AWSS3TransferManager.default()
-            
-            let cognitoId = credentialProvider.getIdentityId()
-            
-        }
-        
-        
-        
-        
-        // create a window
-        
-        // create a nav controller
-        
-        // create a vc type to represent desired vc's
-        
-        // mainVC
         let viewController = CameraViewController()
         self.nav.pushViewController(viewController, animated: true)
         window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = nav
         window?.makeKeyAndVisible()
         
-        return true
+        let didFinishLaunching = AWSSignInManager.sharedInstance().interceptApplication(application, didFinishLaunchingWithOptions: launchOptions)
         
-        
-        // assign nav stack to the general desired future stack
-        //nav.viewControllers = [mainView]
-     //   nav.viewControllers = [UIViewController(nibName: nil, bundle: nil), NewItemViewController(), NewItemViewController()]
-        
-        //(nav.viewControllers).append(NewItemDetailViewController())
-        //nav.viewControllers.append(ItemViewController())
-        
+        if (!isInitialized) {
+            AWSSignInManager.sharedInstance().resumeSession(completionHandler: { (result: Any?, error: Error?) in
+                print("Result: \(String(describing: result)) \n Error: \(String(describing: error))")
+            })
+        }
 
-        
-        // set nav vc as initial (root) vc upon launch
-        
-        
-        
-        
+        return didFinishLaunching
         
     }
 

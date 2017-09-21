@@ -1,8 +1,12 @@
 PODS:
+  - AWSAuthCore (2.6.1):
+    - AWSCore (= 2.6.1)
+  - AWSCore (2.6.1)
   - SnapKit (3.2.0)
   - Spring (1.0.3)
 
 DEPENDENCIES:
+  - AWSAuthCore (~> 2.6.1)
   - SnapKit (~> 3.0)
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
 
@@ -17,9 +21,11 @@ CHECKOUT OPTIONS:
     :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
+  AWSAuthCore: b7102940a777cb5bf974d65f7dbfc460df49611c
+  AWSCore: e7d37fa0715def975acf1b0d75556576780088b8
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
 
-PODFILE CHECKSUM: c0918fa04c5ef9237f2f9c14618fd7b21887f26f
+PODFILE CHECKSUM: 75077c7219088505a6adeaa46ad36d253e3a6f69
 
 COCOAPODS: 1.2.1
