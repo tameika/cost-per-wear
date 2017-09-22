@@ -8,7 +8,10 @@
 
 import Foundation
 import UIKit
-import AWSCore
+import AWSAuthCore
+import AWSAuthUI
+import AWSUserPoolsSignIn
+
 
 
 class LoginViewController: UIViewController, LoginViewDelegate {
@@ -51,6 +54,8 @@ class LoginViewController: UIViewController, LoginViewDelegate {
         loginView.delegate = self
         //blurView.blurEffectView.contentView.addSubview(loginView)
         view.addSubview(loginView)
+        
+        AWSSignInManager.sharedInstance().isLoggedIn
 
     }
 

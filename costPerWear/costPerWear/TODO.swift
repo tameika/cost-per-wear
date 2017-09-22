@@ -59,3 +59,11 @@ import Foundation
  cognito sync - allows you to keep the same state in multiple devices 
  
  */
+
+
+
+
+
+//        let credentialsProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "cpw_userpool_MOBILEHUB_220272897")
+//        let configuration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialsProvider)
+//        AWSServiceManager.default().defaultServiceConfiguration = configuration
