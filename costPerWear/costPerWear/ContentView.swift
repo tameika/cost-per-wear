@@ -121,13 +121,13 @@ class ContentView: UIView {
 
 extension ContentView {
     
-    func cancelButtonPressed() {
+    @objc func cancelButtonPressed() {
         print("inside cancel pressed")
         delegate?.cancelSelected()
         
     }
     
-    func enterButtonPressed() {
+    @objc func enterButtonPressed() {
         delegate?.enterSelected()
     }
 }

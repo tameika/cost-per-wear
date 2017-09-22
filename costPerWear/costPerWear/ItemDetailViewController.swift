@@ -39,7 +39,7 @@ class ItemViewController: UIViewController {
     }
     
     
-    func handleTap(recognizer: UITapGestureRecognizer) {
+    @objc func handleTap(recognizer: UITapGestureRecognizer) {
         
         if currentColorSet < colorSets.count - 1 {
             currentColorSet += 1

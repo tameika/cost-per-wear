@@ -73,12 +73,12 @@ class CameraView: UIView {
 
 extension CameraView {
     
-    func openCameraButtonPressed() {
+    @objc func openCameraButtonPressed() {
         delegate?.openCameraSelected()
         
     }
     
-    func openPhotoLibraryButtonPressed() {
+    @objc func openPhotoLibraryButtonPressed() {
         delegate?.openPhotoLibrarySelected()
     }
 }

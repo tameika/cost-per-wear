@@ -157,11 +157,11 @@ class CategoryView: UIView {
 
 extension CategoryView {
     
-    func categoryButtonPressed() {
+    @objc func categoryButtonPressed() {
         delegate?.categorySelected()
     }
     
-    func addButtonPressed() {
+    @objc func addButtonPressed() {
         delegate?.addSelected()
     }
     

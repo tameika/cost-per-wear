@@ -70,7 +70,7 @@ class LoginView: UIView {
         usernameField.translatesAutoresizingMaskIntoConstraints = true
         usernameField.backgroundColor = UIColor.clear
         usernameField.font = UIFont.avenirNext
-        usernameField.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSForegroundColorAttributeName: UIColor.bone])
+        usernameField.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedStringKey.foregroundColor: UIColor.bone])
         usernameField.textAlignment = .left
         usernameField.clearsOnBeginEditing = true
         addSubview(usernameField)
@@ -87,7 +87,7 @@ class LoginView: UIView {
         passwordField.translatesAutoresizingMaskIntoConstraints = false
         passwordField.backgroundColor = UIColor.clear
         passwordField.font = UIFont.avenirNext
-        passwordField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSForegroundColorAttributeName: UIColor.bone])
+        passwordField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedStringKey.foregroundColor: UIColor.bone])
         passwordField.textAlignment = .left
         passwordField.clearsOnBeginEditing = true
         addSubview(passwordField)
@@ -127,7 +127,7 @@ class LoginView: UIView {
 
 extension LoginView: CAAnimationDelegate {
     
-    func loggingIn() {
+    @objc func loggingIn() {
         
         delegate?.loginBtnPressed()
     }
