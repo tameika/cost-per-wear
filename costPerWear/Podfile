@@ -8,7 +8,8 @@ target 'costPerWear' do
 pod 'SnapKit', '~> 3.0'
 pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
 pod 'AWSAuthCore', '~> 2.6.1'
-
+pod 'AWSUserPoolsSignIn', '~> 2.6.1'
+pod 'AWSAuthUI', '~> 2.6.1'
 
 #pod 'AWSAutoScaling'
 #pod 'AWSCloudWatch'

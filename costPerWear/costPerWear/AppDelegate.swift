@@ -36,10 +36,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             })
         }
         
-//        let credentialsProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "IDENTITY_POOL_ID")
-//        let configuration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialsProvider)
-//        AWSServiceManager.default().defaultServiceConfiguration = configuration
-//        
+        let credentialsProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "cpw_userpool_MOBILEHUB_220272897")
+        let configuration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialsProvider)
+        AWSServiceManager.default().defaultServiceConfiguration = configuration
+        
         return didFinishLaunching
         
     }

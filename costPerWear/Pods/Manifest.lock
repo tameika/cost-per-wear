@@ -1,12 +1,22 @@
 PODS:
   - AWSAuthCore (2.6.1):
     - AWSCore (= 2.6.1)
+  - AWSAuthUI (2.6.1):
+    - AWSAuthCore (= 2.6.1)
+    - AWSCore (= 2.6.1)
+  - AWSCognitoIdentityProvider (2.6.1):
+    - AWSCore (= 2.6.1)
   - AWSCore (2.6.1)
+  - AWSUserPoolsSignIn (2.6.1):
+    - AWSAuthCore (= 2.6.1)
+    - AWSCognitoIdentityProvider (= 2.6.1)
   - SnapKit (3.2.0)
   - Spring (1.0.3)
 
 DEPENDENCIES:
   - AWSAuthCore (~> 2.6.1)
+  - AWSAuthUI (~> 2.6.1)
+  - AWSUserPoolsSignIn (~> 2.6.1)
   - SnapKit (~> 3.0)
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
 
@@ -22,10 +32,13 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   AWSAuthCore: b7102940a777cb5bf974d65f7dbfc460df49611c
+  AWSAuthUI: a847a58be0c539f6e1a9e3e205d68b3bc1e39691
+  AWSCognitoIdentityProvider: a335678a0024fa2b44213bc4e86b46b21773e567
   AWSCore: e7d37fa0715def975acf1b0d75556576780088b8
+  AWSUserPoolsSignIn: c850b8f8269a8e7abbdfc289514e3cef036d496e
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
 
-PODFILE CHECKSUM: 75077c7219088505a6adeaa46ad36d253e3a6f69
+PODFILE CHECKSUM: 6f16869fdc968e953e58c7fc4ccd1a80378a765c
 
 COCOAPODS: 1.2.1
