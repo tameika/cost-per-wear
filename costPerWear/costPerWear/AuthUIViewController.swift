@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import AWSAuthUI
+import AWSUserPoolsSignIn
 
 class AuthUIViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        presentAuthUIViewController()
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +23,25 @@ class AuthUIViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func presentAuthUIViewController() {
+        
+        let config = AWSAuthUIConfiguration()
+        config.enableUserPoolsUI = true
+        
+        AWSAuthUIViewController.presentViewController(with: navigationController!, configuration: config, completionHandler: {(
+            _ signInProvider: AWSSignInProvider, _ error: Error?) -> Void in
+            if error == nil {
+                DispatchQueue.main.async(execute: {() -> Void in
+                })
+                
+                
+            } else {
+                
+                print("something went wrong at sign in")
+                
+            }
+            
+        })
     }
-    */
-
+        
 }
