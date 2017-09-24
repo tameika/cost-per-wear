@@ -55,7 +55,6 @@ class LoginViewController: UIViewController, LoginViewDelegate {
         //blurView.blurEffectView.contentView.addSubview(loginView)
         view.addSubview(loginView)
         
-        AWSSignInManager.sharedInstance().isLoggedIn
 
     }
 
