@@ -14,7 +14,6 @@ class AuthUIViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        presentAuthUIViewController()
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,25 +22,6 @@ class AuthUIViewController: UIViewController {
     }
     
 
-    func presentAuthUIViewController() {
-        
-        let config = AWSAuthUIConfiguration()
-        config.enableUserPoolsUI = true
-        
-        AWSAuthUIViewController.presentViewController(with: navigationController!, configuration: config, completionHandler: {(
-            _ signInProvider: AWSSignInProvider, _ error: Error?) -> Void in
-            if error == nil {
-                DispatchQueue.main.async(execute: {() -> Void in
-                })
-                
-                
-            } else {
-                
-                print("something went wrong at sign in")
-                
-            }
-            
-        })
-    }
+    
         
 }
