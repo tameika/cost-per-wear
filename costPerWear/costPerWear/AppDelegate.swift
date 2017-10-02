@@ -35,11 +35,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let viewController = SampleViewController()
-        self.nav.pushViewController(viewController, animated: true)
-        window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = nav
-        window?.makeKeyAndVisible()
+//        let viewController = SampleViewController()
+//        self.nav.pushViewController(viewController, animated: true)
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        self.window?.rootViewController = nav
+//        window?.makeKeyAndVisible()
+        
+        AWSSignInManager.sharedInstance().register(signInProvider: AWSCognitoUserPoolsSignInProvider.sharedInstance())
         
         let didFinishLaunching = AWSSignInManager.sharedInstance().interceptApplication(application, didFinishLaunchingWithOptions: launchOptions)
         
