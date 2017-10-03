@@ -30,7 +30,6 @@
 		BCC261B71F3EA45000006CC4 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261B61F3EA45000006CC4 /* CellView.swift */; };
 		BCC261B91F41908B00006CC4 /* TODO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261B81F41908A00006CC4 /* TODO.swift */; };
 		BCC5CAB81F6631CB0016640D /* people-2598015_1920.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCC5CAB71F6631CB0016640D /* people-2598015_1920.jpg */; };
-		BCC5CACA1F6853960016640D /* red-knits.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCC5CAC91F6853960016640D /* red-knits.jpg */; };
 		BCC5CAD21F6853B90016640D /* hanging-clothes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCC5CAD11F6853B90016640D /* hanging-clothes.jpg */; };
 		BCCD9A5C1EAAABA5003C64E0 /* NewItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCD9A5B1EAAABA5003C64E0 /* NewItemDetailViewController.swift */; };
 		CB623769579A43C4204FF727 /* Pods_costPerWear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D036BDF4FACFA72DFCE381 /* Pods_costPerWear.framework */; };
@@ -39,12 +38,12 @@
 /* Begin PBXFileReference section */
 		23DC76F3BFC357CD4672D41C /* Pods-costPerWear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-costPerWear.release.xcconfig"; path = "Pods/Target Support Files/Pods-costPerWear/Pods-costPerWear.release.xcconfig"; sourceTree = "<group>"; };
 		BC20EB5D1F72E22900FA87AA /* AWSCognitoAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSCognitoAuth.swift; sourceTree = "<group>"; };
-		BC20EB681F74723D00FA87AA /* awsconfiguration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		BC3033A91EDF7FFD00332952 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BC4C49241EB8530900E149E8 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		BC51DE331F57D9DD00C27B27 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BC51DE351F5895F000C27B27 /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		BC6BF90B1F8086E700244DA2 /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
+		BC6BF90D1F82D50C00244DA2 /* awsconfiguration (1).json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "awsconfiguration (1).json"; sourceTree = "<group>"; };
 		BC774FE11EA73F4B009B9B38 /* costPerWear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = costPerWear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC774FE41EA73F4B009B9B38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC774FEC1EA73F4B009B9B38 /* costPerWear.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = costPerWear.xcdatamodel; sourceTree = "<group>"; };
@@ -72,7 +71,6 @@
 		BCC261B61F3EA45000006CC4 /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		BCC261B81F41908A00006CC4 /* TODO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODO.swift; sourceTree = "<group>"; };
 		BCC5CAB71F6631CB0016640D /* people-2598015_1920.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "people-2598015_1920.jpg"; path = "../../../../Downloads/people-2598015_1920.jpg"; sourceTree = "<group>"; };
-		BCC5CAC91F6853960016640D /* red-knits.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "red-knits.jpg"; path = "../../../red-knits.jpg"; sourceTree = "<group>"; };
 		BCC5CAD11F6853B90016640D /* hanging-clothes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "hanging-clothes.jpg"; path = "../../../hanging-clothes.jpg"; sourceTree = "<group>"; };
 		BCCD9A5B1EAAABA5003C64E0 /* NewItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemDetailViewController.swift; sourceTree = "<group>"; };
 		D9D036BDF4FACFA72DFCE381 /* Pods_costPerWear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_costPerWear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,11 +148,10 @@
 				BC7750011EA81915009B9B38 /* View */,
 				BC7750001EA818D5009B9B38 /* Controller */,
 				BC20EB601F72FA7E00FA87AA /* Files */,
-				BCC5CAC91F6853960016640D /* red-knits.jpg */,
 				BCC5CAB71F6631CB0016640D /* people-2598015_1920.jpg */,
 				BC774FEB1EA73F4B009B9B38 /* costPerWear.xcdatamodeld */,
 				BCC5CAD11F6853B90016640D /* hanging-clothes.jpg */,
-				BC20EB681F74723D00FA87AA /* awsconfiguration.json */,
+				BC6BF90D1F82D50C00244DA2 /* awsconfiguration (1).json */,
 				BC774FF31EA73F4B009B9B38 /* Info.plist */,
 			);
 			path = costPerWear;
@@ -283,7 +280,6 @@
 			files = (
 				BCC5CAD21F6853B90016640D /* hanging-clothes.jpg in Resources */,
 				BCC5CAB81F6631CB0016640D /* people-2598015_1920.jpg in Resources */,
-				BCC5CACA1F6853960016640D /* red-knits.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +474,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"INFOPLIST_FILE[sdk=*]" = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
