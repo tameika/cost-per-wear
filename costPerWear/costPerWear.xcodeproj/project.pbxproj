@@ -13,6 +13,7 @@
 		BC51DE341F57D9DD00C27B27 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51DE331F57D9DD00C27B27 /* LoginView.swift */; };
 		BC51DE361F5895F000C27B27 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51DE351F5895F000C27B27 /* BlurView.swift */; };
 		BC6BF90C1F8086E700244DA2 /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6BF90B1F8086E700244DA2 /* SampleViewController.swift */; };
+		BC6BF9301F85A4A800244DA2 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = BC6BF92F1F85A44A00244DA2 /* awsconfiguration.json */; };
 		BC774FED1EA73F4B009B9B38 /* costPerWear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC774FEB1EA73F4B009B9B38 /* costPerWear.xcdatamodeld */; };
 		BC7750031EA81C29009B9B38 /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7750021EA81C29009B9B38 /* ItemDetailView.swift */; };
 		BC7750051EA81C82009B9B38 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7750041EA81C82009B9B38 /* ItemDetailViewController.swift */; };
@@ -43,7 +44,7 @@
 		BC51DE331F57D9DD00C27B27 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BC51DE351F5895F000C27B27 /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		BC6BF90B1F8086E700244DA2 /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
-		BC6BF92D1F84777800244DA2 /* awsconfiguration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		BC6BF92F1F85A44A00244DA2 /* awsconfiguration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		BC774FE11EA73F4B009B9B38 /* costPerWear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = costPerWear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC774FE41EA73F4B009B9B38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC774FEC1EA73F4B009B9B38 /* costPerWear.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = costPerWear.xcdatamodel; sourceTree = "<group>"; };
@@ -151,7 +152,7 @@
 				BCC5CAB71F6631CB0016640D /* people-2598015_1920.jpg */,
 				BC774FEB1EA73F4B009B9B38 /* costPerWear.xcdatamodeld */,
 				BCC5CAD11F6853B90016640D /* hanging-clothes.jpg */,
-				BC6BF92D1F84777800244DA2 /* awsconfiguration.json */,
+				BC6BF92F1F85A44A00244DA2 /* awsconfiguration.json */,
 				BC774FF31EA73F4B009B9B38 /* Info.plist */,
 			);
 			path = costPerWear;
@@ -280,6 +281,7 @@
 			files = (
 				BCC5CAD21F6853B90016640D /* hanging-clothes.jpg in Resources */,
 				BCC5CAB81F6631CB0016640D /* people-2598015_1920.jpg in Resources */,
+				BC6BF9301F85A4A800244DA2 /* awsconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
