@@ -43,7 +43,7 @@
 		BC51DE331F57D9DD00C27B27 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BC51DE351F5895F000C27B27 /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		BC6BF90B1F8086E700244DA2 /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
-		BC6BF90D1F82D50C00244DA2 /* awsconfiguration (1).json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "awsconfiguration (1).json"; sourceTree = "<group>"; };
+		BC6BF92D1F84777800244DA2 /* awsconfiguration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		BC774FE11EA73F4B009B9B38 /* costPerWear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = costPerWear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC774FE41EA73F4B009B9B38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC774FEC1EA73F4B009B9B38 /* costPerWear.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = costPerWear.xcdatamodel; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 				BCC5CAB71F6631CB0016640D /* people-2598015_1920.jpg */,
 				BC774FEB1EA73F4B009B9B38 /* costPerWear.xcdatamodeld */,
 				BCC5CAD11F6853B90016640D /* hanging-clothes.jpg */,
-				BC6BF90D1F82D50C00244DA2 /* awsconfiguration (1).json */,
+				BC6BF92D1F84777800244DA2 /* awsconfiguration.json */,
 				BC774FF31EA73F4B009B9B38 /* Info.plist */,
 			);
 			path = costPerWear;

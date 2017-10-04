@@ -21,12 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var isInitialized = false
     
     
-    
     func application(_ application: UIApplication, open url: URL,
                      sourceApplication: String?, annotation: Any) -> Bool {
-        print(0)
         AWSSignInManager.sharedInstance().interceptApplication(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
-        print(1)
         if (!isInitialized) {
             isInitialized = true
         }
@@ -36,26 +33,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-//        let viewController = SampleViewController()
-//        self.nav.pushViewController(viewController, animated: true)
-//        window = UIWindow(frame: UIScreen.main.bounds)
-//        self.window?.rootViewController = nav
-//        window?.makeKeyAndVisible()
+                let viewController = SampleViewController()
+                self.nav.pushViewController(viewController, animated: true)
+                window = UIWindow(frame: UIScreen.main.bounds)
+                self.window?.rootViewController = nav
+                window?.makeKeyAndVisible()
         
         
-        print(2)
         AWSSignInManager.sharedInstance().register(signInProvider: AWSCognitoUserPoolsSignInProvider.sharedInstance())
-        print(3)
         let didFinishLaunching = AWSSignInManager.sharedInstance().interceptApplication(application, didFinishLaunchingWithOptions: launchOptions)
-        print(4)
         if (!isInitialized) {
             AWSSignInManager.sharedInstance().resumeSession(completionHandler: { (result: Any?, error: Error?) in
                 print("Result: \(String(describing: result)) \n Error: \(String(describing: error))")
             })
-            print(5)
             isInitialized = true
         }
-        print(6)
         return didFinishLaunching
     }
     
