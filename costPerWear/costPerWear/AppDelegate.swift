@@ -15,7 +15,6 @@ import AWSUserPoolsSignIn
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    let nav = UINavigationController()
     
     // set up the initialized flag
     var isInitialized = false
@@ -33,11 +32,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-                let viewController = SampleViewController()
-                self.nav.pushViewController(viewController, animated: true)
-                window = UIWindow(frame: UIScreen.main.bounds)
-                self.window?.rootViewController = nav
-                window?.makeKeyAndVisible()
+        let viewController = SampleViewController()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let nav = UINavigationController(rootViewController: viewController)
+        
+        print(nav)
+        //nav.pushViewController(viewController, animated: true)
+        self.window?.rootViewController = nav
+        window?.makeKeyAndVisible()
+        print(viewController)
+        print(nav)
         
         
         AWSSignInManager.sharedInstance().register(signInProvider: AWSCognitoUserPoolsSignInProvider.sharedInstance())
@@ -48,6 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             })
             isInitialized = true
         }
+        print(didFinishLaunching)
         return didFinishLaunching
     }
     

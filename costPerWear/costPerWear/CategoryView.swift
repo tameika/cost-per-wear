@@ -158,10 +158,12 @@ class CategoryView: UIView {
 extension CategoryView {
     
     @objc func categoryButtonPressed() {
+        print("inside category button pressed method")
         delegate?.categorySelected()
     }
     
     @objc func addButtonPressed() {
+        print("inside add button pressed method")
         delegate?.addSelected()
     }
     

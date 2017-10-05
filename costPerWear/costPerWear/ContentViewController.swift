@@ -44,7 +44,6 @@ class ContentViewController: UIViewController, ContentViewDelegate {
 extension ContentViewController {
     
     func cancelSelected() {
-        print("inside cancel selected")
         self.dismiss(animated: true, completion: nil)
     }
     

@@ -40,11 +40,14 @@ class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
     
     
     func categorySelected() {
+        print("inside category selected method")
         let clothingListVC = ClothingListViewController()
-        navigationController?.pushViewController(clothingListVC, animated: true)
+        //let navClothingListVC = UINavigationController(rootViewController: clothingListVC)
+        self.navigationController?.pushViewController(clothingListVC, animated: true)
     }
     
     func addSelected() {
+        print("inside add item selected")
         let newItemDetailVC = NewItemDetailViewController()
         newItemDetailVC.modalPresentationStyle = .overCurrentContext
         present(newItemDetailVC, animated: true, completion: nil)
