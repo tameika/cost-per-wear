@@ -42,3 +42,8 @@ class SampleViewController: UIViewController {
     }
     
 }
+
+
+extension AWSAuthUIViewController {
+    
+}
