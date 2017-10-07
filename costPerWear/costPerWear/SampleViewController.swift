@@ -12,11 +12,16 @@ import AWSUserPoolsSignIn
 
 class SampleViewController: UIViewController {
     
+    var backgroundImage = UIImageView()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         presentAuthUIViewController()
+        
+        
+
         
     }
     
