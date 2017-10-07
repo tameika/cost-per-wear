@@ -8,12 +8,13 @@
 
 import UIKit
 import Spring
+import AWSUserPoolsSignIn
 
 
 class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
     
     var categoryView = CategoryView()
-    
+    var logOutBtn = UIBarButtonItem()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -36,6 +37,8 @@ class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
         categoryView.delegate = self
         view.addSubview(categoryView)
         
+       
+
     }
     
     
@@ -53,6 +56,8 @@ class CategorySelectionViewController: UIViewController, CategoryViewDelegate {
         present(newItemDetailVC, animated: true, completion: nil)
         
     }
+    
+    
     
     
 }

@@ -16,7 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
-    // set up the initialized flag
     var isInitialized = false
     
     
@@ -37,7 +36,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let nav = UINavigationController(rootViewController: viewController)
         
         print(nav)
-        //nav.pushViewController(viewController, animated: true)
         self.window?.rootViewController = nav
         window?.makeKeyAndVisible()
         print(viewController)
@@ -64,18 +62,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
         
-       // func logOut() {
-            
-            let pool = AWSCognitoIdentityUserPool()
-            let poolUser = pool.currentUser()
-            if poolUser != nil {
-                pool.currentUser()?.signOut()
-            }
-       // }
-        
+        let pool = AWSCognitoIdentityUserPool()
+        let poolUser = pool.currentUser()
+        if poolUser != nil {
+            pool.currentUser()?.signOut()
+        }
     }
     
     func applicationWillEnterForeground(_ application: UIApplication) {
