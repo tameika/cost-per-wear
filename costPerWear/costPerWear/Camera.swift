@@ -15,7 +15,7 @@ class Camera {
     class func test() {
         
         var captureSession: AVCaptureSession?
-        var videoPreviewLayer: AVCaptureVideoPreviewLayer?
+        //var videoPreviewLayer: AVCaptureVideoPreviewLayer?
         var capturePhotoOutput: AVCapturePhotoOutput?
         
         let captureDevice = AVCaptureDevice.default(for: .video)
@@ -25,6 +25,23 @@ class Camera {
             let input = try AVCaptureInput(captureDevice)
             captureSession = AVCaptureSession()
             captureSession?.addInput(input)
+            
+            capturePhotoOutput = AVCapturePhotoOutput()
+            capturePhotoOutput?.isHighResolutionCaptureEnabled = true
+            
+            captureSession?.addOutput(capturePhotoOutput)
+            
+            let captureMetadataOutput = AVCaptureMetadataOutput()
+            captureSession?.addOutput(captureMetadataOutput)
+            
+            captureMetadataOutput.setMetadataObjectsDelegate(self, queue: dispatchMain())
+            captureMetadataOutput.metadataObjectTypes = [.qr]
+            
+            captureSession?.startRunning()
+        } catch {
+            
+            print(error)
+            return
         }
     }
     

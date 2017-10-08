@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AVFoundation
 import UIKit
 import SnapKit
 
@@ -25,7 +26,6 @@ class CameraView: UIView {
     var captureBtn: UIButton!
     var messageLabel: UILabel!
     
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -35,7 +35,9 @@ class CameraView: UIView {
         
         
         captureBtn.layer.cornerRadius = captureBtn.frame.size.width * 0.50
-        captureBtn.clipsToBounds = true 
+        captureBtn.clipsToBounds = true
+        
+        
         
 //        openCameraBtn = UIButton(frame: CGRect.zero)
 //        openCameraBtn = UIButton(type: .roundedRect)
