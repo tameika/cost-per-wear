@@ -15,8 +15,10 @@ import SnapKit
 
 protocol CameraViewDelegate: class {
     
-    func openCameraSelected()
-    func openPhotoLibrarySelected()
+//    func openCameraSelected()
+//    func openPhotoLibrarySelected()
+    
+    func onTapTakePhoto()
 }
 
 class CameraView: UIView {
@@ -36,6 +38,8 @@ class CameraView: UIView {
         
         captureBtn.layer.cornerRadius = captureBtn.frame.size.width * 0.50
         captureBtn.clipsToBounds = true
+        captureBtn.addTarget(self, action: #selector(takePhotoBtnTapped), for: .touchUpInside)
+        addSubview(captureBtn)
         
         
         
@@ -77,12 +81,17 @@ class CameraView: UIView {
 
 extension CameraView {
     
-    @objc func openCameraButtonPressed() {
-        delegate?.openCameraSelected()
-        
+//    @objc func openCameraButtonPressed() {
+//        delegate?.openCameraSelected()
+//        
+//    }
+//    
+//    @objc func openPhotoLibraryButtonPressed() {
+//        delegate?.openPhotoLibrarySelected()
+//    }
+    
+    func takePhotoBtnTapped() {
+        delegate?.onTapTakePhoto()
     }
     
-    @objc func openPhotoLibraryButtonPressed() {
-        delegate?.openPhotoLibrarySelected()
-    }
 }

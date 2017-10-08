@@ -12,11 +12,13 @@ import AVFoundation
 
 class Camera {
     
+    var captureSession: AVCaptureSession?
+    var capturePhotoOutput: AVCapturePhotoOutput?
+
+    
     class func test() {
         
-        var captureSession: AVCaptureSession?
         //var videoPreviewLayer: AVCaptureVideoPreviewLayer?
-        var capturePhotoOutput: AVCapturePhotoOutput?
         
         let captureDevice = AVCaptureDevice.default(for: .video)
         

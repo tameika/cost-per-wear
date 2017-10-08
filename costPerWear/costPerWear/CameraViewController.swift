@@ -11,6 +11,8 @@ import AVFoundation
 
 class CameraViewController: UIViewController {
     
+    var camera = Camera()
+    
     //var imagePicked: UIImageView!
     
     weak var cameraView: CameraView!
@@ -24,49 +26,50 @@ class CameraViewController: UIViewController {
    
 }
 
-
-extension CameraViewController: UIImagePickerControllerDelegate,
-UINavigationControllerDelegate, CameraViewDelegate {
+extension CameraViewController: CameraViewDelegate {
     
-    func openCameraSelected() {
-        print(3)
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.sourceType = .camera
-            imagePicker.allowsEditing = false
-            self.present(imagePicker, animated: true, completion: nil)
-        }
-    }
-    
-    func openPhotoLibrarySelected() {
-        print(4)
-        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.sourceType = .photoLibrary
-            imagePicker.allowsEditing = true
-            self.present(imagePicker, animated: true, completion: nil)
-
-        }
+    func onTapTakePhoto() {
+        
+        var output = camera.capturePhotoOutput
+        
+         // Make sure capturePhotoOutput is valid
+        
+        guard let capturePhotoOutput = output else { return }
+        
+         // Get an instance of AVCapturePhotoSettings class
+        
+        let photoSettings = AVCapturePhotoSettings()
+        photoSettings.isAutoStillImageStabilizationEnabled = true
+        photoSettings.isHighResolutionPhotoEnabled = true
+        photoSettings.flashMode = .auto
+        
+        // Call capturePhoto method by passing our photo settings and a delegate implementing AVCapturePhotoCaptureDelegate
+        
+        output?.capturePhoto(with: photoSettings, delegate: self)
         
     }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        print(5)
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-        imagePicked.image = image
-        dismiss(animated: true, completion: nil)
-    }
-    
-    
-    func saveImage(sender: AnyObject) {
-        print(6)
-        //guard let image = imagePicked.imge else { print("casting failed"); return }
-        let imageData = UIImageJPEGRepresentation(imagePicked.image!, 0.6) //else { print("could not jpg"); return }
-        let compressedJPGImage = UIImage(data: imageData!) // else { print("could not compress"); return }
-        UIImageWriteToSavedPhotosAlbum(compressedJPGImage!, nil, nil, nil)
-    }
-    
-    
 }
+
+extension CameraViewController: AVCapturePhotoCaptureDelegate {
+    
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photoSampleBuffer: CMSampleBuffer?, previewPhoto previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?) {
+        
+         // Make sure we get some photo sample buffer
+        
+        guard error == nil, let photoSampleBuffer = photoSampleBuffer else { print("Error capturing photo: \(String(describing: error))"); return }
+        
+        
+        // Convert photo same buffer to a jpeg image data by using AVCapturePhotoOutput
+        
+        guard let imageData = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: photoSampleBuffer, previewPhotoSampleBuffer: previewPhotoSampleBuffer) else { return }
+    
+    // initialize a UIImage with our image data
+        
+    let capturedImage = UIImage.init(data: image, scale: 1.0)
+    guard let image = capturedImage else { return }
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+}
+
+}
+
+
