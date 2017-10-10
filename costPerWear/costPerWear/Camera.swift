@@ -90,10 +90,19 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
         // initialize a UIImage with our image data
         
         let capturedImage = UIImage.init(data: image, scale: 1.0)
+        
         guard let image = capturedImage else { return }
+        
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
     }
     
+}
+
+extension CameraViewController: AVCaptureMetadataOutputObjectsDelegate {
+    
+    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+        //print
+    }
 }
 
 
