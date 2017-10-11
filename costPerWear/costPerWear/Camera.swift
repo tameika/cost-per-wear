@@ -6,25 +6,26 @@
 //  Copyright © 2017 Tameika Lawrence. All rights reserved.
 //
 
+import UIKit
 import Foundation
 import AVFoundation
 
 
 class Camera {
     
-    var captureSession: AVCaptureSession?
-    var capturePhotoOutput: AVCapturePhotoOutput?
+    static var captureSession: AVCaptureSession?
+    static var capturePhotoOutput: AVCapturePhotoOutput?
 
     
     class func test() {
         
         //var videoPreviewLayer: AVCaptureVideoPreviewLayer?
         
-        let captureDevice = AVCaptureDevice.default(for: .video)
+        guard let captureDevice = AVCaptureDevice.default(for: .video) else { return }
         
         do {
             
-            let input = try AVCaptureInput(captureDevice)
+            let input = try AVCaptureDeviceInput(device: captureDevice)
             captureSession = AVCaptureSession()
             captureSession?.addInput(input)
             
@@ -89,7 +90,7 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
         
         // initialize a UIImage with our image data
         
-        let capturedImage = UIImage.init(data: image, scale: 1.0)
+        let capturedImage = UIImage.init(data: imageData, scale: 1.0)
         
         guard let image = capturedImage else { return }
         
@@ -104,7 +105,8 @@ extension CameraViewController: AVCaptureMetadataOutputObjectsDelegate {
         var camera = Camera()
 
         if metadataObjects == nil || metadataObjects.count == 0 {
-            let camera = cameraView()
+            let test = CameraView()
+            
             
         }
     }

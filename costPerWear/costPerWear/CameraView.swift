@@ -26,8 +26,8 @@ class CameraView: UIView {
     weak var delegate: CameraViewDelegate?
     var previewView: UIView!
     var captureBtn: UIButton!
-    var messageLabel: UILabel!
-    var qrCodeFrameView: UIView?
+    static var messageLabel: UILabel!
+    static var qrCodeFrameView: UIView?
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -37,13 +37,11 @@ class CameraView: UIView {
         super.init(frame: frame)
         
         
+        captureBtn = UIButton(frame: CGRect.zero)
         captureBtn.layer.cornerRadius = captureBtn.frame.size.width * 0.50
         captureBtn.clipsToBounds = true
         captureBtn.addTarget(self, action: #selector(takePhotoBtnTapped), for: .touchUpInside)
         addSubview(captureBtn)
-        
-        qrCodeFrameView?.clipsToBounds = true
-        addSubview(qrCodeFrameView)
         
         
 //        openCameraBtn = UIButton(frame: CGRect.zero)
@@ -93,7 +91,7 @@ extension CameraView {
 //        delegate?.openPhotoLibrarySelected()
 //    }
     
-    func takePhotoBtnTapped() {
+    @objc func takePhotoBtnTapped() {
         delegate?.onTapTakePhoto()
     }
     
