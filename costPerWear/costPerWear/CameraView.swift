@@ -27,6 +27,7 @@ class CameraView: UIView {
     var previewView: UIView!
     var captureBtn: UIButton!
     var messageLabel: UILabel!
+    var qrCodeFrameView: UIView?
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -41,6 +42,8 @@ class CameraView: UIView {
         captureBtn.addTarget(self, action: #selector(takePhotoBtnTapped), for: .touchUpInside)
         addSubview(captureBtn)
         
+        qrCodeFrameView?.clipsToBounds = true
+        addSubview(qrCodeFrameView)
         
         
 //        openCameraBtn = UIButton(frame: CGRect.zero)

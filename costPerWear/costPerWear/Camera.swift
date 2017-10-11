@@ -101,7 +101,12 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
 extension CameraViewController: AVCaptureMetadataOutputObjectsDelegate {
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-        //print
+        var camera = Camera()
+
+        if metadataObjects == nil || metadataObjects.count == 0 {
+            let camera = cameraView()
+            
+        }
     }
 }
 
