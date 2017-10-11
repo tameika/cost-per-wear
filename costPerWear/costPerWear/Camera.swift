@@ -15,7 +15,7 @@ class Camera {
     
     static var captureSession: AVCaptureSession?
     static var capturePhotoOutput: AVCapturePhotoOutput?
-
+    
     
     class func test() {
         
@@ -32,14 +32,17 @@ class Camera {
             capturePhotoOutput = AVCapturePhotoOutput()
             capturePhotoOutput?.isHighResolutionCaptureEnabled = true
             
-            captureSession?.addOutput(capturePhotoOutput)
-            
-            let captureMetadataOutput = AVCaptureMetadataOutput()
-            captureSession?.addOutput(captureMetadataOutput)
-            
-            captureMetadataOutput.setMetadataObjectsDelegate(self, queue: dispatchMain())
-            captureMetadataOutput.metadataObjectTypes = [.qr]
-            
+            if let capturePhotoOutput = capturePhotoOutput {
+                
+                
+                captureSession?.addOutput(capturePhotoOutput)
+                
+                let captureMetadataOutput = AVCaptureMetadataOutput()
+                captureSession?.addOutput(captureMetadataOutput)
+                
+                captureMetadataOutput.setMetadataObjectsDelegate(CameraViewController(), queue: DispatchQueue.main)
+                captureMetadataOutput.metadataObjectTypes = [.qr]
+            }
             captureSession?.startRunning()
         } catch {
             
@@ -103,7 +106,7 @@ extension CameraViewController: AVCaptureMetadataOutputObjectsDelegate {
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         var camera = Camera()
-
+        
         if metadataObjects == nil || metadataObjects.count == 0 {
             let test = CameraView()
             
