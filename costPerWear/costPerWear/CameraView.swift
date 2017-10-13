@@ -26,8 +26,9 @@ class CameraView: UIView {
     weak var delegate: CameraViewDelegate?
     var previewView: UIView!
     var captureBtn: UIButton!
-    static var messageLabel: UILabel!
-    static var qrCodeFrameView: UIView?
+    var messageLabel: UILabel!
+    var qrCodeFrameView: UIView?
+    var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
