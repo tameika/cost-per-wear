@@ -57,12 +57,10 @@ class Camera {
 extension CameraViewController: CameraViewDelegate {
     
     func onTapTakePhoto() {
-        var camera = Camera()
-        var output = camera.capturePhotoOutput
-        
+
         // Make sure capturePhotoOutput is valid
         
-        guard let capturePhotoOutput = output else { return }
+        guard let capturePhotoOutput = Camera.capturePhotoOutput else { return }
         
         // Get an instance of AVCapturePhotoSettings class
         
@@ -73,7 +71,7 @@ extension CameraViewController: CameraViewDelegate {
         
         // Call capturePhoto method by passing our photo settings and a delegate implementing AVCapturePhotoCaptureDelegate
         
-        output?.capturePhoto(with: photoSettings, delegate: self)
+        capturePhotoOutput.capturePhoto(with: photoSettings, delegate: self)
         
     }
 }
