@@ -38,10 +38,9 @@ class CameraView: UIView {
         super.init(frame: frame)
         
         
-        captureBtn = UIButton(frame: CGRect.zero)
         captureBtn.layer.cornerRadius = captureBtn.frame.size.width * 0.50
         captureBtn.clipsToBounds = true
-        captureBtn.addTarget(self, action: #selector(takePhotoBtnTapped), for: .touchUpInside)
+        captureBtn.addTarget(self, action: #selector(capturePhotoBtnTapped), for: .touchUpInside)
         addSubview(captureBtn)
         
         
@@ -92,7 +91,7 @@ extension CameraView {
 //        delegate?.openPhotoLibrarySelected()
 //    }
     
-    @objc func takePhotoBtnTapped() {
+    @objc func capturePhotoBtnTapped() {
         delegate?.onTapTakePhoto()
     }
     

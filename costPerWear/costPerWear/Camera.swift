@@ -64,7 +64,7 @@ extension CameraViewController: CameraViewDelegate {
         
         // Call capturePhoto method by passing our photo settings and a delegate implementing AVCapturePhotoCaptureDelegate
         capturePhotoOutput.capturePhoto(with: photoSettings, delegate: self)
-        
+
     }
 }
 

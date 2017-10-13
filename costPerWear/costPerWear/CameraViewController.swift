@@ -11,16 +11,26 @@ import AVFoundation
 
 class CameraViewController: UIViewController {
     
+    let camera = Camera()
     
-    //var imagePicked: UIImageView!
     
-    weak var cameraView: CameraView!
-    weak var imagePicked: UIImageView!
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
     }
+    
+    func startSession() {
+        
+    }
+    
+    func capturePhoto(_ sender: Any) {
+        onTapTakePhoto()
+    }
+    
+    
+    
 
    
 }
