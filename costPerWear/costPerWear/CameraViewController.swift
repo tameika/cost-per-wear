@@ -12,12 +12,15 @@ import AVFoundation
 class CameraViewController: UIViewController {
     
     let camera = Camera()
+    var cameraView = CameraView()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        cameraView = CameraView(frame: CGRect(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
+        cameraView.delegate = self
+        view.addSubview(cameraView)
         
     }
     

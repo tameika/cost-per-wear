@@ -37,11 +37,34 @@ class CameraView: UIView {
     override init(frame: CGRect){
         super.init(frame: frame)
         
+        previewView = UIView(frame: CGRect.zero)
+        previewView.clipsToBounds = true
+        previewView.backgroundColor = UIColor.deepTeal
+        addSubview(previewView)
+        previewView.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
+            make.height.equalTo(500.0)
+            make.width.equalTo(frame.width)
+        }
         
-        captureBtn.layer.cornerRadius = captureBtn.frame.size.width * 0.50
+        captureBtn = UIButton(frame: CGRect.zero)
+        captureBtn.layer.cornerRadius = 35.0
+        captureBtn.translatesAutoresizingMaskIntoConstraints = false 
         captureBtn.clipsToBounds = true
+        captureBtn.layer.borderWidth = 4.0
+        captureBtn.layer.borderColor = UIColor.bone.cgColor
+        captureBtn.backgroundColor = UIColor.lightGray
         captureBtn.addTarget(self, action: #selector(capturePhotoBtnTapped), for: .touchUpInside)
         addSubview(captureBtn)
+        captureBtn.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview().inset(-150.0)
+            make.centerY.equalToSuperview().inset(290.0)
+            make.height.equalTo(70.0)
+            make.width.equalTo(70.0)
+        }
+        
+        
         
         
 //        openCameraBtn = UIButton(frame: CGRect.zero)
