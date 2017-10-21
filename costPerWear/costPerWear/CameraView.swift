@@ -58,7 +58,7 @@ class CameraView: UIView {
         captureBtn.addTarget(self, action: #selector(capturePhotoBtnTapped), for: .touchUpInside)
         addSubview(captureBtn)
         captureBtn.snp.makeConstraints { (make) in
-            make.centerX.equalToSuperview().inset(-150.0)
+            make.centerX.equalToSuperview()
             make.centerY.equalToSuperview().inset(290.0)
             make.height.equalTo(70.0)
             make.width.equalTo(70.0)
