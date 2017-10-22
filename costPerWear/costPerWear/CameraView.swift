@@ -116,6 +116,7 @@ extension CameraView {
     
     @objc func capturePhotoBtnTapped() {
         delegate?.onTapTakePhoto()
+        print("capture button tapped")
     }
     
 }
