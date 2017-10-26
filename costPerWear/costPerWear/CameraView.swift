@@ -24,11 +24,12 @@ protocol CameraViewDelegate: class {
 class CameraView: UIView {
     
     weak var delegate: CameraViewDelegate?
-    var previewView: UIView!
+    var previewView: UIImageView!
     var captureBtn: UIButton!
     var messageLabel: UILabel!
     var qrCodeFrameView: UIView?
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
+    // var stillPicture : UIImageView!
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -37,7 +38,7 @@ class CameraView: UIView {
     override init(frame: CGRect){
         super.init(frame: frame)
         
-        previewView = UIView(frame: CGRect.zero)
+        previewView = UIImageView(frame: CGRect.zero)
         previewView.clipsToBounds = true
         previewView.backgroundColor = UIColor.deepTeal
         addSubview(previewView)
