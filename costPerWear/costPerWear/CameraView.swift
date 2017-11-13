@@ -38,6 +38,8 @@ class CameraView: UIView {
     override init(frame: CGRect){
         super.init(frame: frame)
         
+        videoPreviewLayer
+        
         previewView = UIImageView(frame: CGRect.zero)
         previewView.clipsToBounds = true
         previewView.backgroundColor = UIColor.deepTeal

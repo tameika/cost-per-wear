@@ -11,8 +11,11 @@ import AVFoundation
 
 class CameraViewController: UIViewController {
     
-    let camera = Camera()
-    var cameraView = CameraView()
+//    let camera = Camera()
+//    var cameraView = CameraView()
+    
+    var previewView = UIView()
+    var cameraImageView = UIImageView()
     
     override var prefersStatusBarHidden: Bool { return true }
 
@@ -20,22 +23,28 @@ class CameraViewController: UIViewController {
         super.viewDidLoad()
         
         
-        cameraView = CameraView(frame: CGRect(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
-        cameraView.delegate = self
-        view.addSubview(cameraView)
+//        cameraView = CameraView(frame: CGRect(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
+//        cameraView.delegate = self
+//        view.addSubview(cameraView)
+//
+    }
+    
+    
+    
+//
+//    func startSession() {
+//
+//    }
+//
+//    func capturePhoto(_ sender: Any) {
+//        onTapTakePhoto()
+//    }
+//
+    
+    func didTakePhoto(button: UIButton) {
+        
         
     }
-    
-    func startSession() {
-        
-    }
-    
-    func capturePhoto(_ sender: Any) {
-        onTapTakePhoto()
-    }
-    
-    
-    
 
    
 }

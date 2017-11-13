@@ -31,9 +31,8 @@
 		BCC261B51F3E8E2B00006CC4 /* ClothingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261B41F3E8E2B00006CC4 /* ClothingListViewController.swift */; };
 		BCC261B71F3EA45000006CC4 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261B61F3EA45000006CC4 /* CellView.swift */; };
 		BCC261B91F41908B00006CC4 /* TODO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC261B81F41908A00006CC4 /* TODO.swift */; };
-		BCC5CAB81F6631CB0016640D /* people-2598015_1920.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCC5CAB71F6631CB0016640D /* people-2598015_1920.jpg */; };
-		BCC5CAD21F6853B90016640D /* hanging-clothes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCC5CAD11F6853B90016640D /* hanging-clothes.jpg */; };
 		BCCD9A5C1EAAABA5003C64E0 /* NewItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCD9A5B1EAAABA5003C64E0 /* NewItemDetailViewController.swift */; };
+		BCDB65E31FB9425F007BDC55 /* CamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDB65E21FB9425F007BDC55 /* CamViewController.swift */; };
 		CB623769579A43C4204FF727 /* Pods_costPerWear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D036BDF4FACFA72DFCE381 /* Pods_costPerWear.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,9 +72,8 @@
 		BCC261B41F3E8E2B00006CC4 /* ClothingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothingListViewController.swift; sourceTree = "<group>"; };
 		BCC261B61F3EA45000006CC4 /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		BCC261B81F41908A00006CC4 /* TODO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODO.swift; sourceTree = "<group>"; };
-		BCC5CAB71F6631CB0016640D /* people-2598015_1920.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "people-2598015_1920.jpg"; path = "../../../../Downloads/people-2598015_1920.jpg"; sourceTree = "<group>"; };
-		BCC5CAD11F6853B90016640D /* hanging-clothes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "hanging-clothes.jpg"; path = "../../../hanging-clothes.jpg"; sourceTree = "<group>"; };
 		BCCD9A5B1EAAABA5003C64E0 /* NewItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemDetailViewController.swift; sourceTree = "<group>"; };
+		BCDB65E21FB9425F007BDC55 /* CamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamViewController.swift; sourceTree = "<group>"; };
 		D9D036BDF4FACFA72DFCE381 /* Pods_costPerWear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_costPerWear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC32A6F38C8C6C8B57026FBE /* Pods-costPerWear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-costPerWear.debug.xcconfig"; path = "Pods/Target Support Files/Pods-costPerWear/Pods-costPerWear.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,9 +149,7 @@
 				BC7750011EA81915009B9B38 /* View */,
 				BC7750001EA818D5009B9B38 /* Controller */,
 				BC20EB601F72FA7E00FA87AA /* Files */,
-				BCC5CAB71F6631CB0016640D /* people-2598015_1920.jpg */,
 				BC774FEB1EA73F4B009B9B38 /* costPerWear.xcdatamodeld */,
-				BCC5CAD11F6853B90016640D /* hanging-clothes.jpg */,
 				BC6BF92F1F85A44A00244DA2 /* awsconfiguration.json */,
 				BC774FF31EA73F4B009B9B38 /* Info.plist */,
 			);
@@ -175,6 +171,7 @@
 			children = (
 				BCADA0111F456712000D8233 /* LoginViewController.swift */,
 				BC6BF90B1F8086E700244DA2 /* SampleViewController.swift */,
+				BCDB65E21FB9425F007BDC55 /* CamViewController.swift */,
 				BCC261AE1F382A8700006CC4 /* CategorySelectionViewController.swift */,
 				BC4C49241EB8530900E149E8 /* ContentViewController.swift */,
 				BCCD9A5B1EAAABA5003C64E0 /* NewItemDetailViewController.swift */,
@@ -282,8 +279,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCC5CAD21F6853B90016640D /* hanging-clothes.jpg in Resources */,
-				BCC5CAB81F6631CB0016640D /* people-2598015_1920.jpg in Resources */,
 				BC6BF9301F85A4A800244DA2 /* awsconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +358,7 @@
 				BC51DE341F57D9DD00C27B27 /* LoginView.swift in Sources */,
 				BCC261B91F41908B00006CC4 /* TODO.swift in Sources */,
 				BC3033AA1EDF7FFD00332952 /* ContentView.swift in Sources */,
+				BCDB65E31FB9425F007BDC55 /* CamViewController.swift in Sources */,
 				BCADA0121F456712000D8233 /* LoginViewController.swift in Sources */,
 				BC51DE361F5895F000C27B27 /* BlurView.swift in Sources */,
 				BCC261AA1F34F7D300006CC4 /* Extensions.swift in Sources */,
