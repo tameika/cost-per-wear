@@ -12,6 +12,7 @@ import UIKit
 import SnapKit
 
 
+// GITHUB/RIZWANKCE
 
 protocol CameraViewDelegate: class {
     
@@ -38,7 +39,6 @@ class CameraView: UIView {
     override init(frame: CGRect){
         super.init(frame: frame)
         
-        videoPreviewLayer
         
         previewView = UIImageView(frame: CGRect.zero)
         previewView.clipsToBounds = true
