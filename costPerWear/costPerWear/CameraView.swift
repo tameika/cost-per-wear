@@ -29,11 +29,9 @@ class CameraView: UIView {
     var previewView: UIView!
     var captureBtn: UIButton!
     var messageLabel: UILabel!
-    var qrCodeFrameView: UIView?
+    var qrCodeFrameView: UIView!
 
-    
-    //var videoPreviewLayer: AVCaptureVideoPreviewLayer?
-    
+        
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -54,7 +52,7 @@ class CameraView: UIView {
         }
         
         captureBtn = UIButton(frame: CGRect.zero)
-        captureBtn.layer.cornerRadius = captureBtn.frame.size.width / 2
+        captureBtn.layer.cornerRadius = 35.0
         captureBtn.translatesAutoresizingMaskIntoConstraints = false 
         captureBtn.clipsToBounds = true
         captureBtn.layer.borderWidth = 4.0
@@ -76,43 +74,22 @@ class CameraView: UIView {
         messageLabel.backgroundColor = UIColor.eggplantMute
         addSubview(messageLabel)
         messageLabel.snp.makeConstraints { (make) in
-            make.centerX.equalToSuperview()
+            make.centerX.equalToSuperview().inset(150.0)
             make.centerY.equalToSuperview().inset(290.0)
-            make.height.equalTo(30.0)
-            make.width.equalTo(50.0)
+            make.height.equalTo(40.0)
+            make.width.equalTo(60.0)
         }
         
-//        openCameraBtn = UIButton(frame: CGRect.zero)
-//        openCameraBtn = UIButton(type: .roundedRect)
-//        //openCameraBtn.layer.cornerRadius = 20.0
-//        openCameraBtn.backgroundColor = UIColor.bone
-//        openCameraBtn.setTitle("enter!", for: .normal)
-//        openCameraBtn.addTarget(self, action: #selector(openCameraButtonPressed), for: .touchUpInside)
-//        addSubview(openCameraBtn)
-//        openCameraBtn.snp.makeConstraints { (make) in
-//            make.centerX.equalToSuperview()
-//            make.centerY.equalToSuperview().inset(120)
-//            make.height.equalTo(50.0)
-//            make.width.equalTo(100.0)
-//        }
-//
-//
-//
-//        openPhotoLibraryBtn = UIButton(frame: CGRect.zero)
-//        openPhotoLibraryBtn = UIButton(type: .roundedRect)
-//        openPhotoLibraryBtn.layer.cornerRadius = 20.0
-//        openPhotoLibraryBtn.backgroundColor = UIColor.bone
-//        openPhotoLibraryBtn.setTitle("enter!", for: .normal)
-//        openPhotoLibraryBtn.addTarget(self, action: #selector(openPhotoLibraryButtonPressed), for: .touchUpInside)
-//        addSubview(openPhotoLibraryBtn)
-//        openPhotoLibraryBtn.snp.makeConstraints { (make) in
-//            make.centerX.equalToSuperview()
-//            make.centerY.equalTo(openCameraBtn).inset(120)
-//            make.height.equalTo(50.0)
-//            make.width.equalTo(100.0)
-//        }
-
- 
+        
+        
+        qrCodeFrameView = UIView(frame: CGRect.zero)
+        qrCodeFrameView.layer.borderColor = UIColor.green.cgColor
+        qrCodeFrameView.layer.borderWidth = 2
+        addSubview(qrCodeFrameView)
+        bringSubview(toFront: qrCodeFrameView)
+        
+        
+        
         
     }
 }
