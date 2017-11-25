@@ -25,12 +25,14 @@ protocol CameraViewDelegate: class {
 class CameraView: UIView {
     
     weak var delegate: CameraViewDelegate?
-    var previewView: UIImageView!
+    
+    var previewView: UIView!
     var captureBtn: UIButton!
     var messageLabel: UILabel!
     var qrCodeFrameView: UIView?
-    var videoPreviewLayer: AVCaptureVideoPreviewLayer?
-    // var stillPicture : UIImageView!
+
+    
+    //var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -40,9 +42,9 @@ class CameraView: UIView {
         super.init(frame: frame)
         
         
-        previewView = UIImageView(frame: CGRect.zero)
+        previewView = UIView(frame: CGRect.zero)
         previewView.clipsToBounds = true
-        previewView.backgroundColor = UIColor.deepTeal
+        previewView.backgroundColor = UIColor.blueSmoke
         addSubview(previewView)
         previewView.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
@@ -52,7 +54,7 @@ class CameraView: UIView {
         }
         
         captureBtn = UIButton(frame: CGRect.zero)
-        captureBtn.layer.cornerRadius = 35.0
+        captureBtn.layer.cornerRadius = captureBtn.frame.size.width / 2
         captureBtn.translatesAutoresizingMaskIntoConstraints = false 
         captureBtn.clipsToBounds = true
         captureBtn.layer.borderWidth = 4.0
@@ -68,7 +70,17 @@ class CameraView: UIView {
         }
         
         
-        
+        messageLabel = UILabel(frame: CGRect.zero)
+        messageLabel.translatesAutoresizingMaskIntoConstraints = false
+        messageLabel.clipsToBounds = true
+        messageLabel.backgroundColor = UIColor.eggplantMute
+        addSubview(messageLabel)
+        messageLabel.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview().inset(290.0)
+            make.height.equalTo(30.0)
+            make.width.equalTo(50.0)
+        }
         
 //        openCameraBtn = UIButton(frame: CGRect.zero)
 //        openCameraBtn = UIButton(type: .roundedRect)
