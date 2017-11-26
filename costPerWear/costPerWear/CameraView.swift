@@ -16,9 +16,7 @@ import SnapKit
 
 protocol CameraViewDelegate: class {
     
-//    func openCameraSelected()
-//    func openPhotoLibrarySelected()
-    
+
     func onTapTakePhoto()
 }
 

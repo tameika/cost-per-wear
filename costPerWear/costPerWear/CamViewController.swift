@@ -20,6 +20,7 @@ class CamViewController: UIViewController {
     var cameraView = CameraView()
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +32,8 @@ class CamViewController: UIViewController {
             make.height.equalToSuperview()
             make.width.equalToSuperview()
         }
+        cameraView.delegate = self
+
         
         guard let captureDevice = AVCaptureDevice.default(for: .video) else { return }
         
@@ -65,7 +68,12 @@ class CamViewController: UIViewController {
         
     }
     
-    func onTapTakePhoto(sender: Any) {
+}
+
+extension CamViewController: CameraViewDelegate {
+    
+    func onTapTakePhoto() {
+        print("i got here")
         let capturePhotoOutput = self.capturePhotoOutput
         
         // Get an instance of AVCapturePhotoSettings class
@@ -78,12 +86,12 @@ class CamViewController: UIViewController {
         
         // Call capturePhoto method by passing our photo settings and a delegate implementing AVCapturePhotoCaptureDelegate
         capturePhotoOutput.capturePhoto(with: photoSettings, delegate: self)
-        
     }
     
-    
-    
 }
+    
+    
+
 
 
 extension CamViewController: AVCapturePhotoCaptureDelegate {
