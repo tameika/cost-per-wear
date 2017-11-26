@@ -66,6 +66,18 @@ class CamViewController: UIViewController {
     }
     
     func onTapTakePhoto(sender: Any) {
+        let capturePhotoOutput = self.capturePhotoOutput
+        
+        // Get an instance of AVCapturePhotoSettings class
+        let photoSettings = AVCapturePhotoSettings()
+        
+        // Set photo settings for our need
+        photoSettings.isAutoStillImageStabilizationEnabled = true
+        photoSettings.isHighResolutionPhotoEnabled = true
+        photoSettings.flashMode = .auto
+        
+        // Call capturePhoto method by passing our photo settings and a delegate implementing AVCapturePhotoCaptureDelegate
+        capturePhotoOutput.capturePhoto(with: photoSettings, delegate: self)
         
     }
     
