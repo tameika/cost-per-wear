@@ -83,6 +83,8 @@ extension CamViewController: CameraViewDelegate {
         photoSettings.isAutoStillImageStabilizationEnabled = true
         photoSettings.isHighResolutionPhotoEnabled = true
         photoSettings.flashMode = .auto
+        photoSettings.previewPhotoFormat = [:]
+        
         
         // Call capturePhoto method by passing our photo settings and a delegate implementing AVCapturePhotoCaptureDelegate
         capturePhotoOutput.capturePhoto(with: photoSettings, delegate: self)
