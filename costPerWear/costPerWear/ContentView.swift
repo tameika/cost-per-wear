@@ -43,7 +43,7 @@ class ContentView: UIView {
         addSubview(pageTitle)
         pageTitle.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview().inset(-300.0)
+            make.centerY.equalToSuperview().inset(-100.0)
             make.height.equalTo(50.0)
             make.width.equalTo(100.0)
         }
@@ -92,7 +92,7 @@ class ContentView: UIView {
         addSubview(enterBtn)
         enterBtn.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
-            make.centerY.equalTo(textfieldEntry).inset(120)
+            make.centerY.equalTo(textfieldEntry).inset(200)
             make.height.equalTo(50.0)
             make.width.equalTo(100.0)
         }

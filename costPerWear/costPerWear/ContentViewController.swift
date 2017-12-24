@@ -14,7 +14,7 @@ class ContentViewController: UIViewController, ContentViewDelegate {
     var itemDetails = ItemDetailView()
     var contentView = ContentView()
     var blurView = Blurview()
-    var pages = NewItemDetailViewController()
+    var newItemDetailVC = NewItemDetailViewController()
     
     
     override func viewDidLoad() {
@@ -24,13 +24,10 @@ class ContentViewController: UIViewController, ContentViewDelegate {
         
         self.blurView = Blurview(frame: CGRect.init(x: 0.0, y: 0.0, width: self.view.frame.width, height: self.view.frame.height))
         view.addSubview(blurView)
-
-        
         
         self.contentView = ContentView(frame: CGRect.init(x: 0.0, y: 0.0, width: 400.0, height: 510.0))
         contentView.backgroundColor = UIColor.clear
-        //contentView.pageTitle.text = pages[page]
-        //contentView.pageDescription.text = pages[self.pageIndex].description
+        getPages()
         contentView.delegate = self
         
         self.view.addSubview(self.contentView)
@@ -44,6 +41,17 @@ class ContentViewController: UIViewController, ContentViewDelegate {
 
 extension ContentViewController {
     
+    func getPages() {
+    let pages = newItemDetailVC.pages
+
+        for i in pages {
+            let page = i
+            print("👽 \(page)")
+            contentView.pageTitle.text = page.title
+            contentView.pageDescription.text = page.description
+        }
+    }
+
     func cancelSelected() {
         self.dismiss(animated: true, completion: nil)
     }
